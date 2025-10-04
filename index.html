@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-page="home" data-root=".">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Accueil | Révisions Mathématiques</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <div class="page">
@@ -13,11 +13,15 @@
         <div class="sidebar__content">
           <p class="sidebar__title">Programme de révision</p>
           <nav class="sidebar__nav">
-            <a class="sidebar__link sidebar__link--active" href="index.html">Accueil</a>
-            <a class="sidebar__link" href="chapitre-1.html">Chapitre 1 &mdash; Nombres et calculs</a>
+            <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
+            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
+              Chapitre 1 &mdash; Nombres et calculs
+              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            </a>
           </nav>
         </div>
       </aside>
+
 
       <main class="main" id="haut-de-page">
         <header class="intro">
@@ -28,7 +32,7 @@
             chapitres du cours, accédez rapidement aux exercices et suivez votre
             progression à votre rythme.
           </p>
-          <a class="button" href="chapitre-1.html">Accéder au chapitre&nbsp;1</a>
+          <a class="button" href="chapters/chapitre-1/index.html">Accéder au chapitre&nbsp;1</a>
         </header>
 
         <section class="section">
@@ -50,5 +54,21 @@
         </section>
       </main>
     </div>
+    <div class="section-menu" data-section-menu hidden>
+      <div class="section-menu__backdrop" data-section-menu-close></div>
+      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
+        <button class="section-menu__close" type="button" data-section-menu-close>
+          <span class="visually-hidden">Fermer le menu des sections</span>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <header class="section-menu__header">
+          <p class="section-menu__eyebrow">Chapitre 1</p>
+          <h2 class="section-menu__title" id="section-menu-title">Choisissez une section</h2>
+          <p class="section-menu__subtitle">Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+        </header>
+        <ol class="section-menu__list" data-section-menu-list></ol>
+      </aside>
+    </div>
+    <script src="assets/js/menu.js" defer></script>
   </body>
 </html>
