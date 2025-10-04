@@ -75,15 +75,12 @@ if (menu && menuList && trigger) {
 
   const closeTargets = menu.querySelectorAll('[data-section-menu-close]');
   const panel = menu.querySelector('.section-menu__panel');
+  const sidebar = document.querySelector('.sidebar');
   const TRANSITION_MS = 200;
   const OPEN_DELAY = 250;
-  const CLOSE_DELAY = 150;
 
   let openTimeout;
-  let closeTimeout;
   let isMenuOpen = false;
-  let triggerHover = false;
-  let panelHover = false;
 
   const clearOpenTimeout = () => {
     if (openTimeout) {
@@ -92,22 +89,26 @@ if (menu && menuList && trigger) {
     }
   };
 
-  const clearCloseTimeout = () => {
-    if (closeTimeout) {
-      clearTimeout(closeTimeout);
-      closeTimeout = undefined;
-    }
+  const applyPanelOffset = () => {
+    if (!sidebar) return;
+    const rect = sidebar.getBoundingClientRect();
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    const maxOffset = Math.max(0, viewportWidth - 260);
+    const offset = Math.min(rect.right, maxOffset);
+    menu.style.setProperty('--section-menu-offset', `${offset}px`);
   };
 
   const openMenu = () => {
     if (isMenuOpen) return;
     isMenuOpen = true;
     menu.hidden = false;
+    applyPanelOffset();
     document.body.classList.add('section-menu-open');
     requestAnimationFrame(() => {
       menu.classList.add('section-menu--visible');
     });
     trigger.setAttribute('aria-expanded', 'true');
+    window.addEventListener('resize', applyPanelOffset);
   };
 
   const closeMenu = () => {
@@ -116,6 +117,8 @@ if (menu && menuList && trigger) {
     menu.classList.remove('section-menu--visible');
     document.body.classList.remove('section-menu-open');
     trigger.setAttribute('aria-expanded', 'false');
+    menu.style.removeProperty('--section-menu-offset');
+    window.removeEventListener('resize', applyPanelOffset);
     setTimeout(() => {
       if (!isMenuOpen) {
         menu.hidden = true;
@@ -128,61 +131,25 @@ if (menu && menuList && trigger) {
     openTimeout = setTimeout(openMenu, OPEN_DELAY);
   };
 
-  const scheduleClose = () => {
-    clearCloseTimeout();
-    closeTimeout = setTimeout(() => {
-      if (!triggerHover && !panelHover) {
-        closeMenu();
-      }
-    }, CLOSE_DELAY);
-  };
-
   trigger.addEventListener('mouseenter', () => {
-    triggerHover = true;
     scheduleOpen();
   });
 
   trigger.addEventListener('mouseleave', () => {
-    triggerHover = false;
-    scheduleClose();
+    clearOpenTimeout();
   });
 
   trigger.addEventListener('focus', () => {
-    triggerHover = true;
-    scheduleOpen();
+    clearOpenTimeout();
+    openMenu();
   });
 
   trigger.addEventListener('blur', () => {
-    triggerHover = false;
-    scheduleClose();
-  });
-
-  panel?.addEventListener('mouseenter', () => {
-    panelHover = true;
-    clearCloseTimeout();
-  });
-
-  panel?.addEventListener('mouseleave', () => {
-    panelHover = false;
-    scheduleClose();
-  });
-
-  panel?.addEventListener('focusin', () => {
-    panelHover = true;
-    clearCloseTimeout();
-  });
-
-  panel?.addEventListener('focusout', (event) => {
-    if (!panel.contains(event.relatedTarget)) {
-      panelHover = false;
-      scheduleClose();
-    }
+    clearOpenTimeout();
   });
 
   closeTargets.forEach((element) => {
     element.addEventListener('click', () => {
-      triggerHover = false;
-      panelHover = false;
       clearOpenTimeout();
       closeMenu();
     });
@@ -190,9 +157,18 @@ if (menu && menuList && trigger) {
 
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      triggerHover = false;
-      panelHover = false;
       clearOpenTimeout();
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (
+      isMenuOpen &&
+      !panel?.contains(event.target) &&
+      event.target !== trigger &&
+      !trigger.contains(event.target)
+    ) {
       closeMenu();
     }
   });

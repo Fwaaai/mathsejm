@@ -321,9 +321,6 @@ body {
 .section-menu {
   position: fixed;
   inset: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: flex-end;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.24s ease;
@@ -336,21 +333,26 @@ body {
 }
 
 .section-menu__backdrop {
-  flex: 1;
+  position: absolute;
+  inset: 0;
   background: rgba(19, 22, 43, 0.45);
 }
 
 .section-menu__panel {
-  position: relative;
-  width: min(420px, 90vw);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--section-menu-offset, 300px);
+  width: clamp(260px, calc(100vw - var(--section-menu-offset, 0px)), 420px);
   background: var(--surface);
   padding: 36px;
   box-shadow: -24px 0 54px rgba(17, 20, 35, 0.18);
   display: flex;
   flex-direction: column;
   gap: 24px;
-  transform: translateX(40px);
+  transform: translateX(-32px);
   transition: transform 0.24s ease;
+  overflow-y: auto;
 }
 
 .section-menu--visible .section-menu__panel {
@@ -504,13 +506,12 @@ body {
     padding: 28px;
   }
 
-  .section-menu {
-    align-items: flex-end;
-  }
-
   .section-menu__panel {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    max-width: none;
     border-radius: 24px 24px 0 0;
     transform: translateY(32px);
   }
