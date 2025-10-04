@@ -1,50 +1,98 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Accueil | Révisions Mathématiques</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome | Mathsejm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page">
-      <aside class="sidebar" aria-label="Navigation des chapitres">
-        <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
-        <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
-          <nav class="sidebar__nav">
-            <a class="sidebar__link" href="chapitre-1.html">Chapitre 1 &mdash; Nombres et calculs</a>
-          </nav>
+      <aside class="sidebar" aria-label="Primary">
+        <a class="logo" href="#welcome">Mathsejm</a>
+        <nav class="nav">
+          <a href="#welcome" class="nav__item">Welcome</a>
+          <a href="#features" class="nav__item">Features</a>
+          <a href="#about" class="nav__item">About</a>
+          <a href="#getting-started" class="nav__item">Getting Started</a>
+          <a href="#contact" class="nav__item">Contact</a>
+        </nav>
+        <div class="sidebar__footer">
+          <p class="sidebar__tagline">Navigate the world of numbers with ease.</p>
         </div>
       </aside>
-
-      <main class="main" id="haut-de-page">
-        <header class="intro">
-          <p class="intro__eyebrow">Bienvenue</p>
-          <h1 class="intro__title">Révisions de mathématiques</h1>
-          <p class="intro__lead">
-            Ce site accompagne les élèves pendant leurs révisions. Trouvez les
-            chapitres du cours, accédez rapidement aux exercices et suivez votre
-            progression à votre rythme.
+      <main class="content">
+        <section class="hero" id="welcome">
+          <h1>Welcome to Mathsejm</h1>
+          <p>
+            Mathsejm is your companion for mastering mathematics through
+            interactive lessons, intuitive visualizations, and insightful
+            guidance.
           </p>
-          <a class="button" href="chapitre-1.html">Accéder au chapitre&nbsp;1</a>
-        </header>
-
-        <section class="section">
-          <h2>Comment utiliser ce site&nbsp;?</h2>
-          <ul class="list">
-            <li>Survolez l’onglet «&nbsp;Chapitres&nbsp;» pour afficher la navigation.</li>
-            <li>Choisissez un chapitre pour découvrir toutes ses sections.</li>
-            <li>Consultez chaque fiche et entraînez-vous avec les exercices proposés en classe.</li>
-          </ul>
+          <a class="cta" href="#getting-started">Explore the platform</a>
         </section>
 
-        <section class="section">
-          <h2>À propos des contenus</h2>
+        <section class="card-grid" id="features" aria-labelledby="features-title">
+          <h2 id="features-title">What you can expect</h2>
+          <div class="card">
+            <h3>Interactive Lessons</h3>
+            <p>
+              Engage with step-by-step lessons that adapt to your progress and
+              keep you motivated.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Visual Insights</h3>
+            <p>
+              Understand concepts faster with clean, dynamic charts and visual
+              explanations.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Guided Practice</h3>
+            <p>
+              Practice with curated exercises and receive instant feedback to
+              strengthen your knowledge.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">Why Mathsejm?</h2>
           <p>
-            Les documents sont rédigés en français et adaptés au programme de la
-            classe. Chaque chapitre est découpé en plusieurs sections pour vous
-            aider à cibler les notions importantes avant une évaluation.
+            We combine deep mathematical expertise with a modern, intuitive
+            interface so that students, educators, and enthusiasts can focus on
+            what matters: learning. Whether you are revising fundamentals or
+            exploring advanced topics, Mathsejm creates a seamless learning
+            experience.
+          </p>
+        </section>
+
+        <section
+          class="section section--highlight"
+          id="getting-started"
+          aria-labelledby="getting-started-title"
+        >
+          <h2 id="getting-started-title">Getting started is simple</h2>
+          <ol class="list">
+            <li>Create your personalized learning path.</li>
+            <li>Set goals and track your progress over time.</li>
+            <li>Collaborate with peers and mentors in real-time.</li>
+          </ol>
+        </section>
+
+        <section class="section" id="contact" aria-labelledby="contact-title">
+          <h2 id="contact-title">Stay in the loop</h2>
+          <p>
+            Want to learn more or partner with us? Reach out at
+            <a href="mailto:hello@mathsejm.com">hello@mathsejm.com</a> and we’ll
+            respond within two business days.
           </p>
         </section>
       </main>
