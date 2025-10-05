@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 9 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 9</p>
-          <h1 class="intro__title">Inégalités</h1>
-          <p class="intro__lead">Apprenez à comparer des expressions et à représenter les solutions d’inégalités sur une droite.</p>
+          <h1 class="intro__title">Axe de symétrie (forme canonique)</h1>
+          <p class="intro__lead">
+            Déterminer instantanément l’axe de symétrie d’une parabole exprimée
+            sous la forme $f(x) = a(x - \alpha)^2 + \beta$.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,31 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>Rappel</h2>
+          <p>
+            L’axe de symétrie est la droite verticale passant par le sommet. Dans
+            la forme canonique, on lit directement $x = \alpha$. Si la forme est
+            $f(x) = a(x + p)^2 + q$, alors l’axe est $x = -p$.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Exemples rapides</h2>
           <ul class="list">
-            <li>Maîtriser les symboles &lt;, &gt;, ≤ et ≥.</li>
-            <li>Résoudre une inégalité du premier degré.</li>
-            <li>Représenter graphiquement un ensemble de solutions.</li>
+            <li>$f(x) = -4(x - 3)^2 + 5 \Rightarrow$ axe $x = 3$.</li>
+            <li>$g(x) = 2(x + 1)^2 - 7 \Rightarrow$ axe $x = -1$.</li>
+            <li>Si $f(x) = a(x - \alpha)^2 + \beta$, alors $f(\alpha + h) = f(\alpha - h)$ pour tout réel $h$.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
+          <h2>À vérifier</h2>
           <ul class="list">
-            <li>Multiplier ou diviser par un nombre négatif inverse le sens de l’inégalité.</li>
-            <li>Une inégalité peut avoir une infinité de solutions.</li>
-            <li>Sur une droite graduée, un crochet plein signifie que la borne est incluse.</li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <h2>Idées d’exercices</h2>
-          <ul class="list">
-            <li>Résoudre une inégalité et représenter l’intervalle solution.</li>
-            <li>Comparer deux nombres à l’aide d’un raisonnement par différence.</li>
-            <li>Modéliser une contrainte par une inégalité.</li>
+            <li>Sur un graphique, l’axe coupe la courbe au point de symétrie $S$.</li>
+            <li>Dans un tableau de valeurs, les images de part et d’autre sont identiques.</li>
+            <li>En repassant en forme développée, on retrouve $x = -\dfrac{b}{2a}$.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-08.html">Section précédente</a>
             <a class="button" href="section-10.html">Section suivante</a>
           </div>
@@ -83,7 +114,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

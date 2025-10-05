@@ -57,13 +57,15 @@
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 1</p>
-          <h1 class="intro__title">Nombres entiers</h1>
-          <p class="intro__lead">Maîtrisez l’écriture, la comparaison et les opérations sur les nombres entiers pour résoudre des problèmes arithmétiques.</p>
+          <h1 class="intro__title">Forme développée d’un trinôme</h1>
+          <p class="intro__lead">
+            Savoir exprimer un polynôme du second degré sous la forme développée
+            $f(x) = ax^2 + bx + c$ à partir d’informations graphiques ou des
+            autres formes usuelles.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -76,27 +78,75 @@
         <section class="section">
           <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>Revoir l’écriture décimale et la valeur de chaque chiffre selon sa position.</li>
-            <li>Comparer et ranger des entiers à l’aide des symboles &lt; et &gt;.</li>
-            <li>Poser et vérifier les quatre opérations en détaillant les étapes.</li>
+            <li>Identifier les coefficients $a$, $b$ et $c$ dans la forme développée.</li>
+            <li>Passer de la forme canonique ou factorisée à la forme développée.</li>
+            <li>Utiliser un graphique ou trois points d’une parabole pour retrouver $f(x)$.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
+          <h2>Méthodes essentielles</h2>
           <ul class="list">
-            <li>Toujours vérifier si le résultat d’une addition ou d’une soustraction est cohérent.</li>
-            <li>Penser aux signes + ou – lorsque l’on travaille avec des entiers relatifs.</li>
-            <li>Présenter les calculs posés de manière lisible pour éviter les erreurs.</li>
+            <li>
+              <strong>Développer la forme canonique :</strong> si
+              $f(x) = a(x - \alpha)^2 + \beta$, alors
+              $$f(x) = a\big(x^2 - 2\alpha x + \alpha^2\big) + \beta = ax^2 - 2a\alpha x + a\alpha^2 + \beta.$$
+            </li>
+            <li>
+              <strong>Développer la forme factorisée :</strong> si
+              $f(x) = a(x - x_1)(x - x_2)$, on obtient
+              $$f(x) = a\big(x^2 - (x_1 + x_2)x + x_1x_2\big).$$
+            </li>
+            <li>
+              <strong>Détermination à partir de trois points :</strong> résoudre le système
+              $$\begin{cases}
+              f(x_1) = y_1 = ax_1^2 + bx_1 + c, \\
+              f(x_2) = y_2 = ax_2^2 + bx_2 + c, \\
+              f(x_3) = y_3 = ax_3^2 + bx_3 + c
+              \end{cases}$$
+              pour trouver $a$, $b$ et $c$.
+            </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Exemple détaillé</h2>
+          <p>
+            On donne la forme canonique $f(x) = 2(x - 1)^2 - 3$. Pour obtenir la
+            forme développée, on développe puis on réduit :
+          </p>
+          <p>
+            $$
+              \begin{aligned}
+              f(x)
+              &= 2\big(x^2 - 2x + 1\big) - 3 \\
+              &= 2x^2 - 4x + 2 - 3 \\
+              &= 2x^2 - 4x - 1.
+              \end{aligned}
+            $$
+          </p>
+          <p>
+            Ainsi, $a = 2$, $b = -4$ et $c = -1$. Vérifiez en remplaçant $x = 1$ :
+            $$f(1) = 2(1)^2 - 4(1) - 1 = -3,$$ ce qui correspond à la valeur
+            minimale donnée par la forme canonique.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Pour s’entraîner</h2>
           <ul class="list">
-            <li>Comparer deux nombres entiers en justifiant l’ordre choisi.</li>
-            <li>Résoudre un problème de partage nécessitant une division euclidienne.</li>
-            <li>Trouver le plus petit et le plus grand nombre dans une liste donnée.</li>
+            <li>
+              Convertir $f(x) = -3(x + 2)^2 + 5$ en forme développée puis en
+              déterminer $f(-2)$ et $f(0)$.
+            </li>
+            <li>
+              Une parabole passe par $(0, 4)$, $(1, 1)$ et $(3, 7)$. Retrouver la
+              forme développée $f(x) = ax^2 + bx + c$.
+            </li>
+            <li>
+              À partir de $f(x) = 2(x - 4)(x + 1)$, développer puis vérifier la
+              cohérence en calculant la somme et le produit des racines.
+            </li>
           </ul>
           <div class="section__actions">
             <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
@@ -113,7 +163,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

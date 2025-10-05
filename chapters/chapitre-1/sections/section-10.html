@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 10 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 10</p>
-          <h1 class="intro__title">Priorités de calcul</h1>
-          <p class="intro__lead">Respectez la hiérarchie des opérations pour éviter les erreurs de calcul.</p>
+          <h1 class="intro__title">Existence de racines (forme canonique)</h1>
+          <p class="intro__lead">
+            Discuter le nombre de solutions de $f(x) = 0$ à partir de
+            $f(x) = a(x - \alpha)^2 + \beta$ sans recalculer le discriminant.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,40 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>Analyse du paramètre $\beta$</h2>
           <ul class="list">
-            <li>Se souvenir de l’ordre : parenthèses, puissances, multiplication/division, addition/soustraction.</li>
-            <li>Identifier les étapes à détailler dans une résolution.</li>
-            <li>Vérifier la cohérence d’un résultat en utilisant une calculatrice.</li>
+            <li>Si $\beta &gt; 0$ et $a &gt; 0$, la parabole est au-dessus de l’axe et il n’y a pas de racine.</li>
+            <li>Si $\beta &gt; 0$ et $a &lt; 0$, il existe deux racines réelles.</li>
+            <li>Si $\beta = 0$, $x = \alpha$ est une racine double.</li>
+            <li>Si $\beta &lt; 0$, l’équation $f(x) = 0$ possède deux solutions réelles lorsque $a &gt; 0$ et aucune si $a &lt; 0$.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Les parenthèses imbriquées se résolvent de l’intérieur vers l’extérieur.</li>
-            <li>Les puissances sont traitées avant les multiplications.</li>
-            <li>Toujours recopier l’expression à chaque étape sans la modifier.</li>
-          </ul>
+          <h2>Démonstration rapide</h2>
+          <p>
+            Résoudre $f(x) = 0$ revient à résoudre $a(x - \alpha)^2 + \beta = 0$.
+            On isole le carré :
+          </p>
+          <p>
+            $$ (x - \alpha)^2 = -\frac{\beta}{a}. $$
+          </p>
+          <p>
+            L’existence de solutions réelles dépend du signe de $-\dfrac{\beta}{a}$.
+            Si ce terme est négatif, aucune solution réelle. S’il est nul, une
+            solution double. S’il est positif, deux solutions opposées par
+            rapport à $\alpha$.
+          </p>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Exemples</h2>
           <ul class="list">
-            <li>Calculer une expression comportant plusieurs niveaux de parenthèses.</li>
-            <li>Expliquer oralement l’ordre des opérations pour un calcul donné.</li>
-            <li>Créer une expression donnant un résultat imposé.</li>
+            <li>$f(x) = 2(x - 1)^2 + 3$ : $-\dfrac{\beta}{a} = -\dfrac{3}{2} &lt; 0$, aucune racine.</li>
+            <li>$g(x) = -3(x + 2)^2 + 12$ : $-\dfrac{\beta}{a} = -\dfrac{12}{-3} = 4 &gt; 0$, deux racines.</li>
+            <li>$h(x) = 5(x - 4)^2$ : $\beta = 0$, racine double $x = 4$.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-09.html">Section précédente</a>
             <a class="button" href="section-11.html">Section suivante</a>
           </div>
@@ -83,7 +123,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

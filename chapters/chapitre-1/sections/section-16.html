@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 16 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 16</p>
-          <h1 class="intro__title">Proportionnalité</h1>
-          <p class="intro__lead">Explorez les différentes représentations de la proportionnalité pour résoudre des situations variées.</p>
+          <h1 class="intro__title">Factorisation d’un polynôme de degré 3</h1>
+          <p class="intro__lead">
+            Factoriser un polynôme de degré 3 lorsque l’on connaît une racine en
+            utilisant la division euclidienne ou la factorisation synthétique.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,35 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
-          <ul class="list">
-            <li>Utiliser les tableaux et graphiques de proportionnalité.</li>
-            <li>Calculer un coefficient multiplicateur et son inverse.</li>
-            <li>Résoudre des pourcentages composés ou des échelles doubles.</li>
-          </ul>
+          <h2>Procédure</h2>
+          <ol class="list">
+            <li>Vérifier que $r$ est bien une racine : $P(r) = 0$.</li>
+            <li>Diviser $P(x)$ par $(x - r)$ pour obtenir un quotient quadratique $Q(x)$.</li>
+            <li>Factoriser $Q(x)$ en utilisant les techniques du second degré.</li>
+            <li>Écrire $P(x) = (x - r)Q(x)$ pour obtenir la factorisation complète.</li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Une situation proportionnelle se traduit par une droite passant par l’origine.</li>
-            <li>Le coefficient multiplicateur se multiplie pour des évolutions successives.</li>
-            <li>Les pourcentages composés se résolvent par produits successifs.</li>
-          </ul>
+          <h2>Exemple</h2>
+          <p>
+            Soit $P(x) = x^3 - 4x^2 - x + 4$ et $r = 1$. On vérifie $P(1) = 0$.
+            La division par $(x - 1)$ donne $Q(x) = x^2 - 3x - 4$.
+          </p>
+          <p>
+            On factorise $Q(x) = (x - 4)(x + 1)$, d’où
+            $$P(x) = (x - 1)(x - 4)(x + 1).$$
+          </p>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Conseils</h2>
           <ul class="list">
-            <li>Interpréter un graphique de proportionnalité.</li>
-            <li>Trouver le coefficient multiplicateur qui relie deux grandeurs.</li>
-            <li>Résoudre une situation de réduction puis d’augmentation.</li>
+            <li>Utiliser la division synthétique pour gagner du temps lors des calculs.</li>
+            <li>Les racines évidentes sont souvent parmi les diviseurs du terme constant.</li>
+            <li>Après factorisation, vérifiez en développant rapidement ou en testant une valeur.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-15.html">Section précédente</a>
             <a class="button" href="section-17.html">Section suivante</a>
           </div>
@@ -83,7 +118,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

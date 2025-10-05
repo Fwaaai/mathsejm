@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 4 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 4</p>
-          <h1 class="intro__title">Proportions simples</h1>
-          <p class="intro__lead">Appliquez les rapports et les échelles pour résoudre des situations de proportion directe.</p>
+          <h1 class="intro__title">Racines à partir de la forme développée</h1>
+          <p class="intro__lead">
+            Déterminer les solutions de l’équation $f(x) = 0$ pour un trinôme de
+            la forme $ax^2 + bx + c$ à l’aide du discriminant.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,47 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>Méthode du discriminant</h2>
           <ul class="list">
-            <li>Reconnaître les situations de proportionnalité dans un tableau.</li>
-            <li>Utiliser le produit en croix pour trouver une valeur manquante.</li>
-            <li>Passer d’une échelle de plan à une distance réelle et inversement.</li>
+            <li>Calculer $\Delta = b^2 - 4ac$.</li>
+            <li>
+              Interpréter le signe de $\Delta$ :
+              <ul class="list">
+                <li>$\Delta &gt; 0$ : deux racines distinctes $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.</li>
+                <li>$\Delta = 0$ : une racine double $x_0 = -\dfrac{b}{2a}$.</li>
+                <li>$\Delta &lt; 0$ : aucune racine réelle.</li>
+              </ul>
+            </li>
+            <li>
+              Vérifier en remplaçant chaque racine trouvée dans l’expression
+              développée.
+            </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Dans un tableau de proportionnalité, les quotients des colonnes sont tous égaux.</li>
-            <li>Les échelles s’expriment sous la forme 1 : n où n représente la réduction.</li>
-            <li>Vérifier la cohérence des unités avant de calculer.</li>
-          </ul>
+          <h2>Exemple corrigé</h2>
+          <p>
+            Pour $f(x) = 3x^2 - 5x - 2$, on calcule $\Delta = (-5)^2 - 4 \times 3 \times (-2) = 25 + 24 = 49$.
+          </p>
+          <p>
+            Les racines sont
+            $$x_1 = \dfrac{5 - 7}{6} = -\dfrac{1}{3} \quad \text{et} \quad x_2 = \dfrac{5 + 7}{6} = 2.$$
+            On vérifie $f(2) = 0$ et $f\big(-\frac{1}{3}\big) = 0$.
+          </p>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Conseils</h2>
           <ul class="list">
-            <li>Compléter un tableau de proportionnalité avec des vitesses moyennes.</li>
-            <li>Adapter une recette pour un nombre différent de personnes.</li>
-            <li>Calculer une distance réelle à partir d’un plan.</li>
+            <li>Facteur commun et simplification avant le calcul de $\Delta$ peuvent éviter les erreurs.</li>
+            <li>Notez clairement les étapes : expression de $\Delta$, calcul, solutions.</li>
+            <li>
+              Reliez le signe de $a$ et la position des racines par rapport au
+              sommet pour visualiser la courbe.
+            </li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-03.html">Section précédente</a>
             <a class="button" href="section-05.html">Section suivante</a>
           </div>
@@ -83,7 +130,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

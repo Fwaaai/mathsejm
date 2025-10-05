@@ -5,34 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 14 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 14</p>
-          <h1 class="intro__title">Grandeurs composées</h1>
-          <p class="intro__lead">Manipulez les grandeurs comme la vitesse, le débit ou la densité pour modéliser des phénomènes physiques.</p>
+          <h1 class="intro__title">Résolution d’équations du second degré</h1>
+          <p class="intro__lead">
+            Résoudre une équation du second degré $ax^2 + bx + c = 0$ sans
+            changement de variable en utilisant discriminant, factorisation ou
+            forme canonique.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +76,35 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
-          <ul class="list">
-            <li>Identifier les unités utilisées pour chaque grandeur.</li>
-            <li>Utiliser les formules v = d ÷ t, Q = D × t, etc.</li>
-            <li>Convertir les unités avant d’effectuer un calcul.</li>
-          </ul>
+          <h2>Méthodologie</h2>
+          <ol class="list">
+            <li>Mettre l’équation sous la forme $ax^2 + bx + c = 0$.</li>
+            <li>Calculer $\Delta = b^2 - 4ac$ pour connaître le nombre de solutions.</li>
+            <li>Appliquer les formules des racines ou factoriser directement si $\Delta \geq 0$.</li>
+            <li>Vérifier les solutions en les remplaçant dans l’équation initiale.</li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Toujours écrire la formule de départ avant de remplacer par les valeurs.</li>
-            <li>Vérifier la cohérence des unités (km/h, m/s, L/min...).</li>
-            <li>Penser à convertir le temps en heures ou minutes selon la formule.</li>
-          </ul>
+          <h2>Exemple complet</h2>
+          <p>
+            Résoudre $3x^2 - 5x - 2 = 0$ :
+            $$\Delta = (-5)^2 - 4 \times 3 \times (-2) = 49.$$
+            Les solutions sont $x_1 = -\dfrac{1}{3}$ et $x_2 = 2$.
+          </p>
+          <p>
+            La factorisation associée est $3x^2 - 5x - 2 = 3(x - 2)\left(x + \dfrac{1}{3}\right)$.
+          </p>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Astuce</h2>
           <ul class="list">
-            <li>Calculer la vitesse moyenne d’un déplacement.</li>
-            <li>Déterminer le temps nécessaire pour remplir un réservoir avec un débit donné.</li>
-            <li>Comparer deux densités pour savoir quel matériau est le plus léger.</li>
+            <li>Lorsque $b = 0$, on résout $ax^2 + c = 0$ avec $x = \pm \sqrt{-\dfrac{c}{a}}$.</li>
+            <li>Si $c = 0$, factoriser par $x$ puis résoudre $ax + b = 0$.</li>
+            <li>Utiliser la forme canonique pour vérifier rapidement le signe des solutions.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-13.html">Section précédente</a>
             <a class="button" href="section-15.html">Section suivante</a>
           </div>
@@ -83,7 +119,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>
