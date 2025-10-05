@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 17 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 17</p>
-          <h1 class="intro__title">Suites numériques</h1>
-          <p class="intro__lead">Identifiez les suites et anticipez leurs termes pour modéliser des évolutions répétitives.</p>
+          <h1 class="intro__title">Recherche de racines évidentes</h1>
+          <p class="intro__lead">
+            Repérer rapidement une racine rationnelle d’un polynôme de degré
+            inférieur ou égal à 3 pour amorcer une factorisation.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,37 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>Stratégies</h2>
           <ul class="list">
-            <li>Reconnaître une suite arithmétique et calculer sa raison.</li>
-            <li>Déterminer le terme général d’une suite simple.</li>
-            <li>Utiliser une suite pour modéliser un phénomène régulier.</li>
+            <li>
+              Tester les diviseurs du terme constant : si $P(x) = a_n x^n + \cdots + a_0$, une racine rationnelle $\dfrac{p}{q}$ vérifie $p \mid a_0$ et $q \mid a_n$.
+            </li>
+            <li>Essayer les valeurs simples $x = -2, -1, 0, 1, 2$ en priorité.</li>
+            <li>Utiliser la valeur de $P(0) = a_0$ pour éliminer des candidats.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Une suite arithmétique possède des écarts constants entre les termes.</li>
-            <li>Pour calculer u_n, utiliser la formule u_n = u_0 + n × r.</li>
-            <li>Toujours préciser le rang de départ (n = 0 ou n = 1).</li>
-          </ul>
+          <h2>Exemple</h2>
+          <p>
+            Pour $P(x) = 2x^3 - 3x^2 - 8x + 12$, les candidats rationnels sont
+            $\pm1$, $\pm2$, $\pm3$, $\pm4$, $\pm6$, $\pm12$, et éventuellement divisés par $2$.
+            On teste $x = 2$ : $P(2) = 0$ donc $x = 2$ est racine évidente.
+          </p>
+          <p>
+            La division par $(x - 2)$ donne $P(x) = (x - 2)(2x^2 + x - 6)$, puis on
+            factorise le second degré.
+          </p>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>À retenir</h2>
           <ul class="list">
-            <li>Compléter les premiers termes d’une suite donnée.</li>
-            <li>Trouver le rang d’un terme connaissant sa valeur.</li>
-            <li>Modéliser une économie régulière par une suite.</li>
+            <li>Les racines évidentes sont souvent entières ou fractions simples.</li>
+            <li>Chaque racine trouvée réduit le degré du polynôme.</li>
+            <li>Un changement de signe de $P(x)$ entre deux valeurs entières indique l’existence d’une racine réelle.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-16.html">Section précédente</a>
             <a class="button" href="section-18.html">Section suivante</a>
           </div>
@@ -83,7 +120,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

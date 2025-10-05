@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 7 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 7</p>
-          <h1 class="intro__title">Calcul littéral</h1>
-          <p class="intro__lead">Manipulez les expressions littérales pour modéliser des situations et simplifier des calculs.</p>
+          <h1 class="intro__title">Forme canonique</h1>
+          <p class="intro__lead">
+            Transformer un trinôme du second degré en forme canonique
+            $f(x) = a(x - \alpha)^2 + \beta$ à partir des autres représentations.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,48 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
-          <ul class="list">
-            <li>Reconnaître les termes semblables et les réduire.</li>
-            <li>Développer une expression à l’aide de la distributivité.</li>
-            <li>Factoriser une expression simple pour mettre en évidence un facteur commun.</li>
-          </ul>
+          <h2>Compléter le carré</h2>
+          <p>
+            À partir de $f(x) = ax^2 + bx + c$, factorisez $a$ et complétez le
+            carré :
+          </p>
+          <p>
+            $$
+              f(x) = a\left[x^2 + \frac{b}{a}x\right] + c = a\left[\left(x + \frac{b}{2a}\right)^2 - \left(\frac{b}{2a}\right)^2\right] + c.
+            $$
+          </p>
+          <p>
+            On obtient alors
+            $$f(x) = a\left(x + \frac{b}{2a}\right)^2 + c - a\left(\frac{b}{2a}\right)^2,$$
+            ce qui donne $\alpha = -\dfrac{b}{2a}$ et
+            $\beta = f(\alpha) = c - \dfrac{b^2}{4a}$.
+          </p>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>On ne peut additionner que des termes qui ont exactement la même partie littérale.</li>
-            <li>La double distributivité permet de multiplier deux binômes.</li>
-            <li>Factoriser simplifie souvent la résolution d’équations.</li>
-          </ul>
+          <h2>Exemple</h2>
+          <p>
+            Pour $f(x) = 2x^2 + 8x + 1$ :
+            $$
+              \begin{aligned}
+              f(x) &= 2\big(x^2 + 4x\big) + 1 \\
+                   &= 2\Big[(x + 2)^2 - 4\Big] + 1 \\
+                   &= 2(x + 2)^2 - 8 + 1 \\
+                   &= 2(x + 2)^2 - 7.
+              \end{aligned}
+            $$
+            Ainsi, $\alpha = -2$ et $\beta = -7$.
+          </p>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Utilisations</h2>
           <ul class="list">
-            <li>Réduire une expression comportant plusieurs termes semblables.</li>
-            <li>Développer (a + 3)(a – 5) et simplifier le résultat.</li>
-            <li>Factoriser une expression donnée par mise en évidence.</li>
+            <li>Lire directement le sommet $S(\alpha, \beta)$.</li>
+            <li>Connaître le minimum ou le maximum de $f$ selon le signe de $a$.</li>
+            <li>Faciliter la résolution d’équations ou d’inéquations.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-06.html">Section précédente</a>
             <a class="button" href="section-08.html">Section suivante</a>
           </div>
@@ -83,7 +131,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

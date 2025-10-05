@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 18 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 18</p>
-          <h1 class="intro__title">Résolution de problèmes</h1>
-          <p class="intro__lead">Adoptez une démarche structurée pour résoudre des problèmes complexes avec méthode.</p>
+          <h1 class="intro__title">Équation paramétrique</h1>
+          <p class="intro__lead">
+            Discuter le nombre de solutions d’une équation du second degré
+            dépendant d’un paramètre en étudiant le discriminant selon les cas.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,41 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>Méthode générale</h2>
+          <ol class="list">
+            <li>Identifier $a(t)$, $b(t)$, $c(t)$ en fonction du paramètre $t$.</li>
+            <li>Calculer le discriminant $\Delta(t) = b(t)^2 - 4a(t)c(t)$.</li>
+            <li>Étudier le signe de $\Delta(t)$ en résolvant $\Delta(t) = 0$.</li>
+            <li>Conclure : $\Delta(t) > 0$ (deux solutions), $\Delta(t) = 0$ (une solution double), $\Delta(t) < 0$ (aucune solution réelle).</li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Exemple guidé</h2>
+          <p>
+            Résoudre selon $m$ l’équation $x^2 - 2mx + m + 3 = 0$.
+          </p>
+          <p>
+            On calcule $\Delta(m) = (-2m)^2 - 4(m + 3) = 4m^2 - 4m - 12 = 4(m^2 - m - 3)$.
+          </p>
+          <p>
+            On résout $m^2 - m - 3 = 0$ : $m = \dfrac{1 \pm \sqrt{13}}{2}$.
+          </p>
           <ul class="list">
-            <li>Analyser l’énoncé pour identifier les données utiles.</li>
-            <li>Choisir la stratégie de résolution adaptée (tableau, équation, schéma...).</li>
-            <li>Vérifier la cohérence du résultat obtenu.</li>
+            <li>$m < \dfrac{1 - \sqrt{13}}{2}$ ou $m > \dfrac{1 + \sqrt{13}}{2}$ : deux solutions réelles.</li>
+            <li>$m = \dfrac{1 \pm \sqrt{13}}{2}$ : une solution double $x = m$.</li>
+            <li>Pour $\dfrac{1 - \sqrt{13}}{2} < m < \dfrac{1 + \sqrt{13}}{2}$ : pas de solution réelle.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
+          <h2>Conseils</h2>
           <ul class="list">
-            <li>Relire l’énoncé après chaque calcul pour éviter les hors-sujet.</li>
-            <li>Traduire les informations en équations ou en tableaux lorsque c’est possible.</li>
-            <li>Conclure toujours par une phrase répondant clairement à la question.</li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <h2>Idées d’exercices</h2>
-          <ul class="list">
-            <li>Résoudre un problème de partage avec des contraintes supplémentaires.</li>
-            <li>Modéliser une situation de trajet croisé.</li>
-            <li>Analyser un problème ouvert et proposer plusieurs stratégies.</li>
+            <li>Penser à préciser les valeurs interdites si $a(t) = 0$ annule le degré.</li>
+            <li>Présenter la discussion sous forme de tableau pour clarifier les cas.</li>
+            <li>Interpréter graphiquement en traçant le discriminant en fonction du paramètre.</li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-17.html">Section précédente</a>
             <a class="button" href="section-19.html">Section suivante</a>
           </div>
@@ -83,7 +124,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

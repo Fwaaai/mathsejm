@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 3 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 3</p>
-          <h1 class="intro__title">Fractions</h1>
-          <p class="intro__lead">Travaillez les écritures fractionnaires pour mieux comprendre les partages et les ratios.</p>
+          <h1 class="intro__title">Axe de symétrie (forme développée)</h1>
+          <p class="intro__lead">
+            Déterminer l’équation de l’axe de symétrie d’une parabole définie par
+            $f(x) = ax^2 + bx + c$ en exploitant les propriétés du sommet.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +75,51 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>À savoir</h2>
           <ul class="list">
-            <li>Passer d’une fraction impropre à un nombre mixte et inversement.</li>
-            <li>Simplifier une fraction en utilisant le PGCD du numérateur et du dénominateur.</li>
-            <li>Additionner ou soustraire des fractions en trouvant un dénominateur commun.</li>
+            <li>
+              L’axe de symétrie passe par le sommet $S(x_S, y_S)$ et est parallèle
+              à l’axe des ordonnées.
+            </li>
+            <li>
+              Son équation est $x = x_S$ avec $x_S = -\dfrac{b}{2a}$ lorsque $f(x)
+              = ax^2 + bx + c$.
+            </li>
+            <li>
+              Les points situés de part et d’autre de l’axe ont des abscisses
+              opposées par rapport à $x_S$ et la même ordonnée :
+              $$f(x_S + h) = f(x_S - h).$$
+            </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Deux fractions sont équivalentes si on multiplie ou divise numérateur et dénominateur par le même nombre.</li>
-            <li>On ne peut additionner des fractions qu’après les avoir mises au même dénominateur.</li>
-            <li>Lors d’une multiplication de fractions, multiplier les numérateurs entre eux puis les dénominateurs.</li>
-          </ul>
+          <h2>Exemple</h2>
+          <p>
+            Avec $f(x) = x^2 - 6x + 5$, on calcule $x_S = -\dfrac{-6}{2} = 3$.
+            L’axe de symétrie a donc pour équation $x = 3$. On vérifie :
+            $$f(1) = 0 \quad \text{et} \quad f(5) = 0,$$
+            les points $(1,0)$ et $(5,0)$ sont symétriques par rapport à cet axe.
+          </p>
+          <div class="graph-placeholder" role="img" aria-label="Graphique à insérer représentant une parabole avec son axe de symétrie">
+            Graphique à insérer ici.
+          </div>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Bonnes pratiques</h2>
           <ul class="list">
-            <li>Simplifier une fraction donnée au maximum.</li>
-            <li>Convertir une quantité en fraction d’un tout dans une situation concrète.</li>
-            <li>Calculer le résultat d’une addition de deux fractions.</li>
+            <li>Calculez d’abord le sommet à l’aide de la section précédente.</li>
+            <li>
+              Utilisez la symétrie pour retrouver des points supplémentaires sur
+              la courbe à partir d’un tableau de valeurs.
+            </li>
+            <li>
+              En contrôle, mentionnez toujours l’équation $x = x_S$ pour justifier
+              votre résultat.
+            </li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-02.html">Section précédente</a>
             <a class="button" href="section-04.html">Section suivante</a>
           </div>
@@ -83,7 +134,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>

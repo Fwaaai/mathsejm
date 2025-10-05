@@ -5,34 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 2 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
       </aside>
 
-
-
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 2</p>
-          <h1 class="intro__title">Nombres décimaux</h1>
-          <p class="intro__lead">Apprenez à manipuler les nombres décimaux, à les comparer et à effectuer des calculs précis.</p>
+          <h1 class="intro__title">Sommet à partir de la forme développée</h1>
+          <p class="intro__lead">
+            Calculer les coordonnées du sommet $S(x_S, y_S)$ d’une parabole
+            définie par $f(x) = ax^2 + bx + c$ en exploitant la dérivation ou les
+            formules issues du calcul littéral.
+          </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -43,32 +76,56 @@
         </header>
 
         <section class="section">
-          <h2>Objectifs de la section</h2>
+          <h2>Formules indispensables</h2>
           <ul class="list">
-            <li>Identifier la partie entière et la partie décimale d’un nombre.</li>
-            <li>Aligner correctement les virgules pour additionner ou soustraire.</li>
-            <li>Effectuer des multiplications et divisions par 10, 100, 1000.</li>
+            <li>Le sommet a pour abscisse $x_S = -\dfrac{b}{2a}$ lorsque $a \neq 0$.</li>
+            <li>Son ordonnée se calcule en évaluant $y_S = f(x_S)$.</li>
+            <li>
+              Le sommet correspond aussi au point critique où $f'(x) = 0$ :
+              $f'(x) = 2ax + b$ et $2ax_S + b = 0$ redonne $x_S = -\dfrac{b}{2a}$.
+            </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À ne pas oublier</h2>
-          <ul class="list">
-            <li>Lors d’une multiplication, compter le nombre total de chiffres après la virgule.</li>
-            <li>Pour diviser par 10, 100 ou 1000, déplacer la virgule vers la gauche.</li>
-            <li>Comparer deux décimaux en les écrivant avec le même nombre de chiffres.</li>
-          </ul>
+          <h2>Démarche structurée</h2>
+          <ol class="list">
+            <li>Identifier les coefficients $a$, $b$ et $c$ de la forme développée.</li>
+            <li>Calculer $x_S = -\dfrac{b}{2a}$.</li>
+            <li>Remplacer $x$ par $x_S$ dans $f(x)$ pour obtenir $y_S$.</li>
+            <li>Interpréter le signe de $a$ : $a &gt; 0$ donne un minimum, $a &lt; 0$ un maximum.</li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Idées d’exercices</h2>
+          <h2>Exemple guidé</h2>
+          <p>
+            Pour $f(x) = -2x^2 + 8x - 3$, on a $a = -2$ et $b = 8$. On calcule :
+            $$x_S = -\dfrac{8}{2 \times (-2)} = 2.$$
+          </p>
+          <p>
+            Puis $y_S = f(2) = -2(4) + 8(2) - 3 = -8 + 16 - 3 = 5$. Le sommet est
+            donc $S(2;\,5)$ et correspond à un maximum car $a &lt; 0$.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>À retenir absolument</h2>
           <ul class="list">
-            <li>Convertir un prix en euros en centimes et inversement.</li>
-            <li>Effectuer des calculs de durée avec des heures et des minutes décimales.</li>
-            <li>Résoudre un problème de mesure nécessitant des décimaux.</li>
+            <li>
+              Le sommet se lit directement dans la forme canonique. Pensez à y
+              passer si le calcul devient trop lourd.
+            </li>
+            <li>
+              Une erreur fréquente concerne le signe de $b$ : vérifiez
+              systématiquement $-b$ dans $x_S$.
+            </li>
+            <li>
+              Pour une parabole passant par un point $A(x_A, y_A)$, comparez $y_A$
+              et $y_S$ pour déduire si $A$ est au-dessus ou en dessous du sommet.
+            </li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
             <a class="button button--secondary" href="section-01.html">Section précédente</a>
             <a class="button" href="section-03.html">Section suivante</a>
           </div>
@@ -83,7 +140,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
           <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
           <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>
