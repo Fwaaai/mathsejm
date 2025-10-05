@@ -5,22 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 1 · Section 1 | Révisions Mathématiques</title>
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
   </head>
   <body>
     <div class="page">
       <aside class="sidebar" aria-label="Navigation des chapitres">
         <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
         <div class="sidebar__content">
-          <p class="sidebar__title">Programme de révision</p>
+          <p class="sidebar__title">Chapitres</p>
           <nav class="sidebar__nav">
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
-              Chapitre 1 &mdash; Nombres et calculs
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
-            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
-              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
             </a>
           </nav>
         </div>
