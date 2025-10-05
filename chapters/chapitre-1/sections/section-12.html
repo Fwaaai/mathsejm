@@ -75,58 +75,75 @@
         </header>
 
         <section class="section">
-          <h2>Cas à distinguer</h2>
-          <ul class="list">
-            <li>$\beta &gt; 0$ : $f(x)$ a le signe de $a$ pour tout réel.</li>
-            <li>$\beta = 0$ : $x = \alpha$ est une racine double, le signe de $f$ est celui de $a$ ailleurs.</li>
-            <li>$\beta &lt; 0$ : il existe deux racines $x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}$ si $a > 0$.</li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <h2>Tableau exemple</h2>
-          <p>Pour $f(x) = (x - 2)^2 - 9$ :</p>
-          <p>
-            Les racines sont $x = 2 \pm 3$, soit $x_1 = -1$ et $x_2 = 5$. Le
-            tableau de signe est :
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$-1$</th>
-                <th>$5$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$f(x)$</th>
-                <td>+</td>
-                <td>0</td>
-                <td>0</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>Signe</th>
-                <td colspan="2">$\geq 0$</td>
-                <td colspan="2">$\geq 0$</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="section">
-          <h2>Conseils pratiques</h2>
-          <ul class="list">
+          <h2>Méthodes</h2>
+          <ol class="list">
             <li>
-              Si $a < 0$ et $\beta < 0$, le signe devient négatif en dehors des
-              racines et positif entre elles.
+              <h3>$-\frac{\beta}{a} > 0$</h3>
+              <p>Prenons un exemple en forme canonique :</p>
+              <p>
+                $$f(x) = -2\left(x - \frac{5}{4}\right)^2 + \frac{49}{8}$$
+              </p>
+              <p>Pour trouver les racines, on résout :</p>
+              <p>
+                $$
+                -2\left(x - \frac{5}{4}\right)^2 + \frac{49}{8} = 0 \implies \left(x - \frac{5}{4}\right)^2 = \frac{49}{16}
+                $$
+              </p>
+              <p>
+                Donc :
+                $$
+                x - \frac{5}{4} = \pm \frac{7}{4} \implies x_1 = \frac{5}{4} - \frac{7}{4} = -\frac{1}{2}, \quad x_2 = \frac{5}{4} + \frac{7}{4} = 3
+                $$
+              </p>
+              <p>Les racines sont donc $-\frac{1}{2}$ et $3$.</p>
+              <p>On peut construire ce tableau de signe :</p>
+              <img src="/assets/images/tables/chapter1/table3.png" class="img" />
+              <p>Et ce tableau de variation :</p>
+              <img src="/assets/images/tables/chapter1/table4.png" class="img" />
             </li>
-            <li>Écrivez toujours les valeurs exactes des racines avant d’approximer.</li>
-            <li>Le signe de $f$ contrôle directement celui de l’inéquation $f(x) \geq 0$.</li>
-          </ul>
+
+            <li>
+              <h3>$-\frac{\beta}{a} = 0$</h3>
+              <p>Prenons un exemple en forme canonique :</p>
+              <p>
+                $$f(x) = -(x - 2)^2 + 0$$
+              </p>
+              <p>Résolvons :</p>
+              <p>
+                $$
+                -(x - 2)^2 = 0 \implies x = 2
+                $$
+              </p>
+              <p>Il y a donc une racine double en $x=2$.</p>
+              <p>Tableau de signe :</p>
+              <img src="/assets/images/tables/chapter1/table5.png" class="img" />
+              <p>Tableau de variation :</p>
+              <img src="/assets/images/tables/chapter1/table6.png" class="img" />
+            </li>
+
+            <li>
+              <h3>$-\frac{\beta}{a} < 0$</h3>
+              <p>Prenons un exemple en forme canonique :</p>
+              <p>
+                $$f(x) = \left(x + \frac{1}{2}\right)^2 + \frac{3}{4}$$
+              </p>
+              <p>On a :</p>
+              <p>
+                $$
+                \left(x + \frac{1}{2}\right)^2 = -\frac{3}{4}
+                $$
+              </p>
+              <p>Pas de racines réelles car le carré d’un réel ne peut pas être négatif.</p>
+              <p>Tableau de signe :</p>
+              <img src="/assets/images/tables/chapter1/table7.png" class="img" />
+              <p>Tableau de variation :</p>
+              <img src="/assets/images/tables/chapter1/table8.png" class="img" />
+            </li>
+          </ol>
+        </section>
+
+
+        <section class="section">
           <div class="section__actions">
             <a class="button button--secondary" href="section-11.html">Section précédente</a>
             <a class="button" href="section-13.html">Section suivante</a>
