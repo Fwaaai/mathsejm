@@ -75,58 +75,52 @@
         </header>
 
         <section class="section">
-          <h2>Méthode et exemples</h2>
+          <h2>Méthodes et exemples</h2>
           <ol class="list" type="1">
-            <li><h3>Graphiquememt</h3>
+            <li>
+              <h3>Graphiquement</h3>
               <p>Observons ce graphique.</p>
-              <img src="/assets/images/graphs/chapter1/graph3.png" />
+              <img src="/assets/images/graphs/chapter1/graph3.png" class="img" />
               <p>On peut dire que le sommet <i>semble</i> être à $S = (-6, -5)$.</p>
             </li>
-            <li><h3>Par calcul à partir de forme développée</h3>
+            <li>
+              <h3>Par calcul à partir de la forme développée</h3>
               <p>On sait que la formule pour trouver l'abscisse du sommet $x_S$ est $x_S = \frac{-b}{2a}$.</p>
-              <p>Par exemple, si on a la forme développée: $f(x) = -x^2+4x+5$.</p>
-              <p>On peut remplacer: </p>
+              <p>Par exemple, si l'on considère la forme développée $f(x) = -x^2 + 4x + 5$ :</p>
               <p>
                 \begin{aligned}
-                \alpha = -\frac{4}{2(-1)} = \frac{4}{2} = 2
+                  x_S = \alpha &= -\frac{4}{2(-1)} = \frac{4}{2} = 2
                 \end{aligned}
               </p>
-              <p>On a donc $x_S = 2$.</p>
-              <p>On doit chercher l'ordonnée du sommet $y_S$.</p>
-              <p>Il y a deux choix: </p>
+              <p>L'abscisse du sommet vaut donc $x_S = 2$.</p>
+              <p>Pour déterminer l'ordonnée du sommet $y_S$, on peut procéder de deux façons :</p>
               <ol class="list" type="a">
                 <li>
                   <h4>Par la formule de $\beta$</h4>
-                  <p>La formule de $\beta$ est $y_S = \beta = -\frac{\Delta}{4a} = -\frac{\beta^2-4ac}{4a}$.</p>
-                  <p>On remplace:</p>
-                  <p>
-                    $\beta = -\frac{16-4(-1)(5)}{4(-1)} = \frac{36}{4} = 9$
-                  </p>
-                  <p>On a donc $y_S = 9$.</p>
-                  <p>Alors, le sommet se trouve à $S = (2, 9)$.</p>
-                </li>
-                <li>
-                  <h4>Par complétion dans $f(x)$</h4>
-                  <p>On peut aussi trouver $y_S$ avec $f(x_S)$.</p>
-                  <p>Comme la forme développée nous est donnée:</p>
-                  <p>
-                    $f(x)=-x^2+4x+5$
-                  </p>
-                  <p>On peut remplacer par les valeurs.</p>
+                  <p>La formule donne $y_S = \beta = -\frac{\Delta}{4a}$ avec $\Delta = b^2 - 4ac$.</p>
                   <p>
                     \begin{aligned}
-                      f(2) &= -(2)^2+4(2)+5 \\
-                      &= -4+8+5 \\
-                      &= 9
+                      \Delta &= 4^2 - 4(-1)(5) = 36, \\
+                      \beta &= -\frac{36}{4(-1)} = 9.
                     \end{aligned}
                   </p>
-                  <p>On a donc $y_S = 9$.</p>
-                  <p>Alors, le sommet se trouve à $S = (2, 9)$.</p>
+                  <p>On obtient ainsi $y_S = 9$ et donc $S = (2, 9)$.</p>
                 </li>
-
+                <li>
+                  <h4>Par substitution dans $f(x)$</h4>
+                  <p>On peut aussi évaluer $f(x_S)$.</p>
+                  <p>Comme $f(x) = -x^2 + 4x + 5$ :</p>
+                  <p>
+                    \begin{aligned}
+                      f(2) &= -(2)^2 + 4(2) + 5 \\
+                           &= -4 + 8 + 5 \\
+                           &= 9.
+                    \end{aligned}
+                  </p>
+                  <p>On retrouve $y_S = 9$, donc $S = (2, 9)$.</p>
+                </li>
               </ol>
             </li>
-
           </ol>
         </section>
         <section class="section">

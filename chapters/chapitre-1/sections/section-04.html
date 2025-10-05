@@ -75,13 +75,13 @@
         </header>
 
         <section class="section">
-          <p>On couvre la méthode qui fonctionne à tous les coups, et les méthodes qui peuvent raccourcir le calcul.</p>
-          <ol class="list" type ="1">
+          <h2>Méthodes et exemples</h2>
+          <p>Cette section présente la méthode générale pour trouver les racines d’un trinôme, ainsi que quelques astuces qui permettent de simplifier les calculs.</p>
+          <ol class="list" type="1">
             <li>
               <h3>Cas régulier</h3>
-              <p> Trouver les racines d’un trinome de la forme $ax^2 + bx + c$ revient à résoudre l'équation $ax^2 + bx + c = 0$.
-              </p>
-              <p>On rappelle la formule On rappelle la formule pour résoudre une équation du second degré:</p>
+              <p>Trouver les racines d’un trinôme de la forme $ax^2 + bx + c$ revient à résoudre l'équation $ax^2 + bx + c = 0$.</p>
+              <p>On rappelle la formule pour résoudre une équation du second degré :</p>
               <p>
                 $\Delta = b^2 - 4ac$
               </p>
@@ -92,55 +92,34 @@
                 \end{aligned}</p>
               <p>On résout:</p>
               <p>
-                \begin{aligned}\Delta &= b^2 - 4ac \\       &= 4^2 - 4(-1)(5) \\       &= 16 + 20 \\       &= 36 \\[6pt]x_1 &= \frac{-b + \sqrt{\Delta}}{2a}      = \frac{-4 + \sqrt{36}}{2(-1)}      = \frac{-4 + 6}{-2}      = \frac{2}{-2}      = -1 \\[6pt]x_2 &= \frac{-b - \sqrt{\Delta}}{2a}      = \frac{-4 - \sqrt{36}}{2(-1)}      = \frac{-4 - 6}{-2}      = \frac{-10}{-2}      = 5\end{aligned}
+                \begin{aligned}
+                  \Delta &= b^2 - 4ac = 4^2 - 4(-1)(5) = 16 + 20 = 36, \\n                  x_1 &= \frac{-b + \sqrt{\Delta}}{2a} = \frac{-4 + \sqrt{36}}{2(-1)} = \frac{-4 + 6}{-2} = -1, \\n                  x_2 &= \frac{-b - \sqrt{\Delta}}{2a} = \frac{-4 - \sqrt{36}}{2(-1)} = \frac{-4 - 6}{-2} = 5.\n                \end{aligned}
               </p>
               <p>Les racines sont donc $-1$ et $5$.</p>
             </li>
             <li>
               <h3>Cas particuliers</h3>
-              <p>
-                On a quelques cas où la tâche peut être simplifiée grâce à des propriétés.
-              </p>
+              <p>Certains cas particuliers permettent de conclure plus rapidement.</p>
               <ol class="list" type="a">
                 <li>
                   <h4>$\Delta = 0$</h4>
+                  <p>Si, au cours de la résolution, on obtient $\Delta = 0$, alors l'équation admet une racine double donnée par $x = \frac{-b}{2a}$.</p>
+                  <p>Par exemple, pour $f(x) = x^2 - 2x + 1$ :</p>
                   <p>
-                    Si, au cours de la résolution de l'équation, on s'aperçoit que $\Delta = 0$, alors on a une racine double qui sera donnée par $x = \frac{-b}{2a}$.
+                    \begin{aligned}
+                      \Delta &= (-2)^2 - 4(1)(1) = 0, \\n                      x &= \frac{-(-2)}{2(1)} = 1.\n                    \end{aligned}
                   </p>
-                  <p>Par exemple, pour: $f(x) = x^2 - 2x + 1$, on a:</p>
-                  <p>\begin{aligned}\Delta &= b^2 - 4ac \\       &= (-2)^2 - 4(1)(1) \\       &= 4 - 4 \\       &= 0 \\[6pt]x &= \frac{-b}{2a}    = \frac{-(-2)}{2(1)}    = \frac{2}{2}    = 1\end{aligned}</p>
-                  <br>
-                  <p>La racine double pour cette fonction est donc 1.</p>
+                  <p>La racine double pour cette fonction est donc $1$.</p>
                 </li>
                 <li>
                   <h4>$a+b+c = 0$</h4>
-                  <p>
-                    Si $a +b+c=0$, la fonction aura deux racines:
-                  </p>
-                  <p>$x_1=1, x_2=\frac{c}{a}$</p>
-                  <br>
-                  <p>Par exemple, pour $f(x)=2x^2-3x+1$, on a:</p>
-                  <p>
-                    $a + b + c = 2 - 3 + 1 = 0$
-                  </p>
-                  <p>$x_1 = 1, \; x_2 = \frac{c}{a} = \frac{1}{2}$</p>
-                  <br>
-                  <p>Les racines de cette fonction sont 1 et $\frac{1}{2}$.</p>
+                  <p>Si $a + b + c = 0$, alors les racines sont $x_1 = 1$ et $x_2 = \frac{c}{a}$.</p>
+                  <p>Par exemple, pour $f(x) = 2x^2 - 3x + 1$, on obtient $a + b + c = 2 - 3 + 1 = 0$ ; on a donc $x_1 = 1$ et $x_2 = \frac{1}{2}$.</p>
                 </li>
                 <li>
                   <h4>$a-b+c=0, \quad b=a+c$</h4>
-                  <p>
-                    Si $a-b+c=0$ ou $b=a+c$, l’équation aura deux solutions:
-                  </p>
-                  <p>$x_1=-1, x_2=-\frac{c}{a}$</p>
-                  <br>
-                  <p>Par exemple, pour $f(x)=2x^2+3x+1$, on a:</p>
-                  <p>
-                    $a-b+c=2+3-1=0$
-                  </p>
-                  <p>$x_1=-1, \; x_2=-\frac{c}{a} = -\frac{1}{2}$</p>
-                  <br>
-                  <p>Les racines de cette fonction sont $-1$ et $-\frac{1}{2}$.
+                  <p>Si $a - b + c = 0$ (ce qui équivaut à $b = a + c$), alors les solutions sont $x_1 = -1$ et $x_2 = -\frac{c}{a}$.</p>
+                  <p>Par exemple, pour $f(x) = 2x^2 + 3x + 1$, on observe que $a - b + c = 2 - 3 + 1 = 0$ ; les racines valent donc $x_1 = -1$ et $x_2 = -\frac{1}{2}$.</p>
                 </li>
               </ol>
           </ol>
