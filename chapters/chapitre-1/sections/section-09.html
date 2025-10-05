@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-root="../../.." data-section="section-09">
+<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-09">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,6 +16,10 @@
             <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
             <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-1" href="#">
               Chapitre 1 &mdash; Nombres et calculs
+              <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
+            </a>
+            <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
+              Chapitre 2 &mdash; Géométrie et mesures
               <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
             </a>
           </nav>
@@ -79,9 +83,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow">Chapitre 1</p>
-          <h2 class="section-menu__title" id="section-menu-title">Choisissez une section</h2>
-          <p class="section-menu__subtitle">Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Nombres et calculs</p>
+          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>
