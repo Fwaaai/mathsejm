@@ -60,11 +60,10 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 2</p>
-          <h1 class="intro__title">Sommet à partir de la forme développée</h1>
+          <h1 class="intro__title">Sommet à partir de la forme développée/graphique</h1>
           <p class="intro__lead">
             Calculer les coordonnées du sommet $S(x_S, y_S)$ d’une parabole
-            définie par $f(x) = ax^2 + bx + c$ en exploitant la dérivation ou les
-            formules issues du calcul littéral.
+            définie par $f(x) = ax^2 + bx + c$ en exploitant la formule pour trouver $\alpha$ et $\beta$. 
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -76,55 +75,69 @@
         </header>
 
         <section class="section">
-          <h2>Formules indispensables</h2>
+          <h2>Objectifs</h2>
           <ul class="list">
-            <li>Le sommet a pour abscisse $x_S = -\dfrac{b}{2a}$ lorsque $a \neq 0$.</li>
-            <li>Son ordonnée se calcule en évaluant $y_S = f(x_S)$.</li>
-            <li>
-              Le sommet correspond aussi au point critique où $f'(x) = 0$ :
-              $f'(x) = 2ax + b$ et $2ax_S + b = 0$ redonne $x_S = -\dfrac{b}{2a}$.
-            </li>
+            <li>Savoir trouver les coordonnées du sommet $S(x_S, y_S)$ à partir de la forme développée</li>
+            <li>Savoir trouver les coordonnées du sommet $S(x_S, y_S)$ à partir d’un graphique</li>
           </ul>
         </section>
 
         <section class="section">
           <h2>Démarche structurée</h2>
-          <ol class="list">
-            <li>Identifier les coefficients $a$, $b$ et $c$ de la forme développée.</li>
-            <li>Calculer $x_S = -\dfrac{b}{2a}$.</li>
-            <li>Remplacer $x$ par $x_S$ dans $f(x)$ pour obtenir $y_S$.</li>
-            <li>Interpréter le signe de $a$ : $a &gt; 0$ donne un minimum, $a &lt; 0$ un maximum.</li>
+          <ol class="list" type="1">
+            <li><h3>Graphiquememt</h3>
+              <p>Observons ce graphique.</p>
+              <img src="/assets/images/graphs/chapter1/graph3.png" />
+              <p>On peut dire que le sommet <i>semble</i> être à $S = (-6, -5)$.</p>
+            </li>
+            <li><h3>Par calcul à partir de forme développée</h3>
+              <p>On sait que la formule pour trouver l'abscisse du sommet $x_S$ est $x_S = \frac{-b}{2a}$.</p>
+              <p>Par exemple, si on a la forme développée: $f(x) = -x^2+4x+5$.</p>
+              <p>On peut remplacer: </p>
+              <p>
+                \begin{aligned}
+                \alpha = -\frac{4}{2(-1)} = \frac{4}{2} = 2
+                \end{aligned}
+              </p>
+              <p>On a donc $x_S = 2$.</p>
+              <p>On doit chercher l'ordonnée du sommet $y_S$.</p>
+              <p>Il y a deux choix: </p>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Par la formule de $\beta$</h4>
+                  <p>La formule de $\beta$ est $y_S = \beta = -\frac{\Delta}{4a} = -\frac{\beta^2-4ac}{4a}$.</p>
+                  <p>On remplace:</p>
+                  <p>
+                    $\beta = -\frac{16-4(-1)(5)}{4(-1)} = \frac{36}{4} = 9$
+                  </p>
+                  <p>On a donc $y_S = 9$.</p>
+                  <p>Alors, le sommet se trouve à $S = (2, 9)$.</p>
+                </li>
+                <li>
+                  <h4>Par complétion dans $f(x)$</h4>
+                  <p>On peut aussi trouver $y_S$ avec $f(x_S)$.</p>
+                  <p>Comme la forme développée nous est donnée:</p>
+                  <p>
+                    $f(x)=-x^2+4x+5$
+                  </p>
+                  <p>On peut remplacer par les valeurs.</p>
+                  <p>
+                    \begin{aligned}
+                      f(2) &= -(2)^2+4(2)+5 \\
+                      &= -4+8+5 \\
+                      &= 9
+                    \end{aligned}
+                  </p>
+                  <p>On a donc $y_S = 9$.</p>
+                  <p>Alors, le sommet se trouve à $S = (2, 9)$.</p>
+                </li>
+
+              </ol>
+            </li>
+
           </ol>
         </section>
-
         <section class="section">
-          <h2>Exemple guidé</h2>
-          <p>
-            Pour $f(x) = -2x^2 + 8x - 3$, on a $a = -2$ et $b = 8$. On calcule :
-            $$x_S = -\dfrac{8}{2 \times (-2)} = 2.$$
-          </p>
-          <p>
-            Puis $y_S = f(2) = -2(4) + 8(2) - 3 = -8 + 16 - 3 = 5$. Le sommet est
-            donc $S(2;\,5)$ et correspond à un maximum car $a &lt; 0$.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>À retenir absolument</h2>
-          <ul class="list">
-            <li>
-              Le sommet se lit directement dans la forme canonique. Pensez à y
-              passer si le calcul devient trop lourd.
-            </li>
-            <li>
-              Une erreur fréquente concerne le signe de $b$ : vérifiez
-              systématiquement $-b$ dans $x_S$.
-            </li>
-            <li>
-              Pour une parabole passant par un point $A(x_A, y_A)$, comparez $y_A$
-              et $y_S$ pour déduire si $A$ est au-dessus ou en dessous du sommet.
-            </li>
-          </ul>
           <div class="section__actions">
             <a class="button button--secondary" href="section-01.html">Section précédente</a>
             <a class="button" href="section-03.html">Section suivante</a>
