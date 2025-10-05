@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-03">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-03"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 3</p>
-          <h1 class="intro__title">Axe de symétrie (forme développée)</h1>
+          <h1 class="intro__title">Axe de symétrie à partir de la forme développée</h1>
           <p class="intro__lead">
             Déterminer l’équation de l’axe de symétrie d’une parabole définie par
-            $f(x) = ax^2 + bx + c$ en exploitant les propriétés du sommet.
+            $f(x) = ax^2 + bx + c$, en mobilisant le lien avec le sommet, la
+            dérivation et la forme canonique.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,52 +82,196 @@
         </header>
 
         <section class="section">
-          <h2>À savoir</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
             <li>
-              L’axe de symétrie passe par le sommet $S(x_S, y_S)$ et est parallèle
-              à l’axe des ordonnées.
+              Calculer l’équation de l’axe de symétrie en partant de la forme
+              développée.
             </li>
             <li>
-              Son équation est $x = x_S$ avec $x_S = -\dfrac{b}{2a}$ lorsque $f(x)
-              = ax^2 + bx + c$.
+              Utiliser la notion de sommet pour relier axe et forme canonique.
             </li>
             <li>
-              Les points situés de part et d’autre de l’axe ont des abscisses
-              opposées par rapport à $x_S$ et la même ordonnée :
-              $$f(x_S + h) = f(x_S - h).$$
+              Exploiter la dérivée pour justifier la position de l’axe.
+            </li>
+            <li>
+              Vérifier graphiquement l’alignement des points symétriques.
             </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Avec $f(x) = x^2 - 6x + 5$, on calcule $x_S = -\dfrac{-6}{2} = 3$.
-            L’axe de symétrie a donc pour équation $x = 3$. On vérifie :
-            $$f(1) = 0 \quad \text{et} \quad f(5) = 0,$$
-            les points $(1,0)$ et $(5,0)$ sont symétriques par rapport à cet axe.
-          </p>
-          <div class="graph-placeholder" role="img" aria-label="Graphique à insérer représentant une parabole avec son axe de symétrie">
-            Graphique à insérer ici.
-          </div>
+          <h2>Méthodes pas à pas</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Via la formule de l’abscisse du sommet</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Calcul de $x_S$</h4>
+                  <p>
+                    L’abscisse du sommet vaut $x_S = -\dfrac{b}{2a}$. L’axe de
+                    symétrie a donc pour équation $x = x_S$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Justification</h4>
+                  <p>
+                    Tout point $A(x_A, y_A)$ possède un symétrique $A'(x_{A'}, y_A)$
+                    tel que $x_{A'} = 2x_S - x_A$. Les deux abscisses sont à égale
+                    distance de $x_S$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Par passage en forme canonique</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Complétion du carré</h4>
+                  <p>
+                    On écrit $f(x) = a(x - \alpha)^2 + \beta$ avec
+                    $\alpha = -\dfrac{b}{2a}$. Dans cette forme, l’axe est
+                    immédiatement $x = \alpha$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Lecture des paramètres</h4>
+                  <p>
+                    La forme canonique montre que lorsque $x$ s’éloigne de
+                    $\alpha$, $f(x)$ dépend seulement de $(x - \alpha)^2$. Le
+                    carré étant invariant par symétrie, l’axe est unique.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Approche par dérivation</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Analyse de la dérivée</h4>
+                  <p>
+                    $f'(x) = 2ax + b$ s’annule pour $x = -\dfrac{b}{2a}$. Cette
+                    valeur est la position du maximum ou du minimum.
+                  </p>
+                </li>
+                <li>
+                  <h4>Symétrie des variations</h4>
+                  <p>
+                    $f'$ est négative à gauche de $x_S$ (si $a &gt; 0$) et positive à
+                    droite, ce qui impose une symétrie des pentes autour de cet
+                    axe vertical.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Lecture graphique et validation</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Observation</h4>
+                  <p>
+                    Sur un graphique, repérer le sommet puis tracer mentalement la
+                    droite verticale passant par lui.
+                  </p>
+                  <!-- Graph suggestion: parabole ouverte vers le bas avec sommet en (1,4) et points symétriques en (-1,0) et (3,0) -->
+                </li>
+                <li>
+                  <h4>Points symétriques</h4>
+                  <p>
+                    Vérifier que deux points à la même hauteur sont alignés en
+                    miroir par rapport à cette droite.
+                  </p>
+                </li>
+                <li>
+                  <h4>Comparaison aux calculs</h4>
+                  <p>
+                    Reporter sur l’axe des abscisses la valeur calculée pour
+                    s’assurer de la cohérence.
+                  </p>
+                </li>
+              </ol>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Bonnes pratiques</h2>
-          <ul class="list">
-            <li>Calculez d’abord le sommet à l’aide de la section précédente.</li>
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
             <li>
-              Utilisez la symétrie pour retrouver des points supplémentaires sur
-              la courbe à partir d’un tableau de valeurs.
+              <h3>Trinôme avec coefficients entiers</h3>
+              <p>
+                Pour $f(x) = 2x^2 - 4x + 5$, on obtient $x_S = -\dfrac{-4}{4} = 1$.
+                L’axe est donc $x = 1$.
+              </p>
             </li>
             <li>
-              En contrôle, mentionnez toujours l’équation $x = x_S$ pour justifier
-              votre résultat.
+              <h3>Trinôme avec fraction</h3>
+              <p>
+                $f(x) = \dfrac{1}{3}x^2 + x - 6$ : $x_S = -\dfrac{1}{2/3} = -\dfrac{3}{2}$.
+                L’axe est $x = -\dfrac{3}{2}$.
+              </p>
+            </li>
+            <li>
+              <h3>Validation par symétrie</h3>
+              <p>
+                Soit $f(x) = -x^2 + 4x - 1$. On calcule $x_S = 2$. Les points
+                $A(0, -1)$ et $B(4, -1)$ sont symétriques par rapport à $x = 2$.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils pratiques</h2>
+          <ul class="list">
+            <li>
+              L’axe de symétrie passe toujours par le sommet : calculez l’un pour
+              obtenir l’autre.
+            </li>
+            <li>
+              En cas de doute, réalisez un tableau de variations : le changement
+              de signe de $f'$ identifie la valeur clé.
+            </li>
+            <li>
+              Sur un graphique, utilisez la grille pour mesurer la distance entre
+              des points de même ordonnée.
+            </li>
+            <li>
+              Si la parabole est donnée en forme factorisée, l’axe se trouve à
+              mi-chemin entre les deux racines (quand elles existent).
             </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Confondre axe et ordonnée du sommet</h3>
+              <p>
+                L’axe est une droite verticale notée $x = \text{constante}$, pas une
+                valeur d’ordonnée.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier le facteur $2a$</h3>
+              <p>
+                La division par $2a$ dans $x_S = -\dfrac{b}{2a}$ est essentielle.
+                Une erreur sur $a$ déplace entièrement l’axe.
+              </p>
+            </li>
+            <li>
+              <h3>Se fier uniquement au graphique</h3>
+              <p>
+                Un tracé imprécis peut donner une valeur arrondie. Utilisez-le
+                pour contrôler, pas pour conclure.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-02.html">Section précédente</a>
+            <a class="button button--secondary" href="section-02.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-04.html">Section suivante</a>
           </div>
         </section>
@@ -128,15 +279,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

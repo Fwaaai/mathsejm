@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-11">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-11"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,11 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 11</p>
-          <h1 class="intro__title">Tableau de variation (forme canonique)</h1>
+          <h1 class="intro__title">Tableau de variation à partir de la forme canonique</h1>
           <p class="intro__lead">
-            Établir le tableau de variation à partir de
-            $f(x) = a(x - \alpha)^2 + \beta$ en utilisant la lecture directe du
-            sommet.
+            Utiliser directement la forme canonique $f(x) = a(x - \alpha)^2 + \beta$
+            pour établir un tableau de variation précis et justifié en quelques
+            étapes.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -76,56 +82,130 @@
         </header>
 
         <section class="section">
-          <h2>Méthode</h2>
-          <ol class="list">
-            <li>Identifier $\alpha$ et $\beta$ dans la forme canonique.</li>
-            <li>Noter que $f(x) - \beta = a(x - \alpha)^2 \geq 0$ si $a &gt; 0$.</li>
-            <li>En déduire que $f(x)$ atteint sa valeur extrême $\beta$ au point $x = \alpha$.</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
+            <li>Lire le sens de variation immédiatement grâce au signe de $a$.</li>
+            <li>Placer le sommet $(\alpha, \beta)$ au centre du tableau.</li>
+            <li>Déterminer les limites lorsque $x \to \pm\infty$.</li>
+            <li>
+              Rédiger un tableau de variation clair et exploitable pour les
+              inéquations ou études de fonctions.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Étapes méthodiques</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Identifier les paramètres</h3>
+              <p>
+                Dans $f(x) = a(x - \alpha)^2 + \beta$, notez la valeur de $a$ et les
+                coordonnées du sommet $(\alpha, \beta)$.
+              </p>
+            </li>
+            <li>
+              <h3>Déterminer le sens de variation</h3>
+              <p>
+                \begin{cases}
+                  a &gt; 0 &\Rightarrow f \text{ décroît sur } (-\infty, \alpha] \text{ puis croît sur } [\alpha, +\infty) \\
+                  a &lt; 0 &\Rightarrow f \text{ croît sur } (-\infty, \alpha] \text{ puis décroît sur } [\alpha, +\infty)
+                \end{cases}
+              </p>
+            </li>
+            <li>
+              <h3>Calculer la valeur extrême</h3>
+              <p>
+                La valeur $\beta$ est le minimum (si $a &gt; 0$) ou le maximum (si $a &lt; 0$).
+              </p>
+            </li>
+            <li>
+              <h3>Déterminer les limites</h3>
+              <p>
+                $\lim\limits_{x \to \pm\infty} f(x)$ se lit directement : le terme
+                $a(x - \alpha)^2$ domine.
+              </p>
+              <ul class="list">
+                <li>Si $a &gt; 0$, $f(x) \to +\infty$ lorsque $x \to \pm\infty$.</li>
+                <li>Si $a &lt; 0$, $f(x) \to -\infty$ lorsque $x \to \pm\infty$.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Compléter le tableau</h3>
+              <p>
+                Reporter les informations précédentes sur les trois lignes : valeurs
+                de $x$, sens de variation et valeurs de $f(x)$.
+              </p>
+              <!-- Graph suggestion: parabole $f(x)=-(x-1)^2+4$ illustrant un maximum central -->
+            </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Tableau standard</h2>
-          <p>Pour $a &gt; 0$ :</p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$\alpha$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$f(x)$</th>
-                <td>$+\infty$</td>
-                <td>$\beta$ (minimum)</td>
-                <td>$+\infty$</td>
-              </tr>
-              <tr>
-                <th>Variation</th>
-                <td>décroît</td>
-                <td></td>
-                <td>croît</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2>Exemple entièrement détaillé</h2>
           <p>
-            Pour $a &lt; 0$, remplacez $+\infty$ par $-\infty$ dans la première
-            ligne et inversez les sens de variation.
+            Pour $f(x) = -2(x - 3)^2 + 5$ :
+          </p>
+          <ul class="list">
+            <li>$a = -2 &lt; 0$ : $f$ croît puis décroît.</li>
+            <li>Sommet $S(3; 5)$ : valeur maximale $5$.</li>
+            <li>Limites : $f(x) \to -\infty$ quand $x \to \pm\infty$.</li>
+          </ul>
+          <p>
+            \begin{array}{c|ccc}
+              x & -\infty & 3 & +\infty \\
+              \hline
+              f(x) & -\infty & \nearrow 5 & \searrow -\infty
+            \end{array}
           </p>
         </section>
 
         <section class="section">
-          <h2>Illustration</h2>
-          <p>
-            Avec $f(x) = -2(x - 3)^2 + 5$, on lit $\alpha = 3$, $\beta = 5$ et
-            $a = -2$. Le tableau montre une croissance de $-\infty$ à $3$ puis une
-            décroissance après $3$, la valeur maximale étant $5$.
-          </p>
+          <h2>Cas particuliers</h2>
+          <ul class="list">
+            <li>
+              Si $a = 0$, la fonction n’est plus quadratique : vérifier la consigne.
+            </li>
+            <li>
+              Si l’étude est restreinte à un intervalle $[m, M]$, calculez également
+              $f(m)$ et $f(M)$.
+            </li>
+            <li>
+              Lorsque $\alpha$ est fractionnaire, laissez la valeur exacte dans le
+              tableau pour conserver la précision.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Se tromper de sens</h3>
+              <p>
+                Inverser les flèches revient à mal interpréter le signe de $a$. Faites
+                un croquis rapide pour vérifier.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier d’indiquer $\beta$</h3>
+              <p>
+                Le tableau doit montrer explicitement la valeur extrême prise par la
+                fonction.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre sommet et racines</h3>
+              <p>
+                Le sommet n’est pas forcément un point d’intersection avec l’axe des
+                abscisses.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-10.html">Section précédente</a>
+            <a class="button button--secondary" href="section-10.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-12.html">Section suivante</a>
           </div>
         </section>
@@ -133,15 +213,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

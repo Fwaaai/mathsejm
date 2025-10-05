@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-05">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-05"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 5</p>
-          <h1 class="intro__title">Tableau de variation (forme développée)</h1>
+          <h1 class="intro__title">Tableau de variation à partir de la forme développée</h1>
           <p class="intro__lead">
-            Construire le tableau de variation de $f(x) = ax^2 + bx + c$ grâce à
-            l’étude du signe de $a$ et des coordonnées du sommet.
+            Construire un tableau de variation complet pour la fonction
+            polynomiale $f(x) = ax^2 + bx + c$ en identifiant le sommet, la
+            concavité et les limites aux bornes de l’intervalle considéré.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,62 +82,208 @@
         </header>
 
         <section class="section">
-          <h2>Étapes clés</h2>
-          <ol class="list">
-            <li>Calculer le sommet $S(x_S, y_S)$ avec $x_S = -\dfrac{b}{2a}$.</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
             <li>
-              Déterminer la concavité : si $a &gt; 0$, la parabole est ouverte vers
-              le haut (minimum) ; si $a &lt; 0$, vers le bas (maximum).
+              Déterminer le sens de variation d’un trinôme à partir de la forme
+              développée.
             </li>
             <li>
-              Remplir le tableau avec les limites $-\infty$ et $+\infty$ et la
-              valeur en $x_S$.
+              Calculer précisément les coordonnées du sommet pour compléter le
+              tableau.
+            </li>
+            <li>
+              Interpréter graphiquement la concavité et les limites.
+            </li>
+            <li>
+              Rédiger un tableau de variation lisible et correctement justifié.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Procédure détaillée</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Identifier les coefficients et la concavité</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Lecture de $a$</h4>
+                  <p>
+                    Si $a &gt; 0$, la parabole est ouverte vers le haut : elle décroît
+                    puis croît. Si $a &lt; 0$, elle est ouverte vers le bas : elle croît
+                    puis décroît.
+                  </p>
+                </li>
+                <li>
+                  <h4>Conséquences sur le tableau</h4>
+                  <p>
+                    La première colonne indique le sens de variation avant et
+                    après l’abscisse du sommet.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Calculer le sommet</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Abscisse</h4>
+                  <p>
+                    $x_S = -\dfrac{b}{2a}$. C’est la valeur centrale du tableau.
+                  </p>
+                </li>
+                <li>
+                  <h4>Ordonnée</h4>
+                  <p>
+                    $y_S = f(x_S)$ se place dans la ligne des images pour indiquer
+                    la valeur extrême (minimum ou maximum).
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Déterminer les limites</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Vers $-\infty$</h4>
+                  <p>
+                    $\lim\limits_{x \to -\infty} f(x) = +\infty$ si $a &gt; 0$ et
+                    $-\infty$ si $a &lt; 0$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Vers $+\infty$</h4>
+                  <p>
+                    $\lim\limits_{x \to +\infty} f(x) = +\infty$ si $a &gt; 0$ et
+                    $-\infty$ si $a &lt; 0$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Compléter le tableau</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Ligne des $x$</h4>
+                  <p>
+                    Indiquer $-\infty$, $x_S$ puis $+\infty$ (ou les bornes de
+                    l’intervalle étudié si la fonction est restreinte).
+                  </p>
+                </li>
+                <li>
+                  <h4>Ligne des variations</h4>
+                  <p>
+                    Utiliser des flèches descendantes puis montantes (ou l’inverse)
+                    selon le signe de $a$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Ligne des $f(x)$</h4>
+                  <p>
+                    Placer $+\infty$ ou $-\infty$ aux extrémités, et $y_S$ au centre.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Vérification graphique</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Coût d’un dessin rapide</h4>
+                  <p>
+                    Tracer une esquisse de la parabole pour confirmer le sens des
+                    variations.
+                  </p>
+                  <!-- Graph suggestion: parabole ouverte vers le haut avec sommet en (1,-4) pour illustrer variation décroissante puis croissante -->
+                </li>
+                <li>
+                  <h4>Comparaison</h4>
+                  <p>
+                    Vérifier que l’extrémum indiqué dans le tableau correspond bien
+                    au sommet repéré sur le graphique.
+                  </p>
+                </li>
+              </ol>
             </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Modèle de tableau</h2>
-          <p>Pour $f(x) = ax^2 + bx + c$ avec $a &gt; 0$ :</p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$x_S$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$f(x)$</th>
-                <td>\( +\infty \)</td>
-                <td>$y_S$ (minimum)</td>
-                <td>\( +\infty \)</td>
-              </tr>
-              <tr>
-                <th>Variation</th>
-                <td>\(\searrow\)</td>
-                <td></td>
-                <td>\(\nearrow\)</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2>Exemple complet</h2>
           <p>
-            Pour $a &lt; 0$, inversez les tendances : $f(x)$ décroît jusqu’au sommet
-            puis croît vers $-\infty$.
+            Pour $f(x) = -x^2 + 4x - 1$ :
+          </p>
+          <ul class="list">
+            <li>$a = -1 &lt; 0$ donc la fonction croît puis décroît.</li>
+            <li>$x_S = -\dfrac{4}{-2} = 2$ et $y_S = f(2) = 3$.</li>
+            <li>
+              Limites : $\lim\limits_{x \to \pm\infty} f(x) = -\infty$.
+            </li>
+          </ul>
+          <p>
+            Le tableau de variation est donc :
+          </p>
+          <p>
+            \begin{array}{c|ccc}
+              x & -\infty & 2 & +\infty \\
+              \hline
+              f(x) & -\infty & \nearrow 3 & \searrow -\infty
+            \end{array}
           </p>
         </section>
 
         <section class="section">
-          <h2>Application</h2>
-          <p>
-            Soit $f(x) = x^2 - 4x + 1$. On trouve $x_S = 2$ et $y_S = f(2) = -3$.
-            Comme $a = 1 &gt; 0$, le tableau indique une décroissance de $-\infty$ à
-            $2$ puis une croissance après $2$.
-          </p>
+          <h2>Conseils supplémentaires</h2>
+          <ul class="list">
+            <li>
+              Pour une étude sur un intervalle borné, adaptez les extrémités du
+              tableau et calculez les images correspondantes.
+            </li>
+            <li>
+              Reliez systématiquement le sens des variations à l’étude du signe de
+              $f'(x) = 2ax + b$.
+            </li>
+            <li>
+              En contrôle, rédigez une phrase d’introduction : «&nbsp;Comme $a &lt; 0$,
+              la fonction $f$ est croissante puis décroissante.&nbsp;»
+            </li>
+            <li>
+              Si la forme canonique est déjà connue, la lecture du sommet devient
+              immédiate.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs courantes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Inverser les flèches</h3>
+              <p>
+                Se tromper sur le signe de $a$ conduit à un tableau inversé.
+                Vérifiez l’ouverture de la parabole.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier le calcul de $y_S$</h3>
+              <p>
+                Sans l’ordonnée du sommet, le tableau perd l’information clé sur la
+                valeur extrême.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre $x_S$ avec une racine</h3>
+              <p>
+                Le sommet n’est pas nécessairement sur l’axe des abscisses ; il ne
+                faut pas y inscrire $0$ systématiquement.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-04.html">Section précédente</a>
+            <a class="button button--secondary" href="section-04.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-06.html">Section suivante</a>
           </div>
         </section>
@@ -138,15 +291,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

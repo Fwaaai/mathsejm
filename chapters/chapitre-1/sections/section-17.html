@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-17">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-17"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,8 +68,8 @@
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 17</p>
           <h1 class="intro__title">Recherche de racines évidentes</h1>
           <p class="intro__lead">
-            Repérer rapidement une racine rationnelle d’un polynôme de degré
-            inférieur ou égal à 3 pour amorcer une factorisation.
+            Identifier rapidement une racine évidente pour un polynôme de degré au
+            plus $3$ afin de simplifier sa factorisation ou sa résolution.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,38 +81,125 @@
         </header>
 
         <section class="section">
-          <h2>Stratégies</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
+            <li>Comprendre la notion de racine évidente (entière ou rationnelle simple).</li>
+            <li>Tester méthodiquement les valeurs candidates.</li>
+            <li>Confirmer qu’une valeur est racine en évaluant le polynôme.</li>
+            <li>Utiliser la racine trouvée pour factoriser.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Procédure de recherche</h2>
+          <ol class="list" type="1">
             <li>
-              Tester les diviseurs du terme constant : si $P(x) = a_n x^n + \cdots + a_0$, une racine rationnelle $\dfrac{p}{q}$ vérifie $p \mid a_0$ et $q \mid a_n$.
+              <h3>Normaliser le polynôme</h3>
+              <p>
+                S’assurer que le polynôme est écrit sous la forme $P(x) = a_n x^n + \ldots + a_0$.
+              </p>
             </li>
-            <li>Essayer les valeurs simples $x = -2, -1, 0, 1, 2$ en priorité.</li>
-            <li>Utiliser la valeur de $P(0) = a_0$ pour éliminer des candidats.</li>
-          </ul>
+            <li>
+              <h3>Lister les candidats possibles</h3>
+              <p>
+                Pour un polynôme à coefficients entiers, les racines rationnelles
+                éventuelles sont de la forme $\dfrac{d}{c}$ où $d$ divise $a_0$ et $c$
+                divise $a_n$.
+              </p>
+            </li>
+            <li>
+              <h3>Évaluer les candidats</h3>
+              <p>
+                Calculer $P(x)$ pour chaque candidat. Si $P(x) = 0$, la valeur est
+                racine évidente.
+              </p>
+            </li>
+            <li>
+              <h3>Utiliser les symétries</h3>
+              <p>
+                Pour certains polynômes, tester les valeurs $\pm 1$, $\pm 2$ suffit
+                souvent.
+              </p>
+            </li>
+            <li>
+              <h3>Factoriser</h3>
+              <p>
+                Une fois la racine trouvée, factoriser avec $(x - r)$ et résoudre le
+                polynôme de degré inférieur restant.
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Pour $P(x) = 2x^3 - 3x^2 - 8x + 12$, les candidats rationnels sont
-            $\pm1$, $\pm2$, $\pm3$, $\pm4$, $\pm6$, $\pm12$, et éventuellement divisés par $2$.
-            On teste $x = 2$ : $P(2) = 0$ donc $x = 2$ est racine évidente.
-          </p>
-          <p>
-            La division par $(x - 2)$ donne $P(x) = (x - 2)(2x^2 + x - 6)$, puis on
-            factorise le second degré.
-          </p>
+          <h2>Exemples rapides</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Polynôme de degré 2</h3>
+              <p>
+                $P(x) = x^2 - 3x + 2$ : tester $1$ et $2$. $P(1) = 0$ donc $x = 1$ est
+                racine évidente.
+              </p>
+            </li>
+            <li>
+              <h3>Polynôme de degré 3</h3>
+              <p>
+                $P(x) = x^3 - 2x^2 - 5x + 6$ : les diviseurs de $6$ sont $\pm 1$, $\pm 2$, $\pm 3$, $\pm 6$.
+                $P(1) = 0$ donc $x = 1$ est racine.
+              </p>
+            </li>
+            <li>
+              <h3>Coefficients non unitaires</h3>
+              <p>
+                $P(x) = 2x^3 + 3x^2 - 8x - 12$ : candidats $\pm 1$, $\pm 2$, $\pm 3$, $\pm 4$, $\pm 6$.
+                $P(2) = 0$ donc $x = 2$ est racine évidente.
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>À retenir</h2>
+          <h2>Conseils pratiques</h2>
           <ul class="list">
-            <li>Les racines évidentes sont souvent entières ou fractions simples.</li>
-            <li>Chaque racine trouvée réduit le degré du polynôme.</li>
-            <li>Un changement de signe de $P(x)$ entre deux valeurs entières indique l’existence d’une racine réelle.</li>
+            <li>Commencez toujours par tester $x = 0$ si la constante est nulle.</li>
+            <li>
+              Utilisez la calculatrice pour accélérer l’évaluation tout en notant les
+              calculs utiles à la rédaction.
+            </li>
+            <li>
+              Dès qu’une racine est trouvée, factorisez pour simplifier la recherche
+              des autres racines.
+            </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier des candidats</h3>
+              <p>
+                N’oubliez pas les valeurs négatives ou les fractions possibles.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre racine et valeur approchée</h3>
+              <p>
+                $P(1) = 0,1$ n’est pas une racine : il faut une annulation exacte.
+              </p>
+            </li>
+            <li>
+              <h3>Ne pas factoriser ensuite</h3>
+              <p>
+                L’objectif est d’utiliser la racine pour factoriser. Ne vous arrêtez pas
+                au simple constat $P(r) = 0$.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-16.html">Section précédente</a>
+            <a class="button button--secondary" href="section-16.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-18.html">Section suivante</a>
           </div>
         </section>
@@ -114,15 +207,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

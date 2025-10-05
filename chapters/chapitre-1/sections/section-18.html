@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-18">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-18"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 18</p>
-          <h1 class="intro__title">Équation paramétrique</h1>
+          <h1 class="intro__title">Équation paramétrique du second degré</h1>
           <p class="intro__lead">
-            Discuter le nombre de solutions d’une équation du second degré
-            dépendant d’un paramètre en étudiant le discriminant selon les cas.
+            Étudier une équation du second degré dépendant d’un paramètre, réaliser
+            une disjonction de cas et décrire le nombre de solutions en fonction de
+            la valeur du paramètre.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,42 +82,143 @@
         </header>
 
         <section class="section">
-          <h2>Méthode générale</h2>
-          <ol class="list">
-            <li>Identifier $a(t)$, $b(t)$, $c(t)$ en fonction du paramètre $t$.</li>
-            <li>Calculer le discriminant $\Delta(t) = b(t)^2 - 4a(t)c(t)$.</li>
-            <li>Étudier le signe de $\Delta(t)$ en résolvant $\Delta(t) = 0$.</li>
-            <li>Conclure : $\Delta(t) > 0$ (deux solutions), $\Delta(t) = 0$ (une solution double), $\Delta(t) < 0$ (aucune solution réelle).</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
+            <li>Exprimer le discriminant en fonction du paramètre.</li>
+            <li>Discuter le signe du discriminant pour déterminer le nombre de solutions.</li>
+            <li>
+              Donner les solutions en fonction du paramètre lorsqu’elles existent.
+            </li>
+            <li>
+              Interpréter graphiquement l’évolution en fonction du paramètre.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Démarche standard</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Mettre l’équation sous forme standard</h3>
+              <p>
+                Regrouper les termes pour obtenir $a(p)x^2 + b(p)x + c(p) = 0$ où $p$
+                est le paramètre.
+              </p>
+            </li>
+            <li>
+              <h3>Calculer le discriminant</h3>
+              <p>
+                $\Delta(p) = b(p)^2 - 4a(p)c(p)$.
+              </p>
+            </li>
+            <li>
+              <h3>Étudier le signe de $\Delta(p)$</h3>
+              <p>
+                Résoudre $\Delta(p) > 0$, $\Delta(p) = 0$, $\Delta(p) < 0$ pour déterminer
+                les intervalles de $p$.
+              </p>
+            </li>
+            <li>
+              <h3>Donner les solutions</h3>
+              <p>
+                Pour $\Delta(p) \geq 0$, exprimer $x_{1,2}(p) = \dfrac{-b(p) \pm \sqrt{\Delta(p)}}{2a(p)}$.
+              </p>
+            </li>
+            <li>
+              <h3>Analyser les cas limites</h3>
+              <p>
+                Vérifier que $a(p) \neq 0$ et traiter séparément les valeurs du
+                paramètre qui rendent $a(p) = 0$.
+              </p>
+            </li>
           </ol>
         </section>
 
         <section class="section">
           <h2>Exemple guidé</h2>
           <p>
-            Résoudre selon $m$ l’équation $x^2 - 2mx + m + 3 = 0$.
+            Résoudre $(p - 1)x^2 + 2px + (p + 3) = 0$ selon $p$.
           </p>
+          <ol class="list" type="1">
+            <li>
+              <strong>Cas $p = 1$</strong> : l’équation devient $2x + 4 = 0$ d’où $x = -2$.
+            </li>
+            <li>
+              <strong>Cas $p \neq 1$</strong> : $a(p) = p - 1$,
+              $b(p) = 2p$, $c(p) = p + 3$.
+            </li>
+            <li>
+              $\Delta(p) = 4p^2 - 4(p - 1)(p + 3) = 4(p^2 - p^2 - 2p + 3) = 4(-2p + 3)$.
+            </li>
+            <li>
+              Disjonction :
+              <ul class="list">
+                <li>$\Delta(p) > 0 \Leftrightarrow p < \dfrac{3}{2}$ : deux solutions.</li>
+                <li>$\Delta(p) = 0 \Leftrightarrow p = \dfrac{3}{2}$ : une solution double.</li>
+                <li>$\Delta(p) < 0 \Leftrightarrow p > \dfrac{3}{2}$ : aucune solution réelle.</li>
+              </ul>
+            </li>
+            <li>
+              Pour $p < \dfrac{3}{2}$,
+              \[
+                x_{1,2} = \frac{-2p \pm 2\sqrt{-2p + 3}}{2(p - 1)} = \frac{-p \pm \sqrt{-2p + 3}}{p - 1}.
+              \]
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Interprétation graphique</h2>
           <p>
-            On calcule $\Delta(m) = (-2m)^2 - 4(m + 3) = 4m^2 - 4m - 12 = 4(m^2 - m - 3)$.
+            Représenter la parabole $y = (p - 1)x^2 + 2px + (p + 3)$ pour différentes
+            valeurs de $p$ montre comment le sommet et les intersections évoluent.
           </p>
-          <p>
-            On résout $m^2 - m - 3 = 0$ : $m = \dfrac{1 \pm \sqrt{13}}{2}$.
-          </p>
+          <!-- Graph suggestion: famille de paraboles pour p=0, p=1.5, p=2 illustrant les trois cas -->
+        </section>
+
+        <section class="section">
+          <h2>Conseils pratiques</h2>
           <ul class="list">
-            <li>$m < \dfrac{1 - \sqrt{13}}{2}$ ou $m > \dfrac{1 + \sqrt{13}}{2}$ : deux solutions réelles.</li>
-            <li>$m = \dfrac{1 \pm \sqrt{13}}{2}$ : une solution double $x = m$.</li>
-            <li>Pour $\dfrac{1 - \sqrt{13}}{2} < m < \dfrac{1 + \sqrt{13}}{2}$ : pas de solution réelle.</li>
+            <li>Isoler les valeurs de $p$ qui annulent $a(p)$ avant de calculer $\Delta(p)$.</li>
+            <li>Factoriser $\Delta(p)$ pour lire plus facilement le signe.</li>
+            <li>
+              Présenter la disjonction sous forme de tableau récapitulatif dans les
+              rédactions longues.
+            </li>
+            <li>
+              Vérifier les solutions obtenues en les substituant dans l’équation
+              initiale.
+            </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Conseils</h2>
-          <ul class="list">
-            <li>Penser à préciser les valeurs interdites si $a(t) = 0$ annule le degré.</li>
-            <li>Présenter la discussion sous forme de tableau pour clarifier les cas.</li>
-            <li>Interpréter graphiquement en traçant le discriminant en fonction du paramètre.</li>
-          </ul>
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier un cas particulier</h3>
+              <p>
+                Si $a(p) = 0$, l’équation devient du premier degré : traitez-la à part.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre paramètre et inconnue</h3>
+              <p>
+                Le paramètre $p$ est fixe dans chaque cas ; seules les inconnues $x$ sont
+                résolues.
+              </p>
+            </li>
+            <li>
+              <h3>Résultats non simplifiés</h3>
+              <p>
+                Simplifiez les expressions de $x_{1,2}(p)$ pour éviter les erreurs.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-17.html">Section précédente</a>
+            <a class="button button--secondary" href="section-17.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-19.html">Section suivante</a>
           </div>
         </section>
@@ -118,15 +226,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

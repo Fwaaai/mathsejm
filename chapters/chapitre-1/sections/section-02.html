@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-02">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-02"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,9 +68,10 @@
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 2</p>
           <h1 class="intro__title">Sommet à partir de la forme développée</h1>
           <p class="intro__lead">
-            Calculer les coordonnées du sommet $S(x_S, y_S)$ d’une parabole
-            définie par $f(x) = ax^2 + bx + c$ en exploitant la dérivation ou les
-            formules issues du calcul littéral.
+            Calculer et interpréter les coordonnées du sommet $S(x_S, y_S)$ d’une
+            parabole définie par $f(x) = ax^2 + bx + c$ à l’aide de plusieurs
+            approches complémentaires (calcul littéral, dérivation, lecture
+            graphique).
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -76,57 +83,274 @@
         </header>
 
         <section class="section">
-          <h2>Formules indispensables</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>Le sommet a pour abscisse $x_S = -\dfrac{b}{2a}$ lorsque $a \neq 0$.</li>
-            <li>Son ordonnée se calcule en évaluant $y_S = f(x_S)$.</li>
             <li>
-              Le sommet correspond aussi au point critique où $f'(x) = 0$ :
-              $f'(x) = 2ax + b$ et $2ax_S + b = 0$ redonne $x_S = -\dfrac{b}{2a}$.
+              Identifier la position du sommet d’une parabole à partir de la
+              forme développée et justifier la méthode choisie.
+            </li>
+            <li>
+              Maîtriser trois techniques complémentaires : formule directe,
+              dérivation, complétion du carré.
+            </li>
+            <li>
+              Lire et exploiter un graphique pour estimer ou vérifier les
+              coordonnées du sommet.
+            </li>
+            <li>
+              Interpréter le rôle du signe de $a$ sur la nature du sommet
+              (maximum ou minimum) et sur la concavité de la courbe.
             </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Démarche structurée</h2>
-          <ol class="list">
-            <li>Identifier les coefficients $a$, $b$ et $c$ de la forme développée.</li>
-            <li>Calculer $x_S = -\dfrac{b}{2a}$.</li>
-            <li>Remplacer $x$ par $x_S$ dans $f(x)$ pour obtenir $y_S$.</li>
-            <li>Interpréter le signe de $a$ : $a &gt; 0$ donne un minimum, $a &lt; 0$ un maximum.</li>
+          <h2>Méthodes détaillées</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Formule littérale directe</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Identification des coefficients</h4>
+                  <p>
+                    Saisir correctement les coefficients du trinôme :
+                    $a$ est le coefficient de $x^2$, $b$ celui de $x$ et $c$ la
+                    constante.
+                  </p>
+                  <p>
+                    Exemple : pour $f(x) = 3x^2 - 6x + 11$, on retient $a = 3$ et
+                    $b = -6$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Calcul de l’abscisse du sommet</h4>
+                  <p>
+                    La formule clé est $x_S = -\dfrac{b}{2a}$ (valable dès que
+                    $a \neq 0$).
+                  </p>
+                  <p>
+                    Avec l’exemple précédent : $x_S = -\dfrac{-6}{2 \times 3} = 1$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Calcul de l’ordonnée du sommet</h4>
+                  <p>
+                    Substituer $x_S$ dans $f(x)$ : $y_S = f(x_S)$. C’est le seul
+                    moyen d’obtenir une valeur exacte.
+                  </p>
+                  <p>
+                    Pour $f(x) = 3x^2 - 6x + 11$, $y_S = f(1) = 3 - 6 + 11 = 8$.
+                    Ainsi $S(1;\,8)$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Méthode par dérivation</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Calcul de la dérivée</h4>
+                  <p>
+                    La dérivée d’un trinôme vaut $f'(x) = 2ax + b$. Le sommet
+                    correspond à l’unique valeur $x$ pour laquelle $f'(x) = 0$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Résolution de l’équation $f'(x) = 0$</h4>
+                  <p>
+                    On résout $2ax + b = 0$, soit $x = -\dfrac{b}{2a}$. On retrouve
+                    la même abscisse que précédemment, ce qui constitue une
+                    vérification fiable.
+                  </p>
+                </li>
+                <li>
+                  <h4>Interprétation de $f''(x)$</h4>
+                  <p>
+                    La dérivée seconde $f''(x) = 2a$ est constante. Si $a &gt; 0$,
+                    alors $f''(x) &gt; 0$ et le sommet est un minimum. Si $a &lt; 0$,
+                    $f''(x) &lt; 0$ et le sommet est un maximum.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Complétion du carré (forme canonique)</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Factorisation de $a$</h4>
+                  <p>
+                    Pour $f(x) = ax^2 + bx + c$, on met $a$ en facteur :
+                    $f(x) = a\left(x^2 + \dfrac{b}{a}x\right) + c$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Complétion du carré</h4>
+                  <p>
+                    On ajoute et retranche
+                    $\left(\dfrac{b}{2a}\right)^2$ à l’intérieur :
+                  </p>
+                  <p>
+                    \[
+                      f(x) = a\left(x + \dfrac{b}{2a}\right)^2 +
+                      \left(c - \dfrac{b^2}{4a}\right).
+                    \]
+                  </p>
+                </li>
+                <li>
+                  <h4>Lecture directe</h4>
+                  <p>
+                    La forme canonique $a(x - \alpha)^2 + \beta$ montre que le
+                    sommet est $S(\alpha,\, \beta)$. Ici $\alpha = -\dfrac{b}{2a}$ et
+                    $\beta = c - \dfrac{b^2}{4a}$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Lecture graphique</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Repérage visuel</h4>
+                  <p>
+                    Observer le point le plus haut (si $a &lt; 0$) ou le plus bas (si
+                    $a &gt; 0$) sur la représentation graphique.
+                  </p>
+                  <!-- Graph suggestion: parabole ouverte vers le haut passant par (0,4) avec sommet en (2,-1) -->
+                </li>
+                <li>
+                  <h4>Lecture des coordonnées</h4>
+                  <p>
+                    Utiliser la graduation de l’axe des abscisses pour lire
+                    $x_S$, puis reporter cette valeur sur l’axe des ordonnées pour
+                    obtenir $y_S$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Vérification analytique</h4>
+                  <p>
+                    Comparer les valeurs obtenues graphiquement avec celles du
+                    calcul. Les écarts proviennent souvent de l’échelle ou de
+                    lectures approximatives.
+                  </p>
+                </li>
+              </ol>
+            </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple guidé</h2>
-          <p>
-            Pour $f(x) = -2x^2 + 8x - 3$, on a $a = -2$ et $b = 8$. On calcule :
-            $$x_S = -\dfrac{8}{2 \times (-2)} = 2.$$
-          </p>
-          <p>
-            Puis $y_S = f(2) = -2(4) + 8(2) - 3 = -8 + 16 - 3 = 5$. Le sommet est
-            donc $S(2;\,5)$ et correspond à un maximum car $a &lt; 0$.
-          </p>
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Exemple complet (valeurs entières)</h3>
+              <p>
+                Soit $f(x) = -2x^2 + 8x - 3$.
+              </p>
+              <ul class="list">
+                <li>
+                  <strong>Étape 1</strong> : $a = -2$, $b = 8$. On calcule
+                  $x_S = -\dfrac{8}{2 \times (-2)} = 2$.
+                </li>
+                <li>
+                  <strong>Étape 2</strong> : $y_S = f(2) = -2(4) + 8(2) - 3 = 5$.
+                </li>
+                <li>
+                  <strong>Étape 3</strong> : $a &lt; 0$ donc $S(2;\,5)$ est un maximum.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Exemple avec fractions</h3>
+              <p>
+                Pour $f(x) = \dfrac{1}{2}x^2 - 3x + \dfrac{7}{2}$ :
+              </p>
+              <ul class="list">
+                <li>
+                  $x_S = -\dfrac{-3}{2 \times \dfrac{1}{2}} = 3$.
+                </li>
+                <li>
+                  $y_S = f(3) = \dfrac{1}{2}(9) - 9 + \dfrac{7}{2} = \dfrac{9}{2} - 9 + \dfrac{7}{2} = -2$.
+                </li>
+                <li>
+                  $a = \dfrac{1}{2} &gt; 0$, le sommet est un minimum.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Vérification par complétion du carré</h3>
+              <p>
+                Pour $f(x) = 4x^2 + 4x + 1$ :
+              </p>
+              <p>
+                \begin{align*}
+                  f(x) &= 4\left(x^2 + x\right) + 1 \\
+                  &= 4\left[x^2 + x + \left(\dfrac{1}{2}\right)^2 - \left(\dfrac{1}{2}\right)^2\right] + 1 \\
+                  &= 4\left(x + \dfrac{1}{2}\right)^2 - 4\left(\dfrac{1}{2}\right)^2 + 1 \\
+                  &= 4\left(x + \dfrac{1}{2}\right)^2 - 1 + 1 \\
+                  &= 4\left(x + \dfrac{1}{2}\right)^2.
+                \end{align*}
+              </p>
+              <p>
+                Le sommet est donc $S\left(-\dfrac{1}{2};\, 0\right)$.
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>À retenir absolument</h2>
+          <h2>Cas particuliers et astuces</h2>
           <ul class="list">
             <li>
-              Le sommet se lit directement dans la forme canonique. Pensez à y
-              passer si le calcul devient trop lourd.
+              Si $b = 0$, la parabole est centrée sur l’axe des ordonnées et le
+              sommet se trouve à $x_S = 0$.
             </li>
             <li>
-              Une erreur fréquente concerne le signe de $b$ : vérifiez
-              systématiquement $-b$ dans $x_S$.
+              Si $c = 0$, la parabole passe par l’origine. Le sommet peut être à
+              gauche ou à droite selon le signe de $b$.
             </li>
             <li>
-              Pour une parabole passant par un point $A(x_A, y_A)$, comparez $y_A$
-              et $y_S$ pour déduire si $A$ est au-dessus ou en dessous du sommet.
+              Un changement d’unité sur l’axe des abscisses modifie la lecture
+              graphique mais ne change pas les coordonnées exactes issues du
+              calcul.
+            </li>
+            <li>
+              Pour vérifier un résultat, comparez l’ordonnée du sommet avec les
+              valeurs voisines : si $a &gt; 0$, $f(x_S)$ doit être inférieur à
+              $f(x_S \pm 1)$.
             </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Confusion de signe</h3>
+              <p>
+                Oublier le signe négatif dans $-\dfrac{b}{2a}$ conduit à une
+                abscisse erronée. Vérifiez systématiquement le signe de $b$.
+              </p>
+            </li>
+            <li>
+              <h3>Omission de la substitution finale</h3>
+              <p>
+                Calculer $x_S$ sans évaluer $y_S$ donne une information
+                incomplète. Le sommet s’exprime toujours sous la forme $(x_S, y_S)$.
+              </p>
+            </li>
+            <li>
+              <h3>Mauvaise interprétation graphique</h3>
+              <p>
+                Un graphique approximatif peut induire une erreur d’une demi
+                unité. Utilisez-le pour valider une tendance, pas pour obtenir une
+                valeur exacte.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-01.html">Section précédente</a>
+            <a class="button button--secondary" href="section-01.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-03.html">Section suivante</a>
           </div>
         </section>
@@ -134,15 +358,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-12">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-12"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 12</p>
-          <h1 class="intro__title">Tableau de signe (forme canonique)</h1>
+          <h1 class="intro__title">Tableau de signe à partir de la forme canonique</h1>
           <p class="intro__lead">
-            Construire le tableau de signe de $f(x) = a(x - \alpha)^2 + \beta$ en
-            analysant le signe de $a$ et la valeur de $\beta$.
+            Analyser le signe de $f(x) = a(x - \alpha)^2 + \beta$ en exploitant
+            l’information fournie par $a$ et $\beta$, et construire un tableau de
+            signe complet.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,60 +82,159 @@
         </header>
 
         <section class="section">
-          <h2>Cas à distinguer</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>$\beta &gt; 0$ : $f(x)$ a le signe de $a$ pour tout réel.</li>
-            <li>$\beta = 0$ : $x = \alpha$ est une racine double, le signe de $f$ est celui de $a$ ailleurs.</li>
-            <li>$\beta &lt; 0$ : il existe deux racines $x = \alpha \pm \sqrt{-\dfrac{\beta}{a}}$ si $a > 0$.</li>
+            <li>Identifier rapidement le signe de $f(x)$ sans repasser en forme développée.</li>
+            <li>Repérer les éventuelles racines à partir de $\beta$ et $a$.</li>
+            <li>Construire un tableau de signe utilisable pour résoudre des inéquations.</li>
+            <li>Justifier chaque étape par un raisonnement clair.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Tableau exemple</h2>
-          <p>Pour $f(x) = (x - 2)^2 - 9$ :</p>
-          <p>
-            Les racines sont $x = 2 \pm 3$, soit $x_1 = -1$ et $x_2 = 5$. Le
-            tableau de signe est :
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$-1$</th>
-                <th>$5$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$f(x)$</th>
-                <td>+</td>
-                <td>0</td>
-                <td>0</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>Signe</th>
-                <td colspan="2">$\geq 0$</td>
-                <td colspan="2">$\geq 0$</td>
-              </tr>
-            </tbody>
-          </table>
+          <h2>Étude du signe</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Observation des paramètres</h3>
+              <ul class="list">
+                <li>$a$ donne le signe dominant.</li>
+                <li>$\beta$ indique la valeur minimale ou maximale selon le signe de $a$.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Condition $\beta\,a &gt; 0$</h3>
+              <p>
+                Si $\beta$ et $a$ ont le même signe strict, $f(x)$ garde ce signe pour
+                tout réel (pas de racine).
+              </p>
+            </li>
+            <li>
+              <h3>Condition $\beta = 0$</h3>
+              <p>
+                $f(x) = 0$ uniquement en $x = \alpha$ (racine double). Le signe de $f(x)$
+                est celui de $a$ ailleurs.
+              </p>
+            </li>
+            <li>
+              <h3>Condition $\beta\,a &lt; 0$</h3>
+              <p>
+                Deux racines existent :
+                \[
+                  x = \alpha \pm \sqrt{-\frac{\beta}{a}}.
+                \]
+                Le signe change de part et d’autre de ces racines.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Construction du tableau</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Ligne des $x$</h3>
+              <p>
+                Inscrire les racines éventuelles en respectant l’ordre croissant.
+              </p>
+            </li>
+            <li>
+              <h3>Ligne du signe</h3>
+              <p>
+                Utiliser le schéma suivant :
+              </p>
+              <ul class="list">
+                <li>
+                  Si $\beta\,a &gt; 0$, une seule ligne avec $+$ ou $-$ selon $a$.
+                </li>
+                <li>
+                  Si $\beta = 0$, inscrire $0$ au-dessus de $x = \alpha$ et le signe de
+                  $a$ ailleurs.
+                </li>
+                <li>
+                  Si $\beta\,a &lt; 0$, alterner les signes en commençant par celui de $a$
+                  à l’extérieur.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <h3>Validation graphique</h3>
+              <p>
+                Visualiser la parabole en fonction de $\alpha$ et $\beta$ pour confirmer
+                les changements de signe.
+              </p>
+              <!-- Graph suggestion: parabole $f(x)=(x-1)^2-4$ montrant deux racines symétriques -->
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Aucun changement de signe</h3>
+              <p>
+                $f(x) = 3(x - 2)^2 + 5$ : $a &gt; 0$, $\beta &gt; 0$. La fonction est toujours
+                positive.
+              </p>
+            </li>
+            <li>
+              <h3>Racine double</h3>
+              <p>
+                $g(x) = -4(x + 1)^2$ : $\beta = 0$, le signe est $\leq 0$ avec annulation
+                en $x = -1$.
+              </p>
+            </li>
+            <li>
+              <h3>Deux racines</h3>
+              <p>
+                $h(x) = (x - 3)^2 - 9$ : $a = 1$, $\beta = -9$. Les racines sont $0$ et
+                $6$ et le signe est $+$ à l’extérieur, $-$ entre.
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
           <h2>Conseils pratiques</h2>
           <ul class="list">
+            <li>Indiquer systématiquement la condition sur $\beta\,a$ dans la rédaction.</li>
+            <li>Conserver les valeurs exactes des racines dans le tableau.</li>
+            <li>Relier le tableau de signe au tableau de variation si nécessaire.</li>
             <li>
-              Si $a < 0$ et $\beta < 0$, le signe devient négatif en dehors des
-              racines et positif entre elles.
+              Vérifier qu’un changement de signe n’apparaît que si le trinôme
+              s’annule réellement.
             </li>
-            <li>Écrivez toujours les valeurs exactes des racines avant d’approximer.</li>
-            <li>Le signe de $f$ contrôle directement celui de l’inéquation $f(x) \geq 0$.</li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs à éviter</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier le signe extérieur</h3>
+              <p>
+                Le signe hors des racines dépend toujours du coefficient $a$.
+              </p>
+            </li>
+            <li>
+              <h3>Utiliser des valeurs arrondies</h3>
+              <p>
+                Préférez les racines exactes pour assurer la précision des résolutions
+                d’inéquations.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre $\alpha$ et les racines</h3>
+              <p>
+                $\alpha$ n’est pas nécessairement un zéro de la fonction : vérifiez la
+                condition sur $\beta$ avant de l’inscrire comme racine.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-11.html">Section précédente</a>
+            <a class="button button--secondary" href="section-11.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-13.html">Section suivante</a>
           </div>
         </section>
@@ -136,15 +242,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-15">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-15"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,8 +68,9 @@
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 15</p>
           <h1 class="intro__title">Résolution avec changement de variable</h1>
           <p class="intro__lead">
-            Utiliser une substitution pour transformer une équation en une forme
-            quadratique simple, résoudre puis revenir à la variable initiale.
+            Transformer une équation polynomiale en équation du second degré par un
+            changement de variable judicieux, résoudre puis revenir à la variable
+            initiale.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,37 +82,145 @@
         </header>
 
         <section class="section">
-          <h2>Étapes clés</h2>
-          <ol class="list">
-            <li>Identifier un terme qui peut jouer le rôle d’une nouvelle variable $X$.</li>
-            <li>Poser $X = g(x)$ pour simplifier l’équation en $X$.</li>
-            <li>Résoudre l’équation quadratique obtenue.</li>
-            <li>Revenir à $x$ en résolvant $g(x) = X_i$ pour chaque solution.</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
+            <li>Identifier les équations qui se ramènent à un trinôme du second degré.</li>
+            <li>Choisir et justifier le changement de variable approprié.</li>
+            <li>Résoudre l’équation auxiliaire puis revenir à la variable d’origine.</li>
+            <li>Analyser les solutions obtenues et éliminer celles qui ne conviennent pas.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Stratégie générale</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Repérer la structure</h3>
+              <p>
+                Chercher des expressions du type $(g(x))^2$, $g(x)$ et constante. Si
+                l’équation peut s’écrire $A(g(x))^2 + B g(x) + C = 0$, un changement de
+                variable $t = g(x)$ convient.
+              </p>
+            </li>
+            <li>
+              <h3>Introduire la nouvelle variable</h3>
+              <p>
+                Poser $t = g(x)$ et résoudre l’équation $A t^2 + B t + C = 0$ en $t$.
+              </p>
+            </li>
+            <li>
+              <h3>Résoudre l’équation auxiliaire</h3>
+              <p>
+                Utiliser les méthodes de la section précédente (discriminant, tableau).
+              </p>
+            </li>
+            <li>
+              <h3>Revenir à la variable initiale</h3>
+              <p>
+                Pour chaque solution $t_i$, résoudre $g(x) = t_i$ et conserver les
+                solutions réelles.
+              </p>
+            </li>
+            <li>
+              <h3>Vérifier les solutions</h3>
+              <p>
+                Substituer dans l’équation de départ pour éliminer les solutions
+                extraites (surtout si l’on a élevé au carré).
+              </p>
+            </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Résoudre $\left(x + \dfrac{1}{x}\right)^2 - 5 = 0$ avec $x \neq 0$.
-            Posons $X = x + \dfrac{1}{x}$. L’équation devient $X^2 - 5 = 0$,
-            d’où $X = \pm \sqrt{5}$.
-          </p>
-          <p>
-            On résout ensuite $x + \dfrac{1}{x} = \sqrt{5}$ puis $x + \dfrac{1}{x} = -\sqrt{5}$.
-            Chaque équation se transforme en $x^2 \mp \sqrt{5}x + 1 = 0$.
-          </p>
+          <h2>Exemples détaillés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Equation biquadratique</h3>
+              <p>
+                Résoudre $x^4 - 5x^2 + 4 = 0$.
+              </p>
+              <ol class="list" type="a">
+                <li>Poser $t = x^2$ : $t^2 - 5t + 4 = 0$.</li>
+                <li>$\Delta = 25 - 16 = 9$ donc $t_1 = 1$, $t_2 = 4$.</li>
+                <li>Revenir à $x$ : $x^2 = 1$ donne $x = \pm 1$ ; $x^2 = 4$ donne $x = \pm 2$.</li>
+              </ol>
+            </li>
+            <li>
+              <h3>Equation trigonométrique algébrique</h3>
+              <p>
+                Résoudre $(2x - 3)^2 + 3(2x - 3) - 10 = 0$.
+              </p>
+              <ol class="list" type="a">
+                <li>Poser $t = 2x - 3$ : $t^2 + 3t - 10 = 0$.</li>
+                <li>$\Delta = 9 + 40 = 49$ : $t_1 = 2$, $t_2 = -5$.</li>
+                <li>Revenir : $2x - 3 = 2 \Rightarrow x = \dfrac{5}{2}$ ; $2x - 3 = -5 \Rightarrow x = -1$.</li>
+              </ol>
+            </li>
+            <li>
+              <h3>Équation avec radical</h3>
+              <p>
+                Résoudre $\sqrt{x + 2} = x - 2$ (avec $x \geq 2$).
+              </p>
+              <ol class="list" type="a">
+                <li>Poser $t = \sqrt{x + 2}$ : $t = x - 2$ et $t^2 = x + 2$.</li>
+                <li>Remplacer $x$ : $t^2 = (t + 2) + 2$ donc $t^2 - t - 4 = 0$.</li>
+                <li>$\Delta = 1 + 16 = 17$ : $t = \dfrac{1 \pm \sqrt{17}}{2}$.</li>
+                <li>Garder les valeurs compatibles avec $x \geq 2$ puis revenir à $x$.</li>
+              </ol>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Conseils</h2>
+          <h2>Conseils pratiques</h2>
           <ul class="list">
-            <li>Choisir une substitution qui simplifie réellement l’expression (puissance, produit, somme).</li>
-            <li>Ne pas oublier les conditions de validité (ici $x \neq 0$).</li>
-            <li>Contrôler toutes les solutions obtenues dans l’équation initiale.</li>
+            <li>
+              Avant de poser $t$, vérifiez que l’expression $g(x)$ est réellement
+              répétée (carré ou multiple).
+            </li>
+            <li>
+              Pensez aux restrictions de domaine (radicaux, logarithmes, dénominateurs).
+            </li>
+            <li>
+              Dans les équations biquadratiques, regroupez toujours les termes en $x^4$,
+              $x^2$ et constant.
+            </li>
+            <li>
+              Notez clairement le changement de variable dans la copie pour éviter
+              toute ambiguïté.
+            </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier de revenir à $x$</h3>
+              <p>
+                Les solutions en $t$ ne sont pas les solutions finales : résolvez
+                toujours $g(x) = t_i$.
+              </p>
+            </li>
+            <li>
+              <h3>Ignorer les conditions</h3>
+              <p>
+                Des solutions peuvent être extraites lors d’un carré : vérifiez les
+                restrictions initiales.
+              </p>
+            </li>
+            <li>
+              <h3>Changement de variable inadapté</h3>
+              <p>
+                Choisir $t = x^2$ alors que l’expression $x^2 + 1/x$ est présente ne
+                fonctionnera pas. Analysez d’abord la structure.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-14.html">Section précédente</a>
+            <a class="button button--secondary" href="section-14.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-16.html">Section suivante</a>
           </div>
         </section>
@@ -113,15 +228,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

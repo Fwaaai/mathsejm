@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-07">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-07"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 7</p>
-          <h1 class="intro__title">Forme canonique</h1>
+          <h1 class="intro__title">Forme canonique à partir des autres représentations</h1>
           <p class="intro__lead">
-            Transformer un trinôme du second degré en forme canonique
-            $f(x) = a(x - \alpha)^2 + \beta$ à partir des autres représentations.
+            Transformer un trinôme du second degré pour obtenir la forme canonique
+            $f(x) = a(x - \alpha)^2 + \beta$ à partir de la forme développée,
+            factorisée ou d’informations graphiques.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,49 +82,211 @@
         </header>
 
         <section class="section">
-          <h2>Compléter le carré</h2>
-          <p>
-            À partir de $f(x) = ax^2 + bx + c$, factorisez $a$ et complétez le
-            carré :
-          </p>
-          <p>
-            $$
-              f(x) = a\left[x^2 + \frac{b}{a}x\right] + c = a\left[\left(x + \frac{b}{2a}\right)^2 - \left(\frac{b}{2a}\right)^2\right] + c.
-            $$
-          </p>
-          <p>
-            On obtient alors
-            $$f(x) = a\left(x + \frac{b}{2a}\right)^2 + c - a\left(\frac{b}{2a}\right)^2,$$
-            ce qui donne $\alpha = -\dfrac{b}{2a}$ et
-            $\beta = f(\alpha) = c - \dfrac{b^2}{4a}$.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Pour $f(x) = 2x^2 + 8x + 1$ :
-            $$
-              \begin{aligned}
-              f(x) &= 2\big(x^2 + 4x\big) + 1 \\
-                   &= 2\Big[(x + 2)^2 - 4\Big] + 1 \\
-                   &= 2(x + 2)^2 - 8 + 1 \\
-                   &= 2(x + 2)^2 - 7.
-              \end{aligned}
-            $$
-            Ainsi, $\alpha = -2$ et $\beta = -7$.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>Utilisations</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>Lire directement le sommet $S(\alpha, \beta)$.</li>
-            <li>Connaître le minimum ou le maximum de $f$ selon le signe de $a$.</li>
-            <li>Faciliter la résolution d’équations ou d’inéquations.</li>
+            <li>
+              Obtenir la forme canonique par complétion du carré à partir de la
+              forme développée.
+            </li>
+            <li>
+              Exploiter la forme factorisée pour identifier le sommet et réécrire
+              le trinôme en forme canonique.
+            </li>
+            <li>
+              Utiliser des données graphiques (sommet, point, racines) pour
+              reconstruire $a$, $\alpha$ et $\beta$.
+            </li>
+            <li>
+              Vérifier la cohérence en redéveloppant l’expression obtenue.
+            </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Techniques pas à pas</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Depuis la forme développée</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Mise en facteur de $a$</h4>
+                  <p>
+                    Écrire $f(x) = a\left(x^2 + \dfrac{b}{a}x\right) + c$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Complétion du carré</h4>
+                  <p>
+                    Ajouter et retrancher $\left(\dfrac{b}{2a}\right)^2$ à l’intérieur
+                    des parenthèses :
+                    \[
+                      f(x) = a\left(x + \frac{b}{2a}\right)^2 + \left(c - \frac{b^2}{4a}\right).
+                    \]
+                  </p>
+                </li>
+                <li>
+                  <h4>Lecture des paramètres</h4>
+                  <p>
+                    On obtient $\alpha = -\dfrac{b}{2a}$ et
+                    $\beta = c - \dfrac{b^2}{4a}$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Depuis la forme factorisée</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Identifier les racines</h4>
+                  <p>
+                    Si $f(x) = a(x - x_1)(x - x_2)$, le sommet est situé à
+                    $\alpha = \dfrac{x_1 + x_2}{2}$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Calcul de $\beta$</h4>
+                  <p>
+                    Calculer $f(\alpha)$ pour obtenir $\beta$. Alternativement,
+                    utiliser $\beta = -\dfrac{\Delta}{4a}$ lorsque le discriminant est
+                    connu.
+                  </p>
+                </li>
+                <li>
+                  <h4>Écriture finale</h4>
+                  <p>
+                    Conclure avec $f(x) = a(x - \alpha)^2 + \beta$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>À partir de données graphiques</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Sommet fourni</h4>
+                  <p>
+                    Si le sommet $S(\alpha, \beta)$ est connu, il suffit de
+                    déterminer $a$ à l’aide d’un autre point $P(x_P, y_P)$ du graphe
+                    : $y_P = a(x_P - \alpha)^2 + \beta$.
+                  </p>
+                  <!-- Graph suggestion: parabole ouverte vers le bas avec sommet S(1,4) et point P(-1,0) -->
+                </li>
+                <li>
+                  <h4>Deux racines et un point</h4>
+                  <p>
+                    Utiliser les racines pour calculer $\alpha$, puis substituer un
+                    troisième point pour retrouver $\beta$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Lecture directe du coefficient directeur</h4>
+                  <p>
+                    Si la courbe est resserrée (par exemple, $f(\alpha + 1)$ est
+                    donné), utilisez $f(\alpha + 1) = a + \beta$ pour isoler $a$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Validation par redéveloppement</h3>
+              <p>
+                Développer $a(x - \alpha)^2 + \beta$ et vérifier que l’on retrouve les
+                coefficients $a$, $b$ et $c$ de la forme initiale.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Complétion du carré</h3>
+              <p>
+                Pour $f(x) = 2x^2 - 8x + 7$ :
+              </p>
+              <p>
+                \begin{align*}
+                  f(x) &= 2\left(x^2 - 4x\right) + 7 \\
+                  &= 2\left[x^2 - 4x + 4 - 4\right] + 7 \\
+                  &= 2(x - 2)^2 - 8 + 7 \\
+                  &= 2(x - 2)^2 - 1.
+                \end{align*}
+              </p>
+              <p>
+                La forme canonique est $2(x - 2)^2 - 1$.
+              </p>
+            </li>
+            <li>
+              <h3>Depuis la forme factorisée</h3>
+              <p>
+                $g(x) = 3(x + 1)(x - 5)$ : les racines sont $-1$ et $5$, donc
+                $\alpha = 2$. Calculons $\beta = g(2) = 3(3)(-3) = -27$. Ainsi,
+                $g(x) = 3(x - 2)^2 - 27$.
+              </p>
+            </li>
+            <li>
+              <h3>À partir d’un graphique</h3>
+              <p>
+                Une parabole admet pour sommet $S(-1, 4)$ et passe par $A(1, 0)$.
+                On résout $0 = a(1 - (-1))^2 + 4$, soit $0 = 4a + 4$, d’où $a = -1$.
+                La forme canonique est $-(x + 1)^2 + 4$.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils pratiques</h2>
+          <ul class="list">
+            <li>
+              Conservez la valeur exacte de $\alpha$ et $\beta$ (fractions si
+              nécessaire) pour éviter les erreurs d’arrondi.
+            </li>
+            <li>
+              Si le coefficient $a$ est négatif, le signe reste inchangé dans la
+              forme canonique : veillez à le factoriser correctement.
+            </li>
+            <li>
+              Utilisez la forme canonique pour identifier rapidement le sommet, le
+              signe et le tableau de variations.
+            </li>
+            <li>
+              Après transformation, vérifiez une valeur test (par exemple $f(0)$)
+              pour confirmer l’égalité des deux expressions.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier de soustraire le terme ajouté</h3>
+              <p>
+                Lors de la complétion du carré, tout terme ajouté doit être retiré
+                pour maintenir l’égalité.
+              </p>
+            </li>
+            <li>
+              <h3>Perdre le coefficient $a$</h3>
+              <p>
+                Ne jamais oublier que $a$ multiplie l’ensemble du carré. Une
+                confusion entraîne une erreur sur $\beta$.
+              </p>
+            </li>
+            <li>
+              <h3>Utiliser un point insuffisant</h3>
+              <p>
+                À partir d’un graphique, un seul point autre que le sommet est
+                nécessaire ; vérifier qu’il n’appartient pas à l’axe de symétrie.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-06.html">Section précédente</a>
+            <a class="button button--secondary" href="section-06.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-08.html">Section suivante</a>
           </div>
         </section>
@@ -125,15 +294,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

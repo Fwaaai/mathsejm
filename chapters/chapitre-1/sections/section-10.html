@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-10">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-10"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 10</p>
-          <h1 class="intro__title">Existence de racines (forme canonique)</h1>
+          <h1 class="intro__title">Existence des racines à partir de la forme canonique</h1>
           <p class="intro__lead">
-            Discuter le nombre de solutions de $f(x) = 0$ à partir de
-            $f(x) = a(x - \alpha)^2 + \beta$ sans recalculer le discriminant.
+            Discuter l’existence, le nombre et la valeur des racines réelles d’un
+            trinôme en observant directement les paramètres de la forme canonique
+            $f(x) = a(x - \alpha)^2 + \beta$.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,41 +82,155 @@
         </header>
 
         <section class="section">
-          <h2>Analyse du paramètre $\beta$</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>Si $\beta &gt; 0$ et $a &gt; 0$, la parabole est au-dessus de l’axe et il n’y a pas de racine.</li>
-            <li>Si $\beta &gt; 0$ et $a &lt; 0$, il existe deux racines réelles.</li>
-            <li>Si $\beta = 0$, $x = \alpha$ est une racine double.</li>
-            <li>Si $\beta &lt; 0$, l’équation $f(x) = 0$ possède deux solutions réelles lorsque $a &gt; 0$ et aucune si $a &lt; 0$.</li>
+            <li>Déterminer visuellement si le trinôme admet des racines réelles.</li>
+            <li>Calculer les racines en fonction de $a$, $\alpha$ et $\beta$.</li>
+            <li>
+              Relier l’analyse canonique au discriminant et à la forme factorisée.
+            </li>
+            <li>Interpréter graphiquement les différents cas.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Démonstration rapide</h2>
-          <p>
-            Résoudre $f(x) = 0$ revient à résoudre $a(x - \alpha)^2 + \beta = 0$.
-            On isole le carré :
-          </p>
-          <p>
-            $$ (x - \alpha)^2 = -\frac{\beta}{a}. $$
-          </p>
-          <p>
-            L’existence de solutions réelles dépend du signe de $-\dfrac{\beta}{a}$.
-            Si ce terme est négatif, aucune solution réelle. S’il est nul, une
-            solution double. S’il est positif, deux solutions opposées par
-            rapport à $\alpha$.
-          </p>
+          <h2>Analyse à partir de $\beta$</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Cas $\beta &lt; 0$</h3>
+              <p>
+                La parabole coupe l’axe des abscisses en deux points distincts si
+                $a &gt; 0$, ou reste au-dessus si $a &lt; 0$. Deux racines existent.
+              </p>
+            </li>
+            <li>
+              <h3>Cas $\beta = 0$</h3>
+              <p>
+                Le sommet est sur l’axe : $x = \alpha$ est racine double.
+              </p>
+            </li>
+            <li>
+              <h3>Cas $\beta &gt; 0$</h3>
+              <p>
+                La parabole ne rencontre pas l’axe si $a &gt; 0$ (aucune racine réelle).
+                Si $a &lt; 0$, deux racines existent car la parabole est tournée vers le
+                bas.
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Exemples</h2>
+          <h2>Calcul explicite des racines</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Résolution de $f(x) = 0$</h3>
+              <p>
+                \begin{align*}
+                  a(x - \alpha)^2 + \beta &= 0 \\
+                  (x - \alpha)^2 &= -\frac{\beta}{a}.
+                \end{align*}
+              </p>
+            </li>
+            <li>
+              <h3>Conditions d’existence</h3>
+              <p>
+                Le second membre doit être positif ou nul : $-\dfrac{\beta}{a} \geq 0$.
+                Cela fournit la condition $\beta\,a \leq 0$.
+              </p>
+            </li>
+            <li>
+              <h3>Formules</h3>
+              <p>
+                Si $-\dfrac{\beta}{a} \geq 0$ :
+                \[
+                  x = \alpha \pm \sqrt{-\frac{\beta}{a}}.
+                \]
+                Si $-\dfrac{\beta}{a} = 0$, la racine est unique : $x = \alpha$.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Lien avec le discriminant</h2>
           <ul class="list">
-            <li>$f(x) = 2(x - 1)^2 + 3$ : $-\dfrac{\beta}{a} = -\dfrac{3}{2} &lt; 0$, aucune racine.</li>
-            <li>$g(x) = -3(x + 2)^2 + 12$ : $-\dfrac{\beta}{a} = -\dfrac{12}{-3} = 4 &gt; 0$, deux racines.</li>
-            <li>$h(x) = 5(x - 4)^2$ : $\beta = 0$, racine double $x = 4$.</li>
+            <li>
+              Pour $f(x) = ax^2 + bx + c$, on sait que $\Delta = b^2 - 4ac$.
+            </li>
+            <li>
+              Dans la forme canonique, $\Delta = -4a\beta$. On retrouve la condition
+              $\beta\,a \leq 0$.
+            </li>
+            <li>
+              \begin{cases}
+                \beta &lt; 0 \text{ et } a &gt; 0 &\Rightarrow \Delta &gt; 0 \\
+                \beta = 0 &\Rightarrow \Delta = 0 \\
+                \beta &gt; 0 \text{ et } a &gt; 0 &\Rightarrow \Delta &lt; 0
+              \end{cases}
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Approche graphique</h2>
+          <p>
+            Le paramètre $\beta$ indique la hauteur du sommet. Coupler cette
+            information avec le signe de $a$ permet de visualiser la position de la
+            parabole par rapport à l’axe.
+          </p>
+          <!-- Graph suggestion: trois paraboles en forme canonique montrant les cas beta<0, beta=0, beta>0 -->
+        </section>
+
+        <section class="section">
+          <h2>Exemples détaillés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Deux racines distinctes</h3>
+              <p>
+                $f(x) = (x - 1)^2 - 9$ : $a = 1$, $\beta = -9$. Les racines sont
+                $x = 1 \pm 3$, soit $-2$ et $4$.
+              </p>
+            </li>
+            <li>
+              <h3>Racine double</h3>
+              <p>
+                $g(x) = -2(x + 5)^2$ : $\beta = 0$. La racine est $x = -5$ (double).
+              </p>
+            </li>
+            <li>
+              <h3>Aucune racine réelle</h3>
+              <p>
+                $h(x) = 3(x - 2)^2 + 7$ : $\beta = 7$ et $a &gt; 0$. Aucune solution réelle.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils et erreurs à éviter</h2>
+          <ul class="list">
+            <li>
+              Toujours vérifier la condition $\beta\,a \leq 0$ avant de prendre la
+              racine carrée.
+            </li>
+            <li>
+              Lorsque $a &lt; 0$, la lecture graphique s’inverse : une parabole tournée
+              vers le bas peut avoir deux racines même si $\beta &gt; 0$.
+            </li>
+            <li>
+              Ne pas oublier de vérifier les solutions en les remplaçant dans la
+              fonction initiale.
+            </li>
+            <li>
+              Pour rédiger, annoncez la condition (nombre de racines) avant de donner
+              les valeurs.
+            </li>
           </ul>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-09.html">Section précédente</a>
+            <a class="button button--secondary" href="section-09.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-11.html">Section suivante</a>
           </div>
         </section>
@@ -117,15 +238,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

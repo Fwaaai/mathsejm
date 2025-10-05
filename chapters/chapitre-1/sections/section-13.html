@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-13">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-13"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,8 +68,9 @@
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 13</p>
           <h1 class="intro__title">Existence de la forme factorisée</h1>
           <p class="intro__lead">
-            Justifier, à partir d’un graphique ou d’un calcul, si un trinôme admet
-            une écriture factorisée réelle $f(x) = a(x - x_1)(x - x_2)$.
+            Déterminer si un trinôme du second degré peut être factorisé sous la
+            forme $f(x) = a(x - x_1)(x - x_2)$ à partir de données algébriques ou
+            graphiques, et justifier chaque cas de figure.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,42 +82,168 @@
         </header>
 
         <section class="section">
-          <h2>Critère analytique</h2>
-          <p>
-            Un trinôme $ax^2 + bx + c$ admet une factorisation réelle si et
-            seulement si son discriminant $\Delta = b^2 - 4ac$ est positif ou nul.
-          </p>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>$\Delta > 0$ : $f(x) = a(x - x_1)(x - x_2)$ avec deux racines distinctes.</li>
-            <li>$\Delta = 0$ : $f(x) = a(x - x_0)^2$.</li>
-            <li>$\Delta < 0$ : aucune factorisation réelle.</li>
+            <li>Relier la factorisation à l’existence de racines réelles.</li>
+            <li>Utiliser le discriminant pour justifier l’existence de la forme factorisée.</li>
+            <li>Interpréter un graphique pour conclure sur la possibilité de factoriser.</li>
+            <li>Présenter une démarche de rédaction claire.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Lecture graphique</h2>
-          <p>
-            Sur un graphique, la forme factorisée existe si la parabole coupe ou
-            touche l’axe des abscisses. Le nombre de points d’intersection
-            correspond au nombre de racines.
-          </p>
-          <div class="graph-placeholder" role="img" aria-label="Graphique à insérer illustrant les intersections avec l’axe des abscisses">
-            Graphique à insérer ici.
-          </div>
+          <h2>Analyse algébrique</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Calcul du discriminant</h3>
+              <p>
+                Pour $f(x) = ax^2 + bx + c$, $\Delta = b^2 - 4ac$.
+              </p>
+            </li>
+            <li>
+              <h3>Interprétation</h3>
+              <ul class="list">
+                <li>$\Delta &gt; 0$ : deux racines réelles distinctes, factorisation possible.</li>
+                <li>$\Delta = 0$ : une racine double, factorisation sous la forme $a(x - x_0)^2$.</li>
+                <li>$\Delta &lt; 0$ : aucune racine réelle, pas de factorisation réelle.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Forme factorisée</h3>
+              <p>
+                Lorsque $\Delta \geq 0$, écrire $f(x) = a(x - x_1)(x - x_2)$ avec
+                \[
+                  x_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a}.
+                \]
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Pour $f(x) = x^2 - 4x + 3$, $\Delta = 4^2 - 4 \times 1 \times 3 = 4$.
-            La factorisation est $f(x) = (x - 1)(x - 3)$.
-          </p>
-          <p>
-            Si $g(x) = x^2 + 4x + 5$, alors $\Delta = 16 - 20 = -4$ : aucune
-            factorisation réelle, la parabole reste au-dessus de l’axe des $x$.
-          </p>
+          <h2>Analyse graphique</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Observation de l’axe des abscisses</h3>
+              <p>
+                Une parabole qui coupe l’axe en deux points distincts correspond à
+                $\Delta &gt; 0$.
+              </p>
+            </li>
+            <li>
+              <h3>Parabole tangente à l’axe</h3>
+              <p>
+                La tangence signifie $\Delta = 0$ : factorisation en carré parfait.
+              </p>
+            </li>
+            <li>
+              <h3>Aucune intersection</h3>
+              <p>
+                Lorsque la courbe reste au-dessus ou en dessous de l’axe, $\Delta &lt; 0$.
+              </p>
+              <!-- Graph suggestion: trois mini-graphes illustrant coupure, tangence et absence d'intersection -->
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Démarche de justification</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Annonce</h3>
+              <p>
+                «&nbsp;On calcule le discriminant de $f$ : $\Delta = \ldots$&nbsp;» ou
+                «&nbsp;Le graphique montre deux intersections avec l’axe des abscisses&nbsp;».
+              </p>
+            </li>
+            <li>
+              <h3>Interprétation</h3>
+              <p>
+                «&nbsp;Comme $\Delta &gt; 0$, $f$ admet deux racines réelles&nbsp;» ou
+                «&nbsp;La courbe coupe l’axe en deux points distincts&nbsp;».
+              </p>
+            </li>
+            <li>
+              <h3>Conclusion</h3>
+              <p>
+                «&nbsp;La forme factorisée existe : $f(x) = a(x - x_1)(x - x_2)$&nbsp;» ou
+                «&nbsp;La forme factorisée réelle n’existe pas&nbsp;».
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Discriminant positif</h3>
+              <p>
+                $f(x) = x^2 - 5x + 4$ : $\Delta = 25 - 16 = 9$. Les racines sont $1$ et $4$.
+                La forme factorisée est $(x - 1)(x - 4)$.
+              </p>
+            </li>
+            <li>
+              <h3>Discriminant nul</h3>
+              <p>
+                $g(x) = 9x^2 - 6x + 1$ : $\Delta = 36 - 36 = 0$. Factorisation :
+                $g(x) = (3x - 1)^2$.
+              </p>
+            </li>
+            <li>
+              <h3>Pas de factorisation réelle</h3>
+              <p>
+                $h(x) = 2x^2 + 4x + 7$ : $\Delta = 16 - 56 = -40$. Aucune racine réelle,
+                la forme factorisée réelle n’existe pas.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils pratiques</h2>
+          <ul class="list">
+            <li>Vérifiez vos racines en les substituant dans $f$.</li>
+            <li>Si $a \neq 1$, gardez $a$ en facteur dans la forme factorisée.</li>
+            <li>
+              En présence de racines irrationnelles, laissez-les sous forme exacte
+              avec la racine carrée.
+            </li>
+            <li>
+              Mentionnez explicitement la conclusion (existence ou non) dans votre
+              rédaction.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs courantes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Confondre facteur et racine</h3>
+              <p>
+                Un facteur $(x - r)$ correspond à une racine $x = r$. Vérifiez le signe.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier le coefficient directeur</h3>
+              <p>
+                $f(x) = ax^2 + bx + c$ se factorise en $a(x - x_1)(x - x_2)$ ; $a$ reste
+                devant.
+              </p>
+            </li>
+            <li>
+              <h3>Conclure trop vite</h3>
+              <p>
+                Un graphique approximatif peut induire en erreur : combinez les indices
+                visuels avec un calcul du discriminant lorsque c’est possible.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-12.html">Section précédente</a>
+            <a class="button button--secondary" href="section-12.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-14.html">Section suivante</a>
           </div>
         </section>
@@ -118,15 +251,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

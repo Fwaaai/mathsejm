@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-14">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-14"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,11 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 14</p>
-          <h1 class="intro__title">Résolution d’équations du second degré</h1>
+          <h1 class="intro__title">Résolution d’une équation du second degré</h1>
           <p class="intro__lead">
-            Résoudre une équation du second degré $ax^2 + bx + c = 0$ sans
-            changement de variable en utilisant discriminant, factorisation ou
-            forme canonique.
+            Résoudre $ax^2 + bx + c = 0$ sans changement de variable en suivant une
+            démarche structurée, depuis l’identification des coefficients jusqu’à la
+            vérification des solutions.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -76,36 +82,141 @@
         </header>
 
         <section class="section">
-          <h2>Méthodologie</h2>
-          <ol class="list">
-            <li>Mettre l’équation sous la forme $ax^2 + bx + c = 0$.</li>
-            <li>Calculer $\Delta = b^2 - 4ac$ pour connaître le nombre de solutions.</li>
-            <li>Appliquer les formules des racines ou factoriser directement si $\Delta \geq 0$.</li>
-            <li>Vérifier les solutions en les remplaçant dans l’équation initiale.</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
+            <li>Identifier les coefficients $a$, $b$, $c$ d’un trinôme.</li>
+            <li>Utiliser le discriminant pour déterminer le nombre de solutions.</li>
+            <li>Calculer les solutions exactes et simplifier les expressions.</li>
+            <li>Vérifier la cohérence des solutions (facteurs, substitution, graphes).</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Méthode pas à pas</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Mettre l’équation sous forme standard</h3>
+              <p>
+                S’assurer que l’équation est écrite $ax^2 + bx + c = 0$ en regroupant
+                tous les termes du même côté.
+              </p>
+            </li>
+            <li>
+              <h3>Identifier $a$, $b$, $c$</h3>
+              <p>
+                Lire directement les coefficients et vérifier que $a \neq 0$.
+              </p>
+            </li>
+            <li>
+              <h3>Calculer le discriminant</h3>
+              <p>
+                $\Delta = b^2 - 4ac$.
+              </p>
+            </li>
+            <li>
+              <h3>Étudier les cas</h3>
+              <ul class="list">
+                <li>$\Delta &gt; 0$ : deux solutions distinctes $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.</li>
+                <li>$\Delta = 0$ : une solution double $x_0 = -\dfrac{b}{2a}$.</li>
+                <li>$\Delta &lt; 0$ : aucune solution réelle.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Simplifier les solutions</h3>
+              <p>
+                Réduire les fractions, rationaliser si nécessaire et conserver les
+                racines carrées exactes.
+              </p>
+            </li>
+            <li>
+              <h3>Vérifier</h3>
+              <p>
+                Substituer les solutions dans l’équation initiale ou factoriser pour
+                confirmer que $(x - x_1)(x - x_2)$ redonne le trinôme.
+              </p>
+            </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple complet</h2>
+          <h2>Lecture graphique</h2>
           <p>
-            Résoudre $3x^2 - 5x - 2 = 0$ :
-            $$\Delta = (-5)^2 - 4 \times 3 \times (-2) = 49.$$
-            Les solutions sont $x_1 = -\dfrac{1}{3}$ et $x_2 = 2$.
+            Les solutions correspondent aux intersections de la parabole $y = f(x)$
+            avec l’axe des abscisses. Utilisez le graphique pour estimer et valider.
           </p>
-          <p>
-            La factorisation associée est $3x^2 - 5x - 2 = 3(x - 2)\left(x + \dfrac{1}{3}\right)$.
-          </p>
+          <!-- Graph suggestion: parabole $f(x)=x^2-4x-5$ coupant l'axe en x=-1 et x=5 -->
         </section>
 
         <section class="section">
-          <h2>Astuce</h2>
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Deux solutions</h3>
+              <p>
+                Résoudre $x^2 - 5x + 6 = 0$ : $\Delta = 25 - 24 = 1$, $x_1 = 2$,
+                $x_2 = 3$.
+              </p>
+            </li>
+            <li>
+              <h3>Solution double</h3>
+              <p>
+                Résoudre $4x^2 - 12x + 9 = 0$ : $\Delta = 0$, $x_0 = \dfrac{12}{8} = \dfrac{3}{2}$.
+              </p>
+            </li>
+            <li>
+              <h3>Pas de solution réelle</h3>
+              <p>
+                Résoudre $x^2 + 2x + 5 = 0$ : $\Delta = 4 - 20 = -16$, aucune solution
+                réelle.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils supplémentaires</h2>
           <ul class="list">
-            <li>Lorsque $b = 0$, on résout $ax^2 + c = 0$ avec $x = \pm \sqrt{-\dfrac{c}{a}}$.</li>
-            <li>Si $c = 0$, factoriser par $x$ puis résoudre $ax + b = 0$.</li>
-            <li>Utiliser la forme canonique pour vérifier rapidement le signe des solutions.</li>
+            <li>
+              Avant d’utiliser les formules, essayez de factoriser par inspection
+              (valeurs évidentes).
+            </li>
+            <li>
+              N’oubliez pas de préciser «&nbsp;L’équation n’admet pas de solution réelle&nbsp;»
+              en cas de discriminant négatif.
+            </li>
+            <li>
+              Lorsque $a$, $b$, $c$ ont un facteur commun, simplifiez l’équation.
+            </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs à éviter</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Confondre signe de $b$</h3>
+              <p>
+                $-b$ apparaît dans la formule, pensez à vérifier le signe plusieurs fois.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier le dénominateur $2a$</h3>
+              <p>
+                Chaque solution est divisée par $2a$, pas uniquement par $2$.
+              </p>
+            </li>
+            <li>
+              <h3>Racine carrée mal simplifiée</h3>
+              <p>
+                Simplifiez $\sqrt{\Delta}$ en extrayant les facteurs carrés pour
+                réduire les expressions.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-13.html">Section précédente</a>
+            <a class="button button--secondary" href="section-13.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-15.html">Section suivante</a>
           </div>
         </section>
@@ -113,15 +224,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

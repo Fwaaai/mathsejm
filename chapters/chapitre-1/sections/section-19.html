@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-19">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-19"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 19</p>
-          <h1 class="intro__title">Résolution d’inéquations factorisées</h1>
+          <h1 class="intro__title">Résolution d’inéquations factoriées</h1>
           <p class="intro__lead">
-            Résoudre des inéquations se ramenant à des facteurs du premier ou du
-            second degré en utilisant les tableaux de signes.
+            Résoudre une inéquation se ramenant à des facteurs du premier ou du
+            second degré en construisant un tableau de signe et en interprétant les
+            résultats.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,101 +82,152 @@
         </header>
 
         <section class="section">
-          <h2>Démarche</h2>
-          <ol class="list">
-            <li>Écrire l’inéquation sous forme factorisée : $f(x) = k\prod (x - r_i)^{\alpha_i}$.</li>
-            <li>Établir le tableau de signe de chaque facteur (premier ou second degré).</li>
-            <li>Combiner les signes pour obtenir celui de $f(x)$.</li>
-            <li>Lire l’ensemble solution en respectant le symbole $\geq$, $\leq$, $&gt;$ ou $&lt;$.</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
+            <li>Factoriser l’expression de l’inéquation pour identifier les zéros.</li>
+            <li>Construire un tableau de signe combinant facteurs de degré 1 et 2.</li>
+            <li>Interpréter le tableau pour répondre à l’inéquation.</li>
+            <li>Rédiger une conclusion claire avec intervalles et notation ensembliste.</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Méthode générale</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Mettre l’inéquation sous forme produit</h3>
+              <p>
+                Exemple : résoudre $(x - 2)(x + 1)(x^2 - 4x + 5) \geq 0$.
+              </p>
+            </li>
+            <li>
+              <h3>Étudier chaque facteur</h3>
+              <ul class="list">
+                <li>Facteurs du 1er degré : le signe change en traversant la racine.</li>
+                <li>Facteurs du 2nd degré : utiliser discriminant ou forme canonique.</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Construire le tableau de signe global</h3>
+              <p>
+                Reporter les racines sur la première ligne et combiner les signes par
+                multiplication.
+              </p>
+            </li>
+            <li>
+              <h3>Lire la solution</h3>
+              <p>
+                Sélectionner les intervalles où le produit satisfait l’inéquation
+                (par exemple $\geq 0$).
+              </p>
+            </li>
+            <li>
+              <h3>Conclure avec une phrase</h3>
+              <p>
+                «&nbsp;L’ensemble des solutions est $S = \ldots$&nbsp;». Ajouter la notation
+                intervalle si besoin.
+              </p>
+            </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
+          <h2>Construction d’un tableau de signe</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Identifier les points critiques</h3>
+              <p>
+                Racines réelles simples, doubles et limites où l’expression n’est pas
+                définie (si division).
+              </p>
+            </li>
+            <li>
+              <h3>Organiser les lignes</h3>
+              <p>
+                Une ligne par facteur et une ligne finale pour le produit.
+              </p>
+            </li>
+            <li>
+              <h3>Utiliser les règles de signes</h3>
+              <p>
+                Un facteur de degré 2 sans racine réelle garde le signe de son
+                coefficient dominant.
+              </p>
+            </li>
+            <li>
+              <h3>Ajouter la solution</h3>
+              <p>
+                Colorier ou surligner les intervalles répondant à l’inéquation.
+              </p>
+              <!-- Graph suggestion: représentation d'un tableau de signe pour (x-2)(x+1)(x^2+1) -->
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Exemple guidé</h2>
           <p>
-            Résoudre $(x - 1)(x + 2)^2(2 - x) \geq 0$.
+            Résoudre $(x - 1)(x + 3)(x^2 + 4) \leq 0$.
           </p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$-2$</th>
-                <th>$]-2, 1[$</th>
-                <th>$1$</th>
-                <th>$]1, 2[$</th>
-                <th>$2$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$x + 2$</th>
-                <td>-</td>
-                <td>0</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>$(x + 2)^2$</th>
-                <td>+</td>
-                <td>0</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>$x - 1$</th>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>0</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>$2 - x$</th>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>0</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th>$f(x)$</th>
-                <td>-</td>
-                <td>0</td>
-                <td>-</td>
-                <td>0</td>
-                <td>+</td>
-                <td>0</td>
-                <td>-</td>
-              </tr>
-            </tbody>
-          </table>
+          <ol class="list" type="1">
+            <li>Facteurs du premier degré : racines $-3$ et $1$.</li>
+            <li>Facteur du second degré : $x^2 + 4$ est toujours positif.</li>
+            <li>Tableau de signe :</li>
+          </ol>
           <p>
-            L’inégalité $f(x) \geq 0$ est donc vérifiée pour $x = -2$ et pour
-            tout $x \in [1, 2]$.
+            \begin{array}{c|ccc}
+              x & -\infty & -3 & 1 & +\infty \\
+              \hline
+              x + 3 & - & 0 & + & + \\
+              x - 1 & - & - & 0 & + \\
+              x^2 + 4 & + & + & + & + \\
+              \hline
+              Produit & + & 0 & 0 & +
+            \end{array}
+          </p>
+          <p>
+            Conclusion : solutions $x \in [-3, 1]$ (inégalités larges car produit nul).
           </p>
         </section>
 
         <section class="section">
-          <h2>Conseils</h2>
+          <h2>Conseils pratiques</h2>
           <ul class="list">
-            <li>Garder la multiplicité des racines pour déterminer le changement de signe.</li>
-            <li>Utiliser les résultats des sections 6 et 12 pour les facteurs du second degré.</li>
-            <li>Présenter clairement l’intervalle solution sur une droite graduée.</li>
+            <li>Si un facteur apparaît au carré, le signe ne change pas à sa racine.</li>
+            <li>En cas d’inéquation stricte, exclure les valeurs annulant le produit.</li>
+            <li>Pour des quotients, ajouter la ligne des dénominateurs et exclure leurs zéros.</li>
+            <li>Utiliser la factorisation obtenue en section 16 pour les polynômes de degré 3.</li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier un facteur constant</h3>
+              <p>
+                Un signe constant modifie le résultat global : notez-le clairement.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre «&nbsp;\geq&nbsp;» et «&nbsp;&gt;&nbsp;»</h3>
+              <p>
+                Les solutions incluent ou excluent les racines selon le symbole : restez
+                attentif.
+              </p>
+            </li>
+            <li>
+              <h3>Intervalles mal écrits</h3>
+              <p>
+                Les solutions doivent être données dans l’ordre croissant avec les bons
+                crochets.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-18.html">Section précédente</a>
+            <a class="button button--secondary" href="section-18.html"
+              >Section précédente</a
+            >
             <a class="button" href="../index.html">Retour au chapitre</a>
           </div>
         </section>
@@ -177,15 +235,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

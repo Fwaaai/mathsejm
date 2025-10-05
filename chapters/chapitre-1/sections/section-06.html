@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-06">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-06"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 6</p>
-          <h1 class="intro__title">Tableau de signe (forme développée)</h1>
+          <h1 class="intro__title">Tableau de signe à partir de la forme développée</h1>
           <p class="intro__lead">
-            Déterminer le signe de $f(x) = ax^2 + bx + c$ sur $\mathbb{R}$ grâce à
-            l’étude des racines réelles et du coefficient directeur $a$.
+            Déterminer pour quels réels $x$ le trinôme $f(x) = ax^2 + bx + c$ est
+            positif, nul ou négatif en construisant un tableau de signe complet et
+            argumenté.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,61 +82,191 @@
         </header>
 
         <section class="section">
-          <h2>Démarche</h2>
-          <ol class="list">
-            <li>Calculer le discriminant $\Delta$ pour connaître le nombre de racines réelles.</li>
-            <li>Placer les racines $x_1$ et $x_2$ (avec $x_1 \leq x_2$) sur une ligne.</li>
+          <h2>Objectifs de la section</h2>
+          <ul class="list">
+            <li>Relier le signe de $f(x)$ à ses racines.</li>
+            <li>Construire un tableau de signe fiable pour un trinôme.</li>
             <li>
-              Utiliser le signe de $a$ pour déterminer celui de $f(x)$ à
-              l’extérieur et entre les racines.
+              Utiliser la factorisation pour simplifier la lecture des intervalles.
+            </li>
+            <li>
+              Connecter le tableau de signe aux résolutions d’inéquations.
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Méthodologie détaillée</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Étudier l’existence des racines</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Calcul du discriminant</h4>
+                  <p>
+                    $\Delta = b^2 - 4ac$ indique le nombre de racines réelles.
+                  </p>
+                </li>
+                <li>
+                  <h4>Conclusion</h4>
+                  <p>
+                    Selon le signe de $\Delta$, on distingue trois cas (deux
+                    racines, une racine double, aucune racine réelle).
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Factoriser si possible</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Deux racines distinctes</h4>
+                  <p>
+                    $f(x) = a(x - x_1)(x - x_2)$ avec $x_1 &lt; x_2$. Le signe dépend
+                    de l’ordre des facteurs et du coefficient $a$.
+                  </p>
+                </li>
+                <li>
+                  <h4>Racine double</h4>
+                  <p>
+                    $f(x) = a(x - x_0)^2$. Le signe de $f(x)$ est celui de $a$, sauf
+                    en $x = x_0$ où $f$ s’annule.
+                  </p>
+                </li>
+                <li>
+                  <h4>Aucune racine réelle</h4>
+                  <p>
+                    Le trinôme garde le signe de $a$ pour tout $x$.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Construire le tableau</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Ligne des $x$</h4>
+                  <p>
+                    Indiquer les valeurs critiques (racines) en respectant l’ordre
+                    croissant.
+                  </p>
+                </li>
+                <li>
+                  <h4>Ligne du signe</h4>
+                  <p>
+                    Utiliser les règles suivantes :
+                  </p>
+                  <ul class="list">
+                    <li>
+                      Pour $a &gt; 0$ et deux racines $x_1 &lt; x_2$, le signe est $+$ à
+                      l’extérieur et $-$ entre les racines.
+                    </li>
+                    <li>
+                      Pour $a &lt; 0$, la configuration est inversée.
+                    </li>
+                    <li>
+                      Avec une racine double, le signe ne change pas de part et
+                      d’autre de $x_0$.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>Cas sans racine réelle</h4>
+                  <p>
+                    Inscrire uniquement $+$ (si $a &gt; 0$) ou $-$ (si $a &lt; 0$) sur
+                    toute la ligne, avec mention «&nbsp;Aucune racine réelle&nbsp;».
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Validation graphique</h3>
+              <p>
+                Sur un graphique, les racines correspondent aux intersections avec
+                l’axe des abscisses. Observer si la courbe traverse ou touche l’axe.
+              </p>
+              <!-- Graph suggestion: parabole ouverte vers le haut coupant l'axe en x=-2 et x=1 pour illustrer changement de signe -->
             </li>
           </ol>
         </section>
 
         <section class="section">
-          <h2>Tableau type</h2>
-          <p>Si $\Delta &gt; 0$ et $a &gt; 0$ :</p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$x_1$</th>
-                <th>$x_2$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$f(x)$</th>
-                <td>+</td>
-                <td>0</td>
-                <td>0</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>Signe</th>
-                <td colspan="2">$\geq 0$</td>
-                <td colspan="2">$\geq 0$</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            Entre $x_1$ et $x_2$, le signe est négatif si $a &gt; 0$ et positif si
-            $a &lt; 0$. Adaptez le tableau aux cas $\Delta = 0$ (une seule racine) ou
-            $\Delta &lt; 0$ (signe constant).
-          </p>
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Deux racines distinctes</h3>
+              <p>
+                $f(x) = x^2 + x - 6$. $\Delta = 25$ et les racines sont $-3$ et $2$.
+                Le tableau de signe montre $f(x) &gt; 0$ pour $x &lt; -3$ ou $x &gt; 2$ et
+                $f(x) &lt; 0$ entre les deux.
+              </p>
+            </li>
+            <li>
+              <h3>Racine double</h3>
+              <p>
+                $g(x) = (x - 1)^2 = x^2 - 2x + 1$. Le signe est $\geq 0$ pour tout $x$,
+                avec annulation uniquement en $x = 1$.
+              </p>
+            </li>
+            <li>
+              <h3>Aucune racine</h3>
+              <p>
+                $h(x) = 2x^2 + 4x + 5$. $\Delta = -4$. Le trinôme est strictement
+                positif pour tout réel (car $a &gt; 0$).
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Pour $f(x) = x^2 - 5x + 4$, on obtient $\Delta = 9$, $x_1 = 1$ et
-            $x_2 = 4$. Avec $a = 1 &gt; 0$, $f(x)$ est positif hors de l’intervalle
-            $[1, 4]$ et négatif à l’intérieur.
-          </p>
+          <h2>Conseils pratiques</h2>
+          <ul class="list">
+            <li>
+              Toujours indiquer le signe de $a$ en début de raisonnement.
+            </li>
+            <li>
+              En présence de fractions, conservez les formes exactes pour ne pas
+              perdre la précision sur les racines.
+            </li>
+            <li>
+              Reliez votre tableau à l’étude du signe de $f'(x)$ pour détecter
+              l’extrémum si besoin.
+            </li>
+            <li>
+              Mentionnez clairement lorsque le signe ne change pas (racine double).
+            </li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs fréquentes</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Intervertir l’ordre des racines</h3>
+              <p>
+                L’ordre croissant sur la première ligne conditionne la lecture des
+                intervalles.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier les intervalles «&nbsp;extérieur&nbsp;»</h3>
+              <p>
+                Avec deux racines, il existe trois intervalles à commenter, pas
+                seulement celui du milieu.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre signe et valeur</h3>
+              <p>
+                Le tableau de signe n’indique pas les valeurs de $f(x)$ mais
+                seulement leur signe ($+$, $-$ ou $0$).
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-05.html">Section précédente</a>
+            <a class="button button--secondary" href="section-05.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-07.html">Section suivante</a>
           </div>
         </section>
@@ -137,15 +274,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-04">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-04"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -62,8 +68,9 @@
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 4</p>
           <h1 class="intro__title">Racines à partir de la forme développée</h1>
           <p class="intro__lead">
-            Déterminer les solutions de l’équation $f(x) = 0$ pour un trinôme de
-            la forme $ax^2 + bx + c$ à l’aide du discriminant.
+            Déterminer l’existence et la valeur des racines d’un trinôme du second
+            degré $f(x) = ax^2 + bx + c$ en exploitant les outils algébriques,
+            géométriques et numériques.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,48 +82,216 @@
         </header>
 
         <section class="section">
-          <h2>Méthode du discriminant</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>Calculer $\Delta = b^2 - 4ac$.</li>
             <li>
-              Interpréter le signe de $\Delta$ :
-              <ul class="list">
-                <li>$\Delta &gt; 0$ : deux racines distinctes $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.</li>
-                <li>$\Delta = 0$ : une racine double $x_0 = -\dfrac{b}{2a}$.</li>
-                <li>$\Delta &lt; 0$ : aucune racine réelle.</li>
-              </ul>
+              Calculer le discriminant $\Delta$ et interpréter les différents cas.
             </li>
             <li>
-              Vérifier en remplaçant chaque racine trouvée dans l’expression
-              développée.
+              Obtenir les racines exactes ou approchées selon la valeur de
+              $\Delta$.
+            </li>
+            <li>
+              Factoriser le trinôme lorsque c’est possible.
+            </li>
+            <li>
+              Relier l’étude algébrique à la lecture graphique et au signe de $f$.
             </li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Exemple corrigé</h2>
-          <p>
-            Pour $f(x) = 3x^2 - 5x - 2$, on calcule $\Delta = (-5)^2 - 4 \times 3 \times (-2) = 25 + 24 = 49$.
-          </p>
-          <p>
-            Les racines sont
-            $$x_1 = \dfrac{5 - 7}{6} = -\dfrac{1}{3} \quad \text{et} \quad x_2 = \dfrac{5 + 7}{6} = 2.$$
-            On vérifie $f(2) = 0$ et $f\big(-\frac{1}{3}\big) = 0$.
-          </p>
+          <h2>Méthodes de résolution</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Analyse du discriminant</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Calcul</h4>
+                  <p>
+                    $\Delta = b^2 - 4ac$. Il conditionne le nombre de racines
+                    réelles.
+                  </p>
+                </li>
+                <li>
+                  <h4>Interprétation</h4>
+                  <ul class="list">
+                    <li>$\Delta &gt; 0$ : deux racines réelles distinctes.</li>
+                    <li>$\Delta = 0$ : une racine réelle double.</li>
+                    <li>$\Delta &lt; 0$ : aucune racine réelle.</li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Formules de résolution</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Deux racines</h4>
+                  <p>
+                    Si $\Delta &gt; 0$ :
+                    \[
+                      x_{1,2} = \frac{-b \pm \sqrt{\Delta}}{2a}.
+                    \]
+                  </p>
+                </li>
+                <li>
+                  <h4>Racine double</h4>
+                  <p>
+                    Si $\Delta = 0$ : $x_0 = -\dfrac{b}{2a}$ est solution double.
+                  </p>
+                </li>
+                <li>
+                  <h4>Absence de solution réelle</h4>
+                  <p>
+                    Si $\Delta &lt; 0$, il n’y a pas de racine réelle. On peut alors
+                    indiquer que $f(x)$ garde un signe constant.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Factorisation du trinôme</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Cas $\Delta &gt; 0$</h4>
+                  <p>
+                    $f(x) = a(x - x_1)(x - x_2)$. Cette écriture facilite la
+                    construction du tableau de signe.
+                  </p>
+                </li>
+                <li>
+                  <h4>Cas $\Delta = 0$</h4>
+                  <p>
+                    $f(x) = a(x - x_0)^2$. On lit immédiatement la racine double et
+                    l’axe de symétrie.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Lecture graphique</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Intersection avec l’axe des abscisses</h4>
+                  <p>
+                    Les racines correspondent aux points où la parabole coupe ou
+                    touche l’axe $Ox$.
+                  </p>
+                  <!-- Graph suggestion: parabole coupant l'axe en x=-1 et x=3 pour illustrer deux racines distinctes -->
+                </li>
+                <li>
+                  <h4>Cas particuliers</h4>
+                  <p>
+                    Une parabole tangente à l’axe possède une racine double ; une
+                    parabole entièrement au-dessus (ou en dessous) de l’axe n’a pas
+                    de racine réelle.
+                  </p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h3>Résolution numérique</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Utilisation de la calculatrice</h4>
+                  <p>
+                    Vérifier les solutions exactes à l’aide d’une fonction
+                    «&nbsp;solve&nbsp;» ou d’un tableur pour repérer les changements de signe.
+                  </p>
+                </li>
+                <li>
+                  <h4>Ajustements</h4>
+                  <p>
+                    En cas de racines irrationnelles, donner une approximation à
+                    $10^{-2}$ près et préciser que la valeur exacte est donnée par la
+                    formule.
+                  </p>
+                </li>
+              </ol>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Conseils</h2>
-          <ul class="list">
-            <li>Facteur commun et simplification avant le calcul de $\Delta$ peuvent éviter les erreurs.</li>
-            <li>Notez clairement les étapes : expression de $\Delta$, calcul, solutions.</li>
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
             <li>
-              Reliez le signe de $a$ et la position des racines par rapport au
-              sommet pour visualiser la courbe.
+              <h3>Discriminant positif</h3>
+              <p>
+                $f(x) = x^2 - 2x - 3$. $\Delta = (-2)^2 - 4 \times 1 \times (-3) = 16$.
+                Les racines sont $x_1 = \dfrac{2 - 4}{2} = -1$ et
+                $x_2 = \dfrac{2 + 4}{2} = 3$.
+              </p>
+            </li>
+            <li>
+              <h3>Discriminant nul</h3>
+              <p>
+                $g(x) = 4x^2 - 12x + 9$. $\Delta = (-12)^2 - 4 \times 4 \times 9 = 0$.
+                La racine double est $x_0 = \dfrac{12}{8} = \dfrac{3}{2}$.
+              </p>
+            </li>
+            <li>
+              <h3>Discriminant négatif</h3>
+              <p>
+                $h(x) = 2x^2 + 5x + 7$. $\Delta = 25 - 56 = -31$. Il n’existe pas de
+                racine réelle, la parabole reste toujours au-dessus de l’axe.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils et prolongements</h2>
+          <ul class="list">
+            <li>
+              Avant d’appliquer la formule, simplifiez le trinôme (facteur commun,
+              division par un scalaire non nul).
+            </li>
+            <li>
+              Pour vérifier une racine, remplacez-la dans $f(x)$ et assurez-vous que
+              le résultat est nul.
+            </li>
+            <li>
+              Les racines donnent les abscisses d’intersection avec l’axe : elles
+              sont utiles pour le tableau de signe et l’étude des inéquations.
+            </li>
+            <li>
+              En cas de racines irrationnelles, gardez la forme exacte avec la
+              racine carrée pour éviter les erreurs d’arrondi.
             </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Erreurs à éviter</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Oublier de vérifier $a \neq 0$</h3>
+              <p>
+                Sinon l’équation n’est plus du second degré et les formules ne
+                s’appliquent pas.
+              </p>
+            </li>
+            <li>
+              <h3>Mauvaise gestion des signes</h3>
+              <p>
+                Vérifiez la parenthèse dans $-b \pm \sqrt{\Delta}$ et le dénominateur
+                $2a$.
+              </p>
+            </li>
+            <li>
+              <h3>Confondre racines et extrémum</h3>
+              <p>
+                Une racine est un point où $f(x) = 0$, pas nécessairement un
+                maximum ou un minimum.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-03.html">Section précédente</a>
+            <a class="button button--secondary" href="section-03.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-05.html">Section suivante</a>
           </div>
         </section>
@@ -124,15 +299,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>

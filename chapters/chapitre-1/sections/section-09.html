@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-09">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-09"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +66,11 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 9</p>
-          <h1 class="intro__title">Axe de symétrie (forme canonique)</h1>
+          <h1 class="intro__title">Axe de symétrie à partir de la forme canonique</h1>
           <p class="intro__lead">
-            Déterminer instantanément l’axe de symétrie d’une parabole exprimée
-            sous la forme $f(x) = a(x - \alpha)^2 + \beta$.
+            Lire et interpréter l’axe de symétrie d’une parabole directement depuis
+            la forme canonique et exploiter cette information pour l’étude du
+            graphique.
           </p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../../index.html">Accueil</a>
@@ -75,32 +82,141 @@
         </header>
 
         <section class="section">
-          <h2>Rappel</h2>
-          <p>
-            L’axe de symétrie est la droite verticale passant par le sommet. Dans
-            la forme canonique, on lit directement $x = \alpha$. Si la forme est
-            $f(x) = a(x + p)^2 + q$, alors l’axe est $x = -p$.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>Exemples rapides</h2>
+          <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>$f(x) = -4(x - 3)^2 + 5 \Rightarrow$ axe $x = 3$.</li>
-            <li>$g(x) = 2(x + 1)^2 - 7 \Rightarrow$ axe $x = -1$.</li>
-            <li>Si $f(x) = a(x - \alpha)^2 + \beta$, alors $f(\alpha + h) = f(\alpha - h)$ pour tout réel $h$.</li>
+            <li>Identifier l’axe de symétrie dans l’écriture canonique.</li>
+            <li>Relier l’axe de symétrie au sommet et à la forme factorisée.</li>
+            <li>Utiliser l’axe pour placer des points symétriques sur le graphique.</li>
+            <li>Déduire des propriétés utiles pour les résolutions d’équations.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>À vérifier</h2>
+          <h2>Lecture immédiate de l’axe</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Depuis la forme canonique</h3>
+              <p>
+                Dans $f(x) = a(x - \alpha)^2 + \beta$, l’axe de symétrie est la droite
+                verticale d’équation $x = \alpha$.
+              </p>
+            </li>
+            <li>
+              <h3>Lien avec le sommet</h3>
+              <p>
+                Le sommet $S(\alpha, \beta)$ appartient à l’axe. Tout point de la
+                parabole possède un symétrique par rapport à cette droite.
+              </p>
+            </li>
+            <li>
+              <h3>Comparaison avec la forme factorisée</h3>
+              <p>
+                Si $f(x) = a(x - x_1)(x - x_2)$, alors $\alpha = \dfrac{x_1 + x_2}{2}$.
+                Les racines sont symétriques par rapport à l’axe.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Utilisations pratiques</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Placement de points</h3>
+              <p>
+                Connaissant un point $A(x_A, y_A)$, on obtient son symétrique
+                $A'(2\alpha - x_A, y_A)$. Cela permet de tracer rapidement la courbe.
+              </p>
+            </li>
+            <li>
+              <h3>Résolution d’équations</h3>
+              <p>
+                Si $f(x) = k$ admet deux solutions, elles sont symétriques par rapport
+                à l’axe. On peut donc rechercher une solution puis déduire l’autre.
+              </p>
+            </li>
+            <li>
+              <h3>Construction du graphique</h3>
+              <p>
+                Tracer l’axe en premier, placer le sommet puis reporter des points de
+                part et d’autre pour dessiner la parabole.
+              </p>
+              <!-- Graph suggestion: parabole $f(x)=(x-2)^2-3$ avec axe x=2 tracé en pointillé -->
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Exemples guidés</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Forme canonique explicite</h3>
+              <p>
+                $f(x) = (x - 5)^2 - 4$ : l’axe est $x = 5$.
+              </p>
+            </li>
+            <li>
+              <h3>Coefficient négatif</h3>
+              <p>
+                $g(x) = -3(x + 2)^2 + 1$ : l’axe est $x = -2$.
+              </p>
+            </li>
+            <li>
+              <h3>Lien avec la forme factorisée</h3>
+              <p>
+                $h(x) = 2(x - 1)(x - 7)$ : le passage en canonique donne $\alpha = 4$.
+                L’axe est $x = 4$.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="section">
+          <h2>Conseils</h2>
           <ul class="list">
-            <li>Sur un graphique, l’axe coupe la courbe au point de symétrie $S$.</li>
-            <li>Dans un tableau de valeurs, les images de part et d’autre sont identiques.</li>
-            <li>En repassant en forme développée, on retrouve $x = -\dfrac{b}{2a}$.</li>
+            <li>
+              Indiquez toujours l’équation complète de l’axe ($x = \alpha$) dans vos
+              rédactions.
+            </li>
+            <li>
+              Utilisez l’axe pour vérifier vos calculs de racines : elles doivent se
+              situer à égale distance.
+            </li>
+            <li>
+              Pour des exercices graphiques, tracez l’axe en couleur différente pour
+              améliorer la lisibilité.
+            </li>
           </ul>
+        </section>
+
+        <section class="section">
+          <h2>Pièges à éviter</h2>
+          <ol class="list" type="1">
+            <li>
+              <h3>Confondre l’axe avec une ordonnée</h3>
+              <p>
+                L’axe est une droite verticale. Une notation «&nbsp;$y = \beta$&nbsp;» serait
+                incorrecte.
+              </p>
+            </li>
+            <li>
+              <h3>Oublier le signe dans $(x - \alpha)$</h3>
+              <p>
+                $(x + 3)^2$ signifie $\alpha = -3$ et donc $x = -3$ pour l’axe.
+              </p>
+            </li>
+            <li>
+              <h3>Ignorer les unités du graphique</h3>
+              <p>
+                Vérifiez les échelles pour que la valeur de $\alpha$ corresponde à la
+                lecture graphique.
+              </p>
+            </li>
+          </ol>
           <div class="section__actions">
-            <a class="button button--secondary" href="section-08.html">Section précédente</a>
+            <a class="button button--secondary" href="section-08.html"
+              >Section précédente</a
+            >
             <a class="button" href="section-10.html">Section suivante</a>
           </div>
         </section>
@@ -108,15 +224,35 @@
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>
