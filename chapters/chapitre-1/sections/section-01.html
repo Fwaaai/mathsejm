@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr" data-page="section" data-chapter="1" data-root="../../.." data-section="section-01">
+<html
+  lang="fr"
+  data-page="section"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-01"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -78,94 +84,268 @@
         <section class="section">
           <h2>Objectifs de la section</h2>
           <ul class="list">
-            <li>Identifier les coefficients $a$, $b$ et $c$ dans la forme développée.</li>
-            <li>Passer de la forme canonique ou factorisée à la forme développée.</li>
-            <li>Utiliser un graphique ou trois points d’une parabole pour retrouver $f(x)$.</li>
+            <li>
+              Savoir trouver l'expression à partir de la forme canonique ou
+              factorisée.
+            </li>
+            <li>Savoir trouver l'expression à partir d'un graphique.</li>
+            <li>Savoir trouver l'expression à partir de trois points.</li>
           </ul>
         </section>
 
         <section class="section">
-          <h2>Méthodes essentielles</h2>
-          <ul class="list">
+          <h2>Méthodes et exemples</h2>
+          <ol class="list" type="1">
             <li>
-              <strong>Développer la forme canonique :</strong> si
-              $f(x) = a(x - \alpha)^2 + \beta$, alors
-              $$f(x) = a\big(x^2 - 2\alpha x + \alpha^2\big) + \beta = ax^2 - 2a\alpha x + a\alpha^2 + \beta.$$
+              <h3>À partir d'autres formes</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Forme Canonique</h4>
+                  <p>On peut faire un développement classique.</p>
+                  <p>
+                    \begin{align*} 6(5 - 3x)^{2} + 5 &= 6(25 - 30x + 9x^{2}) + 5
+                    \\ &= 150 - 180x + 54x^{2} + 5 \\ &= 54x^{2} - 180x + 155
+                    \end{align*}
+                  </p>
+                </li>
+                <li>
+                  <h4>Forme Factorisée</h4>
+                  <p>
+                    On peut faire un développement classique, ou utiliser des
+                    identités remarquables.
+                  </p>
+                  <ol class="list" type="i">
+                    <li>
+                      <h4>Développement sans identités</h4>
+                      <p>
+                        \begin{align*} (x - 5)(x + 7) &= x(x + 7) - 5(x + 7) \\
+                        &= x^{2} + 7x - 5x - 35 \\ &= x^{2} + 2x - 35
+                        \end{align*}
+                      </p>
+                    </li>
+                    <li>
+                      <h4>Développement avec identités remarquables</h4>
+                      <ol class="list" type="A">
+                        <li>
+                          <h4>Cas 1 - $(a+b)^2$</h4>
+                          <p>On sait que $(a+b)^2 = a^2 + 2ab + b^2$.</p>
+                          <!-- math for (x+5)^2-->
+                          <p>
+                            \begin{align*} (x + 5)^{2} &= x^{2} + 2(5)(x) +
+                            5^{2} \\ &= x^{2} + 10x + 25 \end{align*}
+                          </p>
+                        </li>
+                        <li>
+                          <h4>Cas 2 - $(a-b)^2$</h4>
+                          <p>On sait que $(a-b)^2 = a^2 - 2ab + b^2$.</p>
+                          <!-- math for (x-5)^2-->
+                          <p>
+                            \begin{align*} (x - 5)^{2} &= x^{2} - 2(5)(x) + 5^2
+                            \\ &= x^{2} - 10x + 25 \end{align*}
+                          </p>
+                        </li>
+                        <li>
+                          <h4>Cas 3 - $(a+b)(a-b)$</h4>
+                          <p>On sait que $(a+b)(a-b) = a^2 - b^2$.</p>
+                          <!-- math for (x+5)(x-5)-->
+                          <p>
+                            \begin{align*} (x + 5)(x - 5) &= x^{2} - 5^{2} \\ &=
+                            x^{2} - 25 \end{align*}
+                          </p>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
             </li>
             <li>
-              <strong>Développer la forme factorisée :</strong> si
-              $f(x) = a(x - x_1)(x - x_2)$, on obtient
-              $$f(x) = a\big(x^2 - (x_1 + x_2)x + x_1x_2\big).$$
+              <h3>À partir d’un graphique</h3>
+              <ol class="list" type="a">
+                <li>
+                  <h4>Par le sommet et un point</h4>
+                  <p>Regardons ce graphique.</p>
+                  <img src="/assets/images/graphs/chapter1/graph1.png" />
+                  <p>On remarque que $S = (-2, -8)$ et $P = (-4,-4)$</p>
+                  <p>On peut alors compléter la forme canonique avec:</p>
+                  <p>
+                    \begin{aligned} \text{Abscisse de } S &: S_{x} = \alpha \\
+                    \text{Ordonnée de } S &: S_{y} = \beta \\ \text{Abscisse de
+                    } P &: P_{x} = x_{0} \\ \text{Ordonnée de } P &: P_{y} =
+                    y_{0} \end{aligned}
+                  </p>
+                  <p>On sait que:</p>
+                  <p>
+                    \begin{aligned} f(x) &= a(x - \alpha)^2 + \beta \\ y_{0} &=
+                    a(x_{0} - \alpha)^2 + \beta \end{aligned}
+                  </p>
+                  <p>Remplaçons avec</p>
+                  <p>
+                    \begin{aligned} S_x = \alpha = -2 \\ S_y = \beta = -8 \\ P_x
+                    = x_0 = -4 \\ P_y = y_0 = -4 \end{aligned}
+                  </p>
+                  <p>On résout pour a:</p>
+                  <p>
+                    \begin{aligned} -4 &= a(-4 - (-2))^2 + (-8) \\ -4 &=
+                    a(-2)^2-8 \\ -4 &= 4a - 8 \\ 4 &= 4a \\ a &= \frac{4}{4} = 1
+                    \end{aligned}
+                  </p>
+                  <p>
+                    On remplace encore une fois, cette fois-ci $a = 1$ pour
+                    trouver la fonction:
+                  </p>
+                  <p>
+                    \begin{aligned} f(x) &= 1(x - (-2))^2 + (-8) \\ f(x) &= (x +
+                    2)^2 - 8 \\ f(x) &= x^2 + 4x + 4 - 8 \\ f(x) &= x^2 + 4x - 4
+                    \end{aligned}
+                  </p>
+                  <p>Ainsi, on retrouve la forme développée.</p>
+                </li>
+                <li>
+                  <h4>Par les abscisses des racines et un point</h4>
+                  <p>Regardons ce graphique.</p>
+                  <img src="/assets/images/graphs/chapter1/graph2.png" />
+                  <p>On remarque les racines sont à $x = -3$ et $x = 2$.</p>
+                  <p>On note:</p>
+                  <p></p>
+                  <p>
+                    \begin{aligned}\text{Première racine : } & r_1
+                    \\\text{Deuxième racine : } & r_2 \\\text{Abscisse de } P
+                    \text{ qui est } P_x & \text{ est notée } x_0 \\\text{Ordonnée de } P \text{ qui est } P_y & \text{ est notée } y_0\end{aligned}
+                  </p>
+                  <p>On peut alors compléter la forme factorisée avec:</p>
+                  <p>
+                    \begin{aligned}f(x) &= a(x - r_1)(x - r_2) \\y_0 &= a(x_0 -
+                    r_1)(x_0 - r_2)\end{aligned}
+                  </p>
+                  <p>Remplaçons:</p>
+                  <p>
+                    \begin{aligned}r_1 &= -3 \\ r_2 &= 2 \\ x_0 &= -2 \\ y_0 &=
+                    -4 \end{aligned}
+                  </p>
+                  <p>On resout pour a:</p>
+                  <p>
+                    \begin{aligned}-4 &=
+                    a\bigl((-2) - (-3)\bigr)\bigl((-2) - 2\bigr) \\ -4 &=
+                    a(1)(-4) \\ -4 &= -4a \\ a &= 1 \end{aligned}
+                  </p>
+                  <p>On peut alors remplacer avec $a = 1$ pour trouver la fonction:</p>
+                  <p>
+                    \begin{aligned}
+                      f(x) &= a(x - r_1)(x - r_2) \\
+                      f(x) &= 1\bigl(x - (-3)\bigr)\bigl(x - 2\bigr) \\
+                      f(x) &= (x + 3)(x - 2) \\
+                      f(x) &= x^2 - 2x + 3x - 6 \\
+                      f(x) &= x^2 + x - 6
+                    \end{aligned}
+                  </p>
+                  <p>Ainsi, on retrouve la forme développée.</p>
+                </li>
+              </ol>
             </li>
-            <li>
-              <strong>Détermination à partir de trois points :</strong> résoudre le système
-              $$\begin{cases}
-              f(x_1) = y_1 = ax_1^2 + bx_1 + c, \\
-              f(x_2) = y_2 = ax_2^2 + bx_2 + c, \\
-              f(x_3) = y_3 = ax_3^2 + bx_3 + c
-              \end{cases}$$
-              pour trouver $a$, $b$ et $c$.
-            </li>
-          </ul>
-        </section>
-
-        <section class="section">
-          <h2>Exemple détaillé</h2>
-          <p>
-            On donne la forme canonique $f(x) = 2(x - 1)^2 - 3$. Pour obtenir la
-            forme développée, on développe puis on réduit :
-          </p>
-          <p>
-            $$
+            <li><h3>À partir d’un triplet de données d’images et d’antécédents</h3>
+            <p>On nous donne trois points distincts:</p>
+            <p>
+              \begin{aligned}P_1 &= (1, 8) \\ P_2 &= (3, 8) \\ P_3 &= (4, 5)\end{aligned}
+            </p>
+            <p>On note:</p>
+            <p>
+              \begin{aligned}\text{Abscisse du premier point : } & x_0 = 1 \\\text{Ordonnée du premier point : } & y_0 = 8 \\\text{Abscisse du deuxième point : } & x_1 = 3 \\\text{Ordonnée du deuxième point : } & y_1 = 8 \\\text{Abscisse du troisième point : } & x_2 = 4 \\\text{Ordonnée du troisième point : } & y_2 = 5 \end{aligned}
+            <p>Pour chaque point, on remplace dans la formule:</p>
+            <p>
               \begin{aligned}
-              f(x)
-              &= 2\big(x^2 - 2x + 1\big) - 3 \\
-              &= 2x^2 - 4x + 2 - 3 \\
-              &= 2x^2 - 4x - 1.
+                f(x) &= ax^2 + bx + c \\
+                y_n &= ax_n^2 + bx_n + c \\
+                P(1,8): & \\
+                8 &= a(1)^2 + b(1) + c \\
+                8 &= a + b + c \\
+                P(3,8): & \\
+                8 &= a(3)^2 + b(3) + c \\
+                8 &= 9a + 3b + c \\
+                P(4,5): & \\
+                5 &= a(4)^2 + b(4) + c \\
+                5 &= 16a + 4b + c
               \end{aligned}
-            $$
-          </p>
-          <p>
-            Ainsi, $a = 2$, $b = -4$ et $c = -1$. Vérifiez en remplaçant $x = 1$ :
-            $$f(1) = 2(1)^2 - 4(1) - 1 = -3,$$ ce qui correspond à la valeur
-            minimale donnée par la forme canonique.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>Pour s’entraîner</h2>
-          <ul class="list">
-            <li>
-              Convertir $f(x) = -3(x + 2)^2 + 5$ en forme développée puis en
-              déterminer $f(-2)$ et $f(0)$.
+            </p>
+            <p>On a donc trois équations avec les mêmes inconnues a, b, et c.
+              <br>On peut donc en faire un système d’équations:</p>
+                <p>\begin{cases}
+                  8 = a + b + c \\
+                  8 = 9a + 3b + c \\
+                  5 = 16a + 4b + c
+                \end{cases}</p>
+                <p>On résout:</p>
+                <p>
+                  \begin{aligned}
+                  &\begin{cases}
+                  8 = a + b + c \\
+                  8 = 9a + 3b + c \\
+                  5 = 16a + 4b + c
+                  \end{cases}\\[0.75em]
+                  \\
+                  8 - 8 &= (9a + 3b + c) - (a + b + c)\\
+                  0 &= (9a - a) + (3b - b) + (c - c)\\
+                  0 &= 8a + 2b\\[0.75em]
+                  \\
+                  5 - 8 &= (16a + 4b + c) - (a + b + c)\\
+                  -3 &= (16a - a) + (4b - b) + (c - c)\\
+                  -3 &= 15a + 3b\\[0.75em]
+                  \\
+                  0 &= 4a + b \quad \\
+                  -1 &= 5a + b \quad \\[0.75em]
+                  \\
+                  (-1) - 0 &= (5a + b) - (4a + b)\\
+                  -1 &= (5a - 4a) + (b - b)\\
+                  -1 &= a + 0\\
+                  a &= -1\\[0.75em]
+                  \\
+                  0 &= 4(-1) + b\\
+                  0 &= -4 + b\\
+                  b &= 4\\[0.75em]
+                  \\
+                  8 &= (-1) + 4 + c\\
+                  8 &= 3 + c\\
+                  c &= 5
+                  \end{aligned}
+                </p>
+                <p>On complète dans la forme développée :</p>
+                <p>$$f(x) = ax^2 + bx + c = -x^2 + 4x + 5$$</p>
             </li>
-            <li>
-              Une parabole passe par $(0, 4)$, $(1, 1)$ et $(3, 7)$. Retrouver la
-              forme développée $f(x) = ax^2 + bx + c$.
-            </li>
-            <li>
-              À partir de $f(x) = 2(x - 4)(x + 1)$, développer puis vérifier la
-              cohérence en calculant la somme et le produit des racines.
-            </li>
-          </ul>
-          <div class="section__actions">
-            <a class="button button--secondary" href="../index.html">Retour au chapitre 1</a>
-            <a class="button" href="section-02.html">Section suivante</a>
-          </div>
+          </ol>
         </section>
       </main>
     </div>
     <div class="section-menu" data-section-menu hidden>
       <div class="section-menu__backdrop" data-section-menu-close></div>
-      <aside class="section-menu__panel" id="section-menu-panel" role="dialog" aria-modal="true" aria-labelledby="section-menu-title">
-        <button class="section-menu__close" type="button" data-section-menu-close>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
           <span class="visually-hidden">Fermer le menu des sections</span>
           <span aria-hidden="true">&times;</span>
         </button>
         <header class="section-menu__header">
-          <p class="section-menu__eyebrow" data-section-menu-eyebrow>Chapitre 1 &mdash; Polynômes du second degré</p>
-          <h2 class="section-menu__title" id="section-menu-title" data-section-menu-title>Choisissez une section</h2>
-          <p class="section-menu__subtitle" data-section-menu-subtitle>Cliquez sur une section pour ouvrir sa fiche de révision.</p>
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
         </header>
         <ol class="section-menu__list" data-section-menu-list></ol>
       </aside>
