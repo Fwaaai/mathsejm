@@ -354,6 +354,74 @@ th {
   text-decoration: underline;
 }
 
+.exercise-list,
+.answer-list {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.exercise {
+  background: rgba(47, 60, 190, 0.06);
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 24px rgba(31, 35, 53, 0.08);
+}
+
+.exercise__title {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.exercise__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 0.95rem;
+}
+
+.exercise__table th,
+.exercise__table td {
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.exercise__actions {
+  margin-top: 32px;
+}
+
+.answers {
+  margin-top: 24px;
+}
+
+.answers[hidden] {
+  display: none;
+}
+
+.answer__details {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 6px 18px rgba(31, 35, 53, 0.08);
+}
+
+.answer__details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.answer__content {
+  margin-top: 12px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .section-menu {
   position: fixed;
   inset: 0;
