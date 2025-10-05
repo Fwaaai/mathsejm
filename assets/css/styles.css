@@ -381,6 +381,11 @@ th {
   background: rgba(19, 22, 43, 0.45);
 }
 
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
 .section-menu__panel {
   position: absolute;
   top: 0;
