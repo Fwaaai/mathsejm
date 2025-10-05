@@ -75,35 +75,57 @@
         </header>
 
         <section class="section">
-          <h2>Étapes clés</h2>
-          <ol class="list">
-            <li>Identifier un terme qui peut jouer le rôle d’une nouvelle variable $X$.</li>
-            <li>Poser $X = g(x)$ pour simplifier l’équation en $X$.</li>
-            <li>Résoudre l’équation quadratique obtenue.</li>
-            <li>Revenir à $x$ en résolvant $g(x) = X_i$ pour chaque solution.</li>
-          </ol>
-        </section>
+        <p>Le changement de variable est une technique qui consiste à remplacer une expression compliquée par une variable intermédiaire pour simplifier l’équation, la résoudre plus facilement, puis revenir à la variable d’origine.</p>
+
+        <p>Par exemple :</p>
+        <p>
+          $$
+          x^4 - 5x^2 + 6 = 0
+          $$
+        </p>
+        <p>Cette équation n’est pas de degré 2 en $x$, mais on remarque que :</p>
+        <p>
+          $$
+          x^4 = (x^2)^2
+          $$
+        </p>
+        <p>On pose alors : $X = x^2$, ce qui donne :</p>
+        <p>
+          $$
+          X^2 - 5X + 6 = 0
+          $$
+        </p>
+
+        <p>On résout cette équation du second degré :</p>
+        <p>
+          $$
+          X_1 = 2, \quad X_2 = 3
+          $$
+        </p>
+
+        <p>On revient ensuite à la variable d’origine, en remplaçant $X$ par $x^2$ :</p>
+        <p>
+          $$
+          x^2 = 2 \quad \text{ou} \quad x^2 = 3
+          $$
+        </p>
+
+        <p>On résout enfin pour $x$ :</p>
+        <p>
+          $$
+          x = \pm \sqrt{2} \quad \text{ou} \quad x = \pm \sqrt{3}
+          $$
+        </p>
+
+        <p>Donc les solutions sont :</p>
+        <p>
+          $$
+          x_1 = \sqrt{2}, \quad x_2 = -\sqrt{2}, \quad x_3 = \sqrt{3}, \quad x_4 = -\sqrt{3}
+          $$
+        </p>
+      </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Résoudre $\left(x + \dfrac{1}{x}\right)^2 - 5 = 0$ avec $x \neq 0$.
-            Posons $X = x + \dfrac{1}{x}$. L’équation devient $X^2 - 5 = 0$,
-            d’où $X = \pm \sqrt{5}$.
-          </p>
-          <p>
-            On résout ensuite $x + \dfrac{1}{x} = \sqrt{5}$ puis $x + \dfrac{1}{x} = -\sqrt{5}$.
-            Chaque équation se transforme en $x^2 \mp \sqrt{5}x + 1 = 0$.
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>Conseils</h2>
-          <ul class="list">
-            <li>Choisir une substitution qui simplifie réellement l’expression (puissance, produit, somme).</li>
-            <li>Ne pas oublier les conditions de validité (ici $x \neq 0$).</li>
-            <li>Contrôler toutes les solutions obtenues dans l’équation initiale.</li>
-          </ul>
           <div class="section__actions">
             <a class="button button--secondary" href="section-14.html">Section précédente</a>
             <a class="button" href="section-16.html">Section suivante</a>

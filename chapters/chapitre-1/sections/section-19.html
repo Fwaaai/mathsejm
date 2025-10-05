@@ -75,89 +75,34 @@
         </header>
 
         <section class="section">
-          <h2>Démarche</h2>
-          <ol class="list">
-            <li>Écrire l’inéquation sous forme factorisée : $f(x) = k\prod (x - r_i)^{\alpha_i}$.</li>
-            <li>Établir le tableau de signe de chaque facteur (premier ou second degré).</li>
-            <li>Combiner les signes pour obtenir celui de $f(x)$.</li>
-            <li>Lire l’ensemble solution en respectant le symbole $\geq$, $\leq$, $&gt;$ ou $&lt;$.</li>
-          </ol>
-        </section>
-
-        <section class="section">
-          <h2>Exemple</h2>
           <p>
-            Résoudre $(x - 1)(x + 2)^2(2 - x) \geq 0$.
+            Résolvons l'inéquation suivante :
           </p>
-          <table>
-            <thead>
-              <tr>
-                <th>$x$</th>
-                <th>$-\infty$</th>
-                <th>$-2$</th>
-                <th>$]-2, 1[$</th>
-                <th>$1$</th>
-                <th>$]1, 2[$</th>
-                <th>$2$</th>
-                <th>$+\infty$</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>$x + 2$</th>
-                <td>-</td>
-                <td>0</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>$(x + 2)^2$</th>
-                <td>+</td>
-                <td>0</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>$x - 1$</th>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>0</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-              </tr>
-              <tr>
-                <th>$2 - x$</th>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>+</td>
-                <td>0</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <th>$f(x)$</th>
-                <td>-</td>
-                <td>0</td>
-                <td>-</td>
-                <td>0</td>
-                <td>+</td>
-                <td>0</td>
-                <td>-</td>
-              </tr>
-            </tbody>
-          </table>
           <p>
-            L’inégalité $f(x) \geq 0$ est donc vérifiée pour $x = -2$ et pour
-            tout $x \in [1, 2]$.
+            $$
+            (x - 1)(x^2 + 2x + 1) \leq 0
+            $$
+          </p>
+
+          <p>On factorise $x^2 + 2x + 1$ :</p>
+          <p>
+            $$
+            (x - 1)(x + 1)^2 \leq 0
+            $$
+          </p>
+
+          <p>Les <strong>valeurs critiques</strong> sont $x = -1$ et $x = 1$.</p>
+
+          <p>On dresse le tableau de signes :</p>
+          <img src="/assets/images/tables/chapter1/table9.png" class="img" />
+
+          <p>On cherche les valeurs de $x$ pour lesquelles l’expression est $\leq 0$ (donc négative ou nulle).</p>
+
+          <p>
+            L'inéquation est vérifiée pour :
+            $$
+            x \in ]-\infty\,;\,1]
+            $$
           </p>
         </section>
 

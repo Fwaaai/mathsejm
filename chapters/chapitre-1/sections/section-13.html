@@ -75,40 +75,51 @@
         </header>
 
         <section class="section">
-          <h2>Critère analytique</h2>
-          <p>
-            Un trinôme $ax^2 + bx + c$ admet une factorisation réelle si et
-            seulement si son discriminant $\Delta = b^2 - 4ac$ est positif ou nul.
-          </p>
-          <ul class="list">
-            <li>$\Delta > 0$ : $f(x) = a(x - x_1)(x - x_2)$ avec deux racines distinctes.</li>
-            <li>$\Delta = 0$ : $f(x) = a(x - x_0)^2$.</li>
-            <li>$\Delta < 0$ : aucune factorisation réelle.</li>
-          </ul>
+          <ol class="list">
+            <li>
+              <h3>À partir d’un graphique</h3>
+              <p>Si le graphique d’une fonction coupe l’axe des abscisses en deux points, on peut en déduire les racines de la fonction.</p>
+              <p>Une fonction qui admet deux racines peut être écrite sous forme factorisée :</p>
+              <p>
+                $$
+                f(x) = a(x - r_1)(x - r_2)
+                $$
+              </p>
+              <p>Par exemple, si les racines sont $r_1 = -1$ et $r_2 = 5$, on peut écrire :</p>
+              <p>
+                $$
+                \begin{aligned}
+                f(x) &= a(x - (-1))(x - 5) \\
+                f(x) &= a(x + 1)(x - 5)
+                \end{aligned}
+                $$
+              </p>
+            </li>
+
+            <li>
+              <h3>À partir d’un calcul</h3>
+              <p>On peut également justifier l’existence de la forme factorisée en résolvant l’équation $f(x) = 0$.</p>
+              <p>Par exemple :</p>
+              <p>
+                $$
+                f(x) = -x^2 + 4x + 5
+                $$
+              </p>
+              <p>On résout $f(x) = 0$ et on trouve les racines $r_1 = -1$ et $r_2 = 5$.</p>
+              <p>On peut alors écrire :</p>
+              <p>
+                $$
+                \begin{aligned}
+                f(x) &= a(x - r_1)(x - r_2) \\
+                f(x) &= a(x + 1)(x - 5)
+                \end{aligned}
+                $$
+              </p>
+            </li>
+          </ol>
         </section>
 
         <section class="section">
-          <h2>Lecture graphique</h2>
-          <p>
-            Sur un graphique, la forme factorisée existe si la parabole coupe ou
-            touche l’axe des abscisses. Le nombre de points d’intersection
-            correspond au nombre de racines.
-          </p>
-          <div class="graph-placeholder" role="img" aria-label="Graphique à insérer illustrant les intersections avec l’axe des abscisses">
-            Graphique à insérer ici.
-          </div>
-        </section>
-
-        <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Pour $f(x) = x^2 - 4x + 3$, $\Delta = 4^2 - 4 \times 1 \times 3 = 4$.
-            La factorisation est $f(x) = (x - 1)(x - 3)$.
-          </p>
-          <p>
-            Si $g(x) = x^2 + 4x + 5$, alors $\Delta = 16 - 20 = -4$ : aucune
-            factorisation réelle, la parabole reste au-dessus de l’axe des $x$.
-          </p>
           <div class="section__actions">
             <a class="button button--secondary" href="section-12.html">Section précédente</a>
             <a class="button" href="section-14.html">Section suivante</a>

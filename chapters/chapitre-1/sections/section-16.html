@@ -75,34 +75,50 @@
         </header>
 
         <section class="section">
-          <h2>Procédure</h2>
-          <ol class="list">
-            <li>Vérifier que $r$ est bien une racine : $P(r) = 0$.</li>
-            <li>Diviser $P(x)$ par $(x - r)$ pour obtenir un quotient quadratique $Q(x)$.</li>
-            <li>Factoriser $Q(x)$ en utilisant les techniques du second degré.</li>
-            <li>Écrire $P(x) = (x - r)Q(x)$ pour obtenir la factorisation complète.</li>
-          </ol>
+          <p>Soit un polynôme :</p>
+          <p>
+            $$
+            p(x) = ax^3 + bx^2 + cx + d
+            $$
+          </p>
+          <p>Si l’on connaît une racine $r$, alors $(x - r)$ est un facteur de $p(x)$.</p>
+          <p>On peut diviser $p(x)$ par $(x - r)$, ce qui donne un quotient $q(x)$ de degré 2. On factorise ensuite $q(x)$ pour obtenir la factorisation complète de $p(x)$.</p>
+
+          <h3>Exemple</h3>
+          <p>Soit :</p>
+          <p>
+            $$
+            p(x) = 2x^3 - 3x^2 - 11x + 6
+            $$
+          </p>
+          <p>On connaît une racine : $r = 3$, donc $(x - 3)$ est un facteur de $p(x)$.</p>
+          <p>On divise alors $p(x)$ par $(x - 3)$ :</p>
+          <p>
+            $$
+            q(x) = \frac{2x^3 - 3x^2 - 11x + 6}{x - 3}
+            $$
+          </p>
+          <p>On obtient :</p>
+          <p>
+            $$
+            q(x) = 2x^2 + 3x - 2
+            $$
+          </p>
+          <p>On factorise $q(x)$ :</p>
+          <p>
+            $$
+            q(x) = 2(x - \frac{1}{2})(x + 2) = (2x - 1)(x + 2)
+            $$
+          </p>
+          <p>On peut alors écrire la forme factorisée complète de $p(x)$ :</p>
+          <p>
+            $$
+            p(x) = (2x - 1)(x + 2)(x - 3)
+            $$
+          </p>
         </section>
 
         <section class="section">
-          <h2>Exemple</h2>
-          <p>
-            Soit $P(x) = x^3 - 4x^2 - x + 4$ et $r = 1$. On vérifie $P(1) = 0$.
-            La division par $(x - 1)$ donne $Q(x) = x^2 - 3x - 4$.
-          </p>
-          <p>
-            On factorise $Q(x) = (x - 4)(x + 1)$, d’où
-            $$P(x) = (x - 1)(x - 4)(x + 1).$$
-          </p>
-        </section>
-
-        <section class="section">
-          <h2>Conseils</h2>
-          <ul class="list">
-            <li>Utiliser la division synthétique pour gagner du temps lors des calculs.</li>
-            <li>Les racines évidentes sont souvent parmi les diviseurs du terme constant.</li>
-            <li>Après factorisation, vérifiez en développant rapidement ou en testant une valeur.</li>
-          </ul>
           <div class="section__actions">
             <a class="button button--secondary" href="section-15.html">Section précédente</a>
             <a class="button" href="section-17.html">Section suivante</a>
