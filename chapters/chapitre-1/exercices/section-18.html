@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html
+  lang="fr"
+  data-page="exercises"
+  data-chapter="1"
+  data-root="../../.."
+  data-section="section-18"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chapitre 1 · Section 18 — Exercices | Révisions Mathématiques</title>
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="sidebar" aria-label="Navigation des chapitres">
+        <span class="sidebar__tab" aria-hidden="true">Chapitres</span>
+        <div class="sidebar__content">
+          <p class="sidebar__title">Chapitres</p>
+          <nav class="sidebar__nav">
+            <a class="sidebar__link" data-nav-target="home" href="#">Accueil</a>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-1"
+              href="#"
+            >
+              Chapitre 1 &mdash; Polynômes du second degré
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
+            </a>
+            <a
+              class="sidebar__link sidebar__link--chapter"
+              data-nav-target="chapter-2"
+              href="#"
+            >
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
+              <span class="sidebar__hint"
+                >Maintenez le survol pour choisir une section</span
+              >
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="intro">
+          <p class="intro__eyebrow">Chapitre&nbsp;1 · Section 18</p>
+          <h1 class="intro__title">Exercices — Équation paramétrique</h1>
+          <p class="intro__lead">
+            Étudiez le discriminant en fonction du paramètre pour déterminer le
+            nombre de solutions, puis interprétez les cas particuliers (racine double,
+            signes des racines…).
+          </p>
+          <div class="intro__actions">
+            <a class="button button--secondary" href="../sections/section-18.html"
+              >Retour à la section</a
+            >
+          </div>
+          <nav class="breadcrumb" aria-label="Fil d’Ariane">
+            <a href="../../../index.html">Accueil</a>
+            <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            <a href="../index.html">Chapitre 1</a>
+            <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            <a href="../sections/section-18.html">Section 18</a>
+            <span class="breadcrumb__separator" aria-hidden="true">›</span>
+            <span class="breadcrumb__current">Exercices</span>
+          </nav>
+        </header>
+
+        <section class="section">
+          <h2>Série d’exercices</h2>
+          <p>
+            Pour chaque équation, calculez $\Delta(m)$, discutez le nombre de
+            solutions réelles et identifiez les situations particulières
+            (racine double, racines de signe opposé…).
+          </p>
+          <ol class="exercise-list" data-exercise-list>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 1</h3>
+              <p>
+                Étudiez le nombre de solutions réelles de $x^2 - (m + 1)x + m = 0$ en
+                fonction de $m$.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 2</h3>
+              <p>
+                Discutez le nombre de solutions de $2x^2 + (m - 3)x + m - 1 = 0$ selon
+                $m$.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 3</h3>
+              <p>
+                Trouvez les valeurs de $m$ pour lesquelles $x^2 - 4x + m = 0$ possède
+                une racine double et donnez cette racine.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 4</h3>
+              <p>
+                Déterminez les valeurs de $m$ pour lesquelles $x^2 + (2m - 5)x + (m^2 - 4)
+                = 0$ n’a pas de solution réelle.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 5</h3>
+              <p>
+                Étudiez $mx^2 - 4x + (m - 1) = 0$ (avec $m \neq 0$) et donnez les
+                intervalles de $m$ assurant 0, 1 ou 2 solutions réelles.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 6</h3>
+              <p>
+                Déterminez les valeurs de $m$ telles que l’équation
+                $x^2 - 2(m + 1)x + m^2 = 0$ possède une racine double et calculez-la.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 7</h3>
+              <p>
+                Pour $x^2 - (m - 3)x + (m - 4) = 0$, trouvez la valeur de $m$ qui impose
+                $x = 2$ comme solution.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 8</h3>
+              <p>
+                Recherchez les valeurs de $m$ pour lesquelles
+                $x^2 + (m - 2)x + (m - 6) = 0$ admet deux solutions réelles de signes
+                opposés.
+              </p>
+              <!-- Graph suggestion: tracer le discriminant m^2 - 8m + 28 et indiquer la zone m < 6 -->
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 9</h3>
+              <p>
+                Étudiez $x^2 - mx + (m + 3) = 0$ : pour quelles valeurs de $m$ a-t-on des
+                solutions réelles ? Calculez explicitement les solutions lorsque
+                $m = 8$.
+              </p>
+            </li>
+            <li class="exercise">
+              <h3 class="exercise__title">Exercice 10</h3>
+              <p>
+                Déterminez les valeurs de $m$ pour lesquelles les deux solutions de
+                $x^2 + (m - 1)x + m = 0$ sont strictement positives.
+              </p>
+            </li>
+          </ol>
+          <div class="exercise__actions">
+            <button class="button" type="button" data-answer-toggle>
+              Afficher les réponses
+            </button>
+          </div>
+          <div class="answers" data-answer-container hidden>
+            <p>
+              Utilisez systématiquement le discriminant $\Delta(m)$ puis, si besoin,
+              les relations somme-produit pour imposer le signe ou la valeur des
+              racines.
+            </p>
+            <ol class="answer-list">
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 1</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = (m + 1)^2 - 4m = m^2 - 2m + 1 = (m - 1)^2 \geq 0$ pour
+                      tout $m$. Il y a donc toujours des solutions réelles : une racine
+                      double si $m = 1$ (solution $x = 1$), deux racines distinctes sinon.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 2</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = (m - 3)^2 - 8(m - 1) = m^2 - 14m + 17$. Les racines de
+                      $\Delta(m) = 0$ sont $m = 7 \pm 4\sqrt{2}$. L’équation a deux
+                      solutions réelles si $m < 7 - 4\sqrt{2}$ ou $m > 7 + 4\sqrt{2}$,
+                      une racine double aux valeurs limites, aucune solution réelle entre
+                      ces deux valeurs.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 3</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = (-4)^2 - 4m = 16 - 4m$. Pour une racine double, on
+                      impose $\Delta = 0 \Rightarrow m = 4$. La racine double vaut
+                      $x = \dfrac{4}{2} = 2$.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 4</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = (2m - 5)^2 - 4(m^2 - 4) = -20m + 41$. L’équation n’a pas
+                      de solution réelle lorsque $\Delta < 0$, soit pour $m > \tfrac{41}{20}$.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 5</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = (-4)^2 - 4m(m - 1) = -4(m^2 - m - 4)$. Posons
+                      $m_{1,2} = \dfrac{1 \pm \sqrt{17}}{2}$. Alors $\Delta > 0$ pour
+                      $m \in \big(\tfrac{1 - \sqrt{17}}{2}, \tfrac{1 + \sqrt{17}}{2}\big)$,
+                      $\Delta = 0$ aux bornes et $\Delta < 0$ en dehors. Donc deux
+                      solutions réelles pour $m$ dans cet intervalle, une racine double
+                      aux bornes, aucune solution réelle sinon (en gardant $m \neq 0$).
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 6</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = [-2(m + 1)]^2 - 4m^2 = 4[(m + 1)^2 - m^2] = 4(2m + 1)$.
+                      La racine double apparaît lorsque $\Delta = 0$, soit $m = -\tfrac{1}{2}$.
+                      La valeur commune vaut $x = m + 1 = \tfrac{1}{2}$.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 7</summary>
+                  <div class="answer__content">
+                    <p>
+                      On impose $x = 2$ : $4 - 2(m - 3) + (m - 4) = 0$ soit $6 - m = 0$.
+                      Ainsi $m = 6$ garantit que $x = 2$ est solution (et donc facteur
+                      $(x - 2)$).
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 8</summary>
+                  <div class="answer__content">
+                    <p>
+                      Produit des racines : $m - 6$. Pour des signes opposés, il faut
+                      $m - 6 < 0 \Rightarrow m < 6$. Le discriminant
+                      $\Delta = (m - 2)^2 - 4(m - 6) = m^2 - 8m + 28$ est toujours positif
+                      (discriminant négatif), donc deux racines réelles existent pour tout
+                      $m$. Conclusion : racines de signes opposés ssi $m < 6$.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 9</summary>
+                  <div class="answer__content">
+                    <p>
+                      $\Delta(m) = m^2 - 4(m + 3) = m^2 - 4m - 12$. Les solutions réelles
+                      existent pour $m \leq -2$ ou $m \geq 6$. Pour $m = 8$ :
+                      $\Delta = 64 - 32 - 12 = 20$. Les racines valent
+                      $x_{1,2} = \dfrac{8 \pm \sqrt{20}}{2} = 4 \pm \sqrt{5}$.
+                    </p>
+                  </div>
+                </details>
+              </li>
+              <li class="answer">
+                <details class="answer__details">
+                  <summary>Exercice 10</summary>
+                  <div class="answer__content">
+                    <p>
+                      Somme des racines : $1 - m$ (positive si $m < 1$), produit : $m$.
+                      Il faut $m > 0$ pour un produit positif. De plus
+                      $\Delta = (m - 1)^2 - 4m = m^2 - 6m + 1 \geq 0$, soit
+                      $m \leq 3 - 2\sqrt{2}$ ou $m \geq 3 + 2\sqrt{2}$. L’intervalle
+                      compatible avec $0 < m < 1$ est $0 < m \leq 3 - 2\sqrt{2}$.
+                    </p>
+                  </div>
+                </details>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__actions">
+            <a class="button button--secondary" href="../sections/section-18.html"
+              >Retour à la section</a
+            >
+            <a class="button" href="section-19.html">Exercices — Section suivante</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="section-menu" data-section-menu hidden>
+      <div class="section-menu__backdrop" data-section-menu-close></div>
+      <aside
+        class="section-menu__panel"
+        id="section-menu-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="section-menu-title"
+      >
+        <button
+          class="section-menu__close"
+          type="button"
+          data-section-menu-close
+        >
+          <span class="visually-hidden">Fermer le menu des sections</span>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <header class="section-menu__header">
+          <p class="section-menu__eyebrow" data-section-menu-eyebrow>
+            Chapitre 1 &mdash; Polynômes du second degré
+          </p>
+          <h2
+            class="section-menu__title"
+            id="section-menu-title"
+            data-section-menu-title
+          >
+            Choisissez une section
+          </h2>
+          <p class="section-menu__subtitle" data-section-menu-subtitle>
+            Cliquez sur une section pour ouvrir sa fiche de révision.
+          </p>
+        </header>
+        <ol class="section-menu__list" data-section-menu-list></ol>
+      </aside>
+    </div>
+    <script src="../../../assets/js/menu.js" defer></script>
+    <script src="../../../assets/js/exercises.js" defer></script>
+  </body>
+</html>
