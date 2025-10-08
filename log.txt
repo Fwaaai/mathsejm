@@ -1,0 +1,297 @@
+[33mcommit 3b64c79a9947cd9cf198e5ee998965e0af9fc607[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 7167a6f f1be48e
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 17:56:31 2025 +0200
+
+    Merge pull request #11 from Fwaai/codex/create-exercises-page-for-chapter-1-sections
+    
+    Add Chapter 1 section exercise pages with answer toggles
+
+[33mcommit f1be48e1f20429b3f34bf56a7173b70c521a0daf[m[33m ([m[1;31morigin/codex/create-exercises-page-for-chapter-1-sections[m[33m)[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 17:55:55 2025 +0200
+
+    Add Chapter 1 section exercise pages and toggled answers
+
+[33mcommit 7167a6f1aabaa29b1be2a9eb584373d1b657e9bc[m
+Merge: 6769f24 3ce9549
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 17:26:20 2025 +0200
+
+    Merge pull request #10 from Fwaai/codex/review-chapter-1-for-style-inconsistencies
+    
+    Standardize chapter 1 section intros and wording
+
+[33mcommit 3ce95493fc046b816fce31c98172f6243d042a3f[m[33m ([m[1;31morigin/codex/review-chapter-1-for-style-inconsistencies[m[33m)[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 17:24:31 2025 +0200
+
+    Standardize chapter 1 section intros and wording
+
+[33mcommit 6769f24f1b439af373187a9e7fda42c83928bed3[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 17:00:29 2025 +0200
+
+            modified:   chapters/chapitre-1/sections/section-18.html
+            modified:   chapters/chapitre-1/sections/section-19.html
+
+[33mcommit ceceabaf3d754739306c002624b8f8e9144a32cd[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 16:58:44 2025 +0200
+
+            new file:   assets/images/tables/chapter1/table9.png
+            modified:   chapters/chapitre-1/sections/section-13.html
+            modified:   chapters/chapitre-1/sections/section-14.html
+            modified:   chapters/chapitre-1/sections/section-15.html
+            modified:   chapters/chapitre-1/sections/section-16.html
+            modified:   chapters/chapitre-1/sections/section-17.html
+            modified:   chapters/chapitre-1/sections/section-18.html
+            modified:   chapters/chapitre-1/sections/section-19.html
+
+[33mcommit 8e1eef90416c4d18e38fe09d64553392ed1023cc[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 16:27:47 2025 +0200
+
+            modified:   chapters/chapitre-1/sections/section-05.html
+            modified:   chapters/chapitre-1/sections/section-07.html
+            modified:   chapters/chapitre-1/sections/section-11.html
+    modified:   chapters/chapitre-1/sections/section-12.html
+
+[33mcommit 2045759b2b2d4e41f14a4134deafeba72fef96b3[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 16:07:46 2025 +0200
+
+            new file:   assets/images/graphs/chapter1/graph5.png
+            modified:   chapters/chapitre-1/sections/section-07.html
+    modified:   chapters/chapitre-1/sections/section-08.html
+            modified:   chapters/chapitre-1/sections/section-09.html
+            modified:   chapters/chapitre-1/sections/section-10.html
+
+[33mcommit a8efd4d9a3d11225c0e90fc20cfdbc616b6f3e79[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 15:39:41 2025 +0200
+
+            modified:   assets/css/styles.css
+            new file:   assets/images/tables/chapter1/table1.png
+            new file:   assets/images/tables/chapter1/table2.png
+            new file:   assets/images/tables/chapter1/table3.png
+            new file:   assets/images/tables/chapter1/table4.png
+    new file:   assets/images/tables/chapter1/table5.png
+    new file:   assets/images/tables/chapter1/table6.png
+    new file:   assets/images/tables/chapter1/table7.png    new file:   assets/images/tables/chapter1/table8.png
+            modified:   chapters/chapitre-1/sections/section-01.html
+            modified:   chapters/chapitre-1/sections/section-02.html
+            modified:   chapters/chapitre-1/sections/section-03.html
+            modified:   chapters/chapitre-1/sections/section-05.html
+            modified:   chapters/chapitre-1/sections/section-06.html
+
+[33mcommit 9e3879aabdbf33039c6ac8bfb889320db1667c57[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 15:06:03 2025 +0200
+
+            modified:   chapters/chapitre-1/sections/section-04.html
+
+[33mcommit 2247300e3e484dc097f4d0b9cecce70bdb5be2e5[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 14:38:16 2025 +0200
+
+            new file:   assets/images/graphs/chapter1/graph4.png
+            modified:   chapters/chapitre-1/sections/section-02.html
+            modified:   chapters/chapitre-1/sections/section-03.html
+
+[33mcommit 18e9a54397999e43dfe4d5fe49b0b744b698364b[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 14:22:21 2025 +0200
+
+            new file:   assets/images/graphs/chapter1/graph3.png
+            modified:   chapters/chapitre-1/sections/section-02.html
+
+[33mcommit 1e925eea706803ef96a8232d1880916f35b49d00[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 12:14:04 2025 +0200
+
+            modified:   chapters/chapitre-1/sections/section-01.html
+
+[33mcommit 77a1fb17245713f11661560c73a2079daf31e687[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 12:09:58 2025 +0200
+
+    Completed Chapter 1 section 1
+            new file:   assets/images/graphs/chapter1/graph1.png
+            new file:   assets/images/graphs/chapter1/graph2.png
+            modified:   chapters/chapitre-1/sections/section-01.html
+
+[33mcommit a66d7cf1700083b3448649b25f9eb1a4d51fd802[m
+Merge: 90f7f20 150ab71
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 10:22:08 2025 +0200
+
+    Merge pull request #8 from Fwaai/codex/locate-content-in-chapters/chapitre-1/index.html
+    
+    Aligner le chapitre 1 avec les polynômes du second degré
+
+[33mcommit 150ab7121e8835cf1dcfdcc48a725867513b0fb6[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 10:19:00 2025 +0200
+
+    Rédiger les contenus du chapitre 1 sur les polynômes du second degré
+
+[33mcommit 90f7f2028e46b41e1a311868202d4975e1c9d33a[m
+Author: Fwaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 09:13:04 2025 +0200
+
+    Update on content
+            deleted:    chapitre-1-section-01.html
+            deleted:    chapitre-1-section-02.html
+            deleted:    chapitre-1-section-03.html
+            deleted:    chapitre-1-section-04.html
+            deleted:    chapitre-1-section-05.html
+            deleted:    chapitre-1-section-06.html
+            deleted:    chapitre-1-section-07.html
+            deleted:    chapitre-1-section-08.html
+            deleted:    chapitre-1-section-09.html
+            deleted:    chapitre-1-section-10.html
+            deleted:    chapitre-1-section-11.html
+            deleted:    chapitre-1-section-12.html
+            deleted:    chapitre-1-section-13.html
+            deleted:    chapitre-1-section-14.html
+            deleted:    chapitre-1-section-15.html
+            deleted:    chapitre-1-section-16.html
+            deleted:    chapitre-1-section-17.html
+            deleted:    chapitre-1-section-18.html
+            deleted:    chapitre-1-section-19.html
+            deleted:    chapitre-1.html
+            modified:   chapters/chapitre-1/index.html
+            modified:   chapters/chapitre-1/sections/section-01.html
+            modified:   index.html
+
+[33mcommit 3f19cf4102e77599f8037714256eeee3aab44005[m
+Merge: ffd01e7 5014c22
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 08:30:32 2025 +0200
+
+    Merge pull request #6 from Fwaai/codex/create-welcome-page-layout-bu5gbr
+    
+    Add geometry chapter and refine section overlay
+
+[33mcommit 5014c22ee9c17db5bf8eeb5fcf7c8974ea343427[m[33m ([m[1;31morigin/codex/create-welcome-page-layout-bu5gbr[m[33m)[m
+Merge: daea780 ffd01e7
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 08:29:56 2025 +0200
+
+    Merge branch 'main' into codex/create-welcome-page-layout-bu5gbr
+
+[33mcommit daea7805e7f123488f8b1fc91db9032cd7408a31[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sun Oct 5 08:11:36 2025 +0200
+
+    Add geometry chapter and refine section overlay
+
+[33mcommit ffd01e760f4e6104e7a4d1c4db02db29342dbabc[m
+Merge: ac4cb59 ab66448
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 20:03:58 2025 +0200
+
+    Merge pull request #5 from Fwaai/codex/create-welcome-page-layout-0t08k4
+    
+    Align section overlay with sidebar
+
+[33mcommit ab664481c93df347938788c461326e1c036bb810[m
+Merge: f195e1f ac4cb59
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 20:03:29 2025 +0200
+
+    Merge branch 'main' into codex/create-welcome-page-layout-0t08k4
+
+[33mcommit f195e1f48175c5aca3646f381fe329b6829c07cd[m[33m ([m[1;31morigin/codex/create-welcome-page-layout-0t08k4[m[33m)[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:59:47 2025 +0200
+
+    Adjust section menu placement and behavior
+
+[33mcommit ac4cb590fa2f0e8c23a4f8e856b9869fd9e08003[m
+Merge: b7695fe 19abbc6
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:49:27 2025 +0200
+
+    Merge pull request #4 from Fwaai/codex/create-welcome-page-layout-jjcjc0
+    
+    Organize chapter pages and add hover section overlay
+
+[33mcommit 19abbc628223f7ffe01a852753fed39e73da503c[m[33m ([m[1;31morigin/codex/create-welcome-page-layout-jjcjc0[m[33m)[m
+Merge: 17c4995 b7695fe
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:49:20 2025 +0200
+
+    Merge branch 'main' into codex/create-welcome-page-layout-jjcjc0
+
+[33mcommit 17c49956812ecc42912c12f96330045718f792c9[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:47:16 2025 +0200
+
+    Organize chapters into folders with hoverable section menu
+
+[33mcommit b7695fe57416d45f7ec737c384f790355b4c3e88[m
+Merge: 4dac960 7e3cd8f
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:30:30 2025 +0200
+
+    Merge pull request #3 from Fwaai/codex/create-welcome-page-layout-yfpdo6
+    
+    Structurer le chapitre 1 avec des pages par section
+
+[33mcommit 7e3cd8f2f2db568024d6db50942e997de531829f[m
+Merge: 66d80b8 4dac960
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:30:23 2025 +0200
+
+    Merge branch 'main' into codex/create-welcome-page-layout-yfpdo6
+
+[33mcommit 66d80b82cca21b05934dd242b34fb3b219e69c83[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:25:25 2025 +0200
+
+    Créer une page dédiée pour chaque section du chapitre 1
+
+[33mcommit 4dac960cfa5a3a884aee08644595e8fccb952174[m
+Merge: 70f4b95 fe2d024
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:09:05 2025 +0200
+
+    Merge pull request #2 from Fwaai/codex/create-welcome-page-layout
+    
+    Refonte de la page d'accueil et ajout du chapitre 1
+
+[33mcommit fe2d024d9f6be75ff6f0a9552a4718bb0ad0f7b1[m
+Merge: dbe2bc4 70f4b95
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:08:47 2025 +0200
+
+    Merge branch 'main' into codex/create-welcome-page-layout
+
+[33mcommit dbe2bc4c91bd59927b566e68d59f1cc682bc474a[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 19:06:21 2025 +0200
+
+    Refaire la page d'accueil et ajouter le chapitre 1
+
+[33mcommit 70f4b95ae4f6e3ff9aab4c68e82fc659ef06f890[m
+Merge: b535c1c f4df729
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 18:50:39 2025 +0200
+
+    Merge pull request #1 from Fwaai/codex/create-welcome-page-layout
+    
+    Add welcome landing page with sidebar navigation
+
+[33mcommit f4df7291fb22e835d71be99cbfc5779651ef6ee3[m
+Author: Fwaaaaaaaaaaaaaaaaaaaaaaaaaai <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 18:50:16 2025 +0200
+
+    Add welcome page with sidebar navigation
+
+[33mcommit b535c1cf41e81b84573bda343e9a5477709c0ccb[m[33m ([m[1;31morigin/codex/create-welcome-page-layout[m[33m)[m
+Author: yuuuta Kikuchi <reagain.shousetu@gmail.com>
+Date:   Sat Oct 4 18:40:59 2025 +0200
+
+    first commit
