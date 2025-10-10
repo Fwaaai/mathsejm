@@ -4,6 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chapitre 2 | Révisions Mathématiques</title>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ],
+        },
+        svg: { fontCache: "global" },
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+      async
+    ></script>
     <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
   <body>
@@ -19,7 +38,7 @@
               <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
             </a>
             <a class="sidebar__link sidebar__link--chapter" data-nav-target="chapter-2" href="#">
-              Chapitre 2 &mdash; Géométrie et mesures
+              Chapitre 2 &mdash; Notion de dérivée et équation de la tangente
               <span class="sidebar__hint">Maintenez le survol pour choisir une section</span>
             </a>
           </nav>
@@ -30,8 +49,8 @@
       <main class="main">
         <header class="intro">
           <p class="intro__eyebrow">Chapitre&nbsp;2</p>
-          <h1 class="intro__title">Géométrie et mesures</h1>
-          <p class="intro__lead">Retrouvez ici les 14 sections du chapitre consacré aux figures planes et aux solides. Chaque fiche rappelle les méthodes essentielles et propose des entraînements ciblés.</p>
+          <h1 class="intro__title">Notion de dérivée et équation de la tangente</h1>
+          <p class="intro__lead">Retrouvez ici les 14 sections pour le second chapitre.</p>
           <nav class="breadcrumb" aria-label="Fil d’Ariane">
             <a href="../../index.html">Accueil</a>
             <span class="breadcrumb__separator" aria-hidden="true">›</span>
@@ -44,73 +63,73 @@
           <p>Chaque section développe une notion clé du chapitre avec rappels de cours, conseils de méthode et idées d’exercices pour vous entraîner avant le contrôle.</p>
           <ul class="section-grid">
             <li class="section-card">
-              <h3 class="section-card__title">Section 1 &mdash; Vocabulaire et repères</h3>
-              <p class="section-card__description">Identifier points, droites, segments et repères orthonormés pour situer précisément les objets.</p>
+              <h3 class="section-card__title">Section 1 &mdash; Notion de limite</h3>
+              <p class="section-card__description">Comprendre la notion de limite à partir d’un tableau de valeurs ou d’un graphique.</p>
               <a class="section-card__link" href="sections/section-01.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 2 &mdash; Mesure des angles</h3>
-              <p class="section-card__description">Mesurer, comparer et tracer des angles à l’aide du rapporteur.</p>
+              <h3 class="section-card__title">Section 2 &mdash; Dérivabilité (graphiquement)</h3>
+              <p class="section-card__description">Interpréter graphique la dérivabilité d’une fonction.</p>
               <a class="section-card__link" href="sections/section-02.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 3 &mdash; Triangles</h3>
-              <p class="section-card__description">Reconnaître les différents triangles et utiliser leurs propriétés d’angles et de côtés.</p>
+              <h3 class="section-card__title">Section 3 &mdash; Dérivabilité par calcul</h3>
+              <p class="section-card__description">Déterminer, par le calcul, si une fonction est dérivable en un réel $a$.</p>
               <a class="section-card__link" href="sections/section-03.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 4 &mdash; Quadrilatères</h3>
-              <p class="section-card__description">Identifier les quadrilatères usuels et connaître leurs propriétés.</p>
+              <h3 class="section-card__title">Section 4 &mdash; Non-dérivabilité en $a$</h3>
+              <p class="section-card__description">Déterminer, par le calcul, la non-dérivabilité d’une fonction en un réel $a$.</p>
               <a class="section-card__link" href="sections/section-04.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 5 &mdash; Cercle et disque</h3>
-              <p class="section-card__description">Tracer un cercle, connaître son vocabulaire et calculer périmètre et aire.</p>
+              <h3 class="section-card__title">Section 5 &mdash; Non-dérivabilité sur le graphique</h3>
+              <p class="section-card__description">Identifier graphiquement les points où une fonction est non dérivable.</p>
               <a class="section-card__link" href="sections/section-05.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 6 &mdash; Polygones réguliers</h3>
-              <p class="section-card__description">Construire et reconnaître des polygones réguliers et utiliser leurs symétries.</p>
+              <h3 class="section-card__title">Section 6 &mdash; Valeur de nombre dérivé utilisant une calculatrice</h3>
+              <p class="section-card__description">Utiliser une calculatrice ou un logiciel pour déterminer une valeur (approchée) du nombre dérivé en un réel $a$.</p>
               <a class="section-card__link" href="sections/section-06.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 7 &mdash; Transformations géométriques</h3>
-              <p class="section-card__description">Étudier symétries, translations et rotations pour déplacer des figures.</p>
+              <h3 class="section-card__title">Section 7 &mdash; Notion de tangente</h3>
+              <p class="section-card__description">Comprendre la notion de tangente à une courbe en un point donné.</p>
               <a class="section-card__link" href="sections/section-07.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 8 &mdash; Alignement et perpendicularité</h3>
-              <p class="section-card__description">Vérifier des alignements et construire des parallèles ou des perpendiculaires.</p>
+              <h3 class="section-card__title">Section 8 &mdash; Équation de la tangente</h3>
+              <p class="section-card__description">Comprendre et déterminer une équation de la tangente à une courbe en un point donné (équation de droite).</p>
               <a class="section-card__link" href="sections/section-08.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 9 &mdash; Aires des figures planes</h3>
-              <p class="section-card__description">Calculer les aires des figures usuelles et de surfaces composées.</p>
+              <h3 class="section-card__title">Section 9 &mdash; Coefficient directeur de la tangente</h3>
+              <p class="section-card__description">Déterminer graphiquement et par le calcul le nombre dérivé, autrement dit, le coefficient directeur de la tangente.</p>
               <a class="section-card__link" href="sections/section-09.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 10 &mdash; Périmètres et longueurs</h3>
-              <p class="section-card__description">Additionner les longueurs d’un contour et convertir les unités de mesure.</p>
+              <h3 class="section-card__title">Section 10 &mdash; Intersection entre tangente et axes</h3>
+              <p class="section-card__description">Déterminer graphiquement et par le calcul, les coordonnées des points d’intersections de la tangente avec les axes de coordonnées.</p>
               <a class="section-card__link" href="sections/section-10.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 11 &mdash; Volumes des solides</h3>
-              <p class="section-card__description">Calculer les volumes des prismes, cylindres, pyramides et cônes.</p>
+              <h3 class="section-card__title">Section 11 &mdash; Approximation affine</h3>
+              <p class="section-card__description">Déterminer une approximation affine à l’aide du lien entre le taux d’accroissement et le nombre dérivé puis vérifier la validité de l’approximation à l’aide de la calculatrice.</p>
               <a class="section-card__link" href="sections/section-11.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 12 &mdash; Théorème de Pythagore</h3>
-              <p class="section-card__description">Identifier un triangle rectangle et appliquer le théorème de Pythagore.</p>
+              <h3 class="section-card__title">Section 12 &mdash; Parallèles</h3>
+              <p class="section-card__description">Résoudre une équation de la forme $f′(x) = f′(a)$ pour déterminer les valeurs de $x$ telles que la tangente au point d’abscisse $x$ soit parallèle à celle au point d’abscisse $a$.</p>
               <a class="section-card__link" href="sections/section-12.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 13 &mdash; Trigonométrie élémentaire</h3>
-              <p class="section-card__description">Utiliser sinus, cosinus et tangente dans un triangle rectangle.</p>
+              <h3 class="section-card__title">Section 13 &mdash; Résoudre l'équation $f'(x) = 0$</h3>
+              <p class="section-card__description">Résoudre graphiquement ou par le calcul l’équation $f′(x) = 0$ puis interpréter graphiquement le résultat.</p>
               <a class="section-card__link" href="sections/section-13.html">Ouvrir la section</a>
             </li>
             <li class="section-card">
-              <h3 class="section-card__title">Section 14 &mdash; Problèmes de géométrie</h3>
-              <p class="section-card__description">Mobiliser toutes les notions du chapitre dans des problèmes variés.</p>
+              <h3 class="section-card__title">Section 14 &mdash; Tangentes passant par l'origine</h3>
+              <p class="section-card__description">Résoudre l’équation $−af′(a) + f(a) = 0$ d’inconnue a pour trouver le(s) réel(s) a en lesquels la tangente au point d’abscisse a passe par l’origine du repère.</p>
               <a class="section-card__link" href="sections/section-14.html">Ouvrir la section</a>
             </li>
           </ul>
