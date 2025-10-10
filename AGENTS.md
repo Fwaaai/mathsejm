@@ -80,4 +80,4 @@ The file structure is as follows
 Make sure to edit the file tree above every time you make an edit. 
 Do not leave any TODOs.
 You do not need to do any testing.
-Fill the README.md.
+Fill the README.md once you've completed everything.
